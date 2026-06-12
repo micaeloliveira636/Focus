@@ -113,3 +113,73 @@ Quando o usuário pedir skill nova:
 4. Se a skill precisar de arquivos de apoio (templates, exemplos),
    criar dentro da pasta da skill
 5. Seguir o fluxo da skill-creator nativa do Claude Code
+
+---
+
+# Agência Focus — contexto do negócio
+
+> Bloco adicionado pelo `/instalar`. Regras específicas da operação da Focus.
+
+## O que é esse workspace
+
+Operação da Agência Focus. Aqui ficam clientes, propostas, conteúdo e
+entregas de tráfego/presença digital pra negócios locais.
+
+**Estrutura de pastas:**
+- `_memoria/` — quem é a Focus, como falamos, foco atual
+- `identidade/` — marca da Focus (lobo, roxo, Montserrat)
+- `clientes/` — uma subpasta por cliente, autossuficiente
+- `briefings/` — briefings antes de virar cliente
+- `propostas/` — propostas em andamento
+- `comercial/` — frente comercial (grade de regiões de prospecção, scripts)
+- `marketing/` — conteúdo institucional da Focus
+- `saidas/` — documentos pontuais, análises
+- `dados/` — arquivos a analisar (relatórios de cliente, exports)
+
+## Sobre a agência
+
+Agência de marketing focada em tráfego e presença digital. Faz empresas
+locais terem um canal de vendas estruturado através de anúncios e redes
+sociais, gerando novos clientes e vendas pela internet.
+
+Operação **solo** — uma pessoa só toca comercial, gestão de tráfego,
+conteúdo e atendimento. Estrutura de agência, capacidade enxuta.
+
+**Cliente ideal:** empreendedor intermediário, 35-45 anos, empresa
+estruturada faturando ≥ R$50k/mês, negócio local de médio/alto ticket.
+
+## Foco atual
+
+A entrega (pós-fechamento) já tem passo a passo redondo. O gargalo está
+na **frente comercial**: prospecção e reunião de vendas sem script
+definido. Ao sugerir prioridades, atacar esse gargalo primeiro.
+
+Tarefa semanal a tirar das costas: **pesquisa de cliente pra prospectar** —
+já virou a skill `/prospectar` (método completo em `_memoria/comercial.md`).
+
+## Tom de voz
+
+Narrativo, pessoal, autêntico. História real → princípio → virada
+prática pro leitor. Ver `_memoria/preferencias.md` pra detalhe.
+
+Evitar: jargão de guru, qualquer coisa que soe hipócrita ou forçada.
+
+## Regras do sistema
+
+- Cliente novo → criar pasta `clientes/<Nome>/` com briefing, estratégia
+  e subpastas conforme as entregas contratadas
+- Proposta nova → `propostas/<cliente>-<data>.html` antes de fechar
+- Casos de sucesso ficam em `clientes/<Nome>/caso.md` (reuso em pitches)
+- Toda peça visual segue `identidade/design-guide.md` (dark + roxo + Montserrat)
+
+## Ferramentas conectadas
+
+- [x] ClickUp — CRM e operação. CRM de prospecção: lista **"CRM Claude"** (id `901327473668`, workspace `9010140178`, space COMERCIAL). Fluxo de status: Identificado → Análise feita → Contato feito → Respondeu → Reunião marcada → Fechado / Sem interesse.
+- [ ] Notion
+- [ ] Gmail
+- [ ] Google Calendar
+- [ ] Canva
+- [ ] Meta Ads
+- [ ] Google Ads
+
+*(Marcar conforme for instalando os MCPs)*
