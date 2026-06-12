@@ -108,7 +108,8 @@ Escolher conforme o valor do prospect (não gastar Loom com 🟡):
 
 - **🔥 quente:** **vídeo de 60-90s (Loom/gravação de tela)** passando por 2-3 brechas
   reais do perfil/GMN dele, já com o que mudaria. É o que mais converte. Vale o
-  trabalho só nos 🔥.
+  trabalho só nos 🔥. **Roteiro-modelo pronto (modular, monta em minutos):
+  `comercial/roteiro-loom.md`.**
 - **🟡 morno / volume:** **uma ideia concreta já dada em texto** (1 anúncio que eu
   rodaria, ou um print do perfil com 2 anotações). Barato de produzir, ainda é "dado".
 - Em todos: enquadrar como **"é seu, usa com quem quiser, zero compromisso"** (tira a
