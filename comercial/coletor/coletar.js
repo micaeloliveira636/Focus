@@ -40,16 +40,19 @@ if (handles.length === 0) {
 
 if (!fs.existsSync(saidasDir)) fs.mkdirSync(saidasDir, { recursive: true });
 
-// converte "3.531" / "6,4 mil" / "1,2 mi" em número aproximado
+// converte "2,426" (vírgula=milhar) / "6,4 mil" / "1,2 mi" em número.
+// Instagram usa vírgula como separador de MILHAR no número cheio ("3,318 seguidores"),
+// mas como DECIMAL quando há sufixo pt-BR ("6,4 mil"). Tratar os dois casos.
 function parseNum(raw) {
   if (!raw) return null;
-  const s = raw.toLowerCase().replace(/\./g, '').replace(',', '.');
-  const m = s.match(/([\d.]+)\s*(mil|mi|m)?/);
-  if (!m) return null;
-  let n = parseFloat(m[1]);
-  if (m[2] === 'mil' || m[2] === 'm') n *= 1000;
-  if (m[2] === 'mi') n *= 1000000;
-  return Math.round(n);
+  raw = raw.trim().toLowerCase();
+  const mult = /\bmil\b/.test(raw) ? 1000 : /\bmi\b/.test(raw) ? 1000000 : 1;
+  let num = (raw.match(/[\d.,]+/) || [])[0] || '';
+  if (mult > 1) num = num.replace(/\./g, '').replace(',', '.'); // sufixo: vírgula = decimal
+  else num = num.replace(/[.,]/g, ''); // número cheio: vírgula/ponto = milhar
+  const n = parseFloat(num);
+  if (isNaN(n)) return null;
+  return Math.round(n * mult);
 }
 
 const ctx = await chromium.launchPersistentContext(userDataDir, {
