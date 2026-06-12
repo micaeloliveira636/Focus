@@ -74,11 +74,22 @@ público, site se houver, bairro.
 
 Pra cada candidato, checar e anotar os problemas:
 
-1. **GMN (Google Meu Negócio):** fotos fracas, sem site, sem horário, sem Instagram vinculado
-2. **Instagram:** bio vazia, feed parado (+30 dias), sem destaques, sem link
-3. **TikTok:** conta inexistente ou abandonada
-4. **LinkedIn:** só checar se for B2B e ticket alto
-5. **Facebook Ads Library:** não anuncia = oportunidade; anuncia mal = oportunidade maior
+1. **GMN (Google Meu Negócio):** tem fotos de qualidade? site linkado? Instagram vinculado? horário correto? responde avaliações?
+2. **Instagram:** bio com proposta clara + link de contato? feed com post recente (<30 dias)? identidade visual? destaques organizados?
+3. **TikTok:** tem conta? se tem, está ativa com vídeos regulares?
+4. **Facebook Ads Library:** já anunciou? bem feito ou lixo? (anuncia mal = oportunidade; não anuncia = oportunidade **só se houver outra dor junto** — ver Passo 4)
+5. **LinkedIn:** só checar se for B2B ou ticket alto (clínicas, coaches, consultores)
+
+**Divisão de trabalho honesta — nunca inventar o que não dá pra ver:**
+
+- ✅ **A skill verifica (público):** existência do negócio e do perfil, site sim/não, telefone, nota e nº de avaliações no GMN, tem Instagram/TikTok sim/não, e a **Biblioteca de Anúncios do Facebook** (anuncia? quantos? — é consultável publicamente).
+- 👁️ **Marca `[verificar]` pro olho humano:** o que exige abrir o app e julgar — qualidade do feed, identidade visual, destaques, recência real dos posts. **Não afirmar isso de cabeça.** O card chega 90% pronto e o usuário bate o olho nos `[verificar]`.
+
+Se um sinal não foi verificável, escrever `[verificar]` no card — nunca chutar.
+
+**Verificação por print (rigor) — dois passos com armadilha:**
+- **Link da bio:** ler o link REAL na bio do Instagram e seguir aquele. Nunca adivinhar a URL (chute de slug = 404 = dado falso). O destino mostra a estrutura real (site / linktree / só agendamento).
+- **Biblioteca de Anúncios:** buscar **pelo @ do Instagram (nome de usuário), nunca pelo nome de exibição.** É o @ que acha a página certa e revela se anuncia. Nome solto traz ruído = chute. Com o @: ou aparece a página dela com anúncios, ou "Nenhum anúncio" = não anuncia.
 
 ### Passo 4 — Decidir e montar a lista
 
@@ -86,17 +97,27 @@ Pra cada candidato, checar e anotar os problemas:
 Se tem ao menos **1–2 problemas sérios** → entra. Se a presença está toda
 bem feita → **descartar** (e dizer quantos descartei e por quê).
 
+**"Não anuncia" sozinho NÃO qualifica.** Negócio estruturado e bombando (nota
+alta, muitas avaliações, feed ativo, site, destaques) cujo único gap é não rodar
+tráfego pago = **pular ou morno, nunca 🔥**. Tráfego escala quem já vende — não
+conserta quem já vende bem sozinho. "Não anuncia" só vira brecha quando vem
+junto de **outra dor real** (feed morto, sem site, sumido do Google, sem estrutura).
+
 Montar a tabela só com os qualificados:
 
 | Negócio | Nicho / Cidade | Contato | Plataformas que tem | Brecha (problemas) | Gancho de abordagem | Prioridade |
 |---|---|---|---|---|---|---|
 
 - **Brecha:** os problemas concretos achados nas 5 etapas, por plataforma.
-- **Gancho:** a frase de entrada personalizada baseada na brecha — no tom da
-  Focus (`preferencias.md`): honesto, concreto, sem jargão de guru, sem
-  entusiasmo fingido. Aponta o problema real, não vende. Ex: *"vi que o feed
-  de vocês parou em março e o perfil não tem link pra agendar — tá deixando
-  cliente na mesa todo dia."*
+- **Gancho:** a frase de entrada personalizada baseada na brecha. **Modelo:**
+  se apresentar → mencionar o problema específico → perguntar se pode mostrar o
+  que viu. Direto, sem pitch longo. Tom da Focus (`preferencias.md`): honesto,
+  concreto, sem jargão de guru. Exemplos:
+  - Sem site: *"vi que você ainda não tem site — isso custa bastante cliente no Google"*
+  - Sem anúncio: *"vi que você ainda não anuncia — com o que vocês fazem dá pra escalar muito"*
+  - Aberto 24h sem comunicar: *"vocês abrem 24h e ninguém sabe disso além de quem passa na rua"*
+- **Canal de contato** (pelo mesmo lugar onde achou): Google Maps → WhatsApp ·
+  Instagram → Direct · TikTok → Direct no TikTok · LinkedIn → Mensagem/InMail.
 - **Prioridade:** 🔥 quente (muitos problemas + sinais de porte) / 🟡 morno.
 
 ### Passo 5 — Criar os cards no ClickUp
