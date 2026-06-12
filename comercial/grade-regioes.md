@@ -44,7 +44,7 @@ Classe média estabelecida, comércio forte, brecha digital ainda alta.
 
 ---
 
-## ✅ Santana (Norte) — VALIDADA · cobertura: 🔲
+## ✅ Santana (Norte) — VALIDADA · cobertura: 🟡 lash 06/26 (núcleo feito; faltam micro-bairros)
 *Renda domiciliar acima da média municipal, 27% do território comercial, padrão
 residencial médio. Sweet spot clássico: dinheiro pra médio ticket + brecha alta.*
 

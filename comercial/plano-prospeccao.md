@@ -71,8 +71,10 @@ O gargalo nunca é falta de alvo; é tempo de execução. Por isso a fila só pr
 > marcar a cobertura na grade e mover o ponteiro abaixo.
 
 ### ▶ Próxima missão
-**`estúdio de lash/cílios × Santana (Norte)`** — começar pelo núcleo Santana e descer
-nos micro-bairros. *(Atualizar esta linha ao avançar.)*
+**`estúdio de lash/cílios × Santana (Norte)` — EM ANDAMENTO.** Núcleo Santana varrido
+(86 descobertos → 14 com porte → 4 cards: Saara Clinic 🔥, Martínez 🔥, Anayram 🟡,
+Emily 🟡). **Seguir** pelos micro-bairros restantes: Água Fria · Tucuruvi · Mandaqui ·
+Carandiru · Jardim São Paulo. Depois → Tatuapé vilas. *(Atualizar ao avançar.)*
 
 ### Sequência de regiões (Tier B — sweet spot)
 
