@@ -109,13 +109,14 @@ Montar a tabela só com os qualificados:
 |---|---|---|---|---|---|---|
 
 - **Brecha:** os problemas concretos achados nas 5 etapas, por plataforma.
-- **Gancho:** a frase de entrada personalizada baseada na brecha. **Modelo:**
-  se apresentar → mencionar o problema específico → perguntar se pode mostrar o
-  que viu. Direto, sem pitch longo. Tom da Focus (`preferencias.md`): honesto,
-  concreto, sem jargão de guru. Exemplos:
-  - Sem site: *"vi que você ainda não tem site — isso custa bastante cliente no Google"*
-  - Sem anúncio: *"vi que você ainda não anuncia — com o que vocês fazem dá pra escalar muito"*
-  - Aberto 24h sem comunicar: *"vocês abrem 24h e ninguém sabe disso além de quem passa na rua"*
+- **Gancho (give-first):** seguir a seção **Abordagem** de `_memoria/comercial.md` —
+  o princípio é **DAR antes de PEDIR** (reciprocidade), nunca "posso te mostrar uma ideia?".
+  Estrutura: humano + prova de que olhou → tira a pressão ("sem compromisso") → brecha
+  como dinheiro na mesa → **oferece um presente pronto** (Loom de 2 min nos 🔥; ideia de
+  anúncio em texto nos 🟡) → micro-pedido preso ao presente ("posso te mandar aqui?").
+  Sem jargão de guru ("escalar", "alavancar"). "Não anuncia" vai **dentro** do presente
+  ligado a resultado ("nada trazendo gente nova de fora"), nunca como abertura.
+  - Indicar no card o **presente** sugerido (Loom 🔥 / ideia-texto 🟡) além do gancho.
 - **Canal de contato** (pelo mesmo lugar onde achou): Google Maps → WhatsApp ·
   Instagram → Direct · TikTok → Direct no TikTok · LinkedIn → Mensagem/InMail.
 - **Prioridade:** 🔥 quente (muitos problemas + sinais de porte) / 🟡 morno.

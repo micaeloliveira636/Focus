@@ -83,53 +83,81 @@ tem, problemas por plataforma, canal de contato e histórico de respostas.
 
 ## Abordagem
 
-**Canal por origem** (aborda pelo mesmo lugar onde achou):
+> Fonte: cruzamento do método de prospecção do **Pedro Sobral** (referência BR de
+> tráfego) + **$100M Leads (Alex Hormozi)** + princípios de persuasão do **Cialdini**
+> + dado de cold outreach (Loom audit: 4% → 22% de resposta). Tudo converge num ponto.
 
-- Google Maps → **WhatsApp**
-- Instagram → **Direct**
-- TikTok → **Direct no TikTok**
-- LinkedIn → **Mensagem ou InMail**
+### O princípio que muda tudo: DAR antes de PEDIR (reciprocidade)
 
-**Princípio:** provar que olhou de verdade (específico) e enquadrar o ponto cego
-como *dinheiro na mesa*, nunca como "você faz errado". Uma brecha só — a mais
-visceral. Os outros problemas ficam no CRM, não na abertura.
+O erro fatal — o meu, nas primeiras versões — é **pedir atenção** ("posso te
+mostrar uma ideia?"). Isso obriga o dono a *imaginar* o valor e a gastar tempo pra
+descobrir se vale. Ele não imagina: ignora. **A virada é entregar o valor já pronto**,
+de graça, sem compromisso. Sobral faz isso ("tomei a liberdade de criar um plano de
+marketing sob medida pro seu negócio, use como quiser"); Hormozi chama de *lead
+magnet*; Cialdini explica o porquê (reciprocidade: quem recebe algo concreto sente
+o impulso de retribuir — nem que seja respondendo). O dado fecha: auditoria em vídeo
+**enviada de graça** saltou a resposta de 4% pra 22%, mesma oferta e mesmo público.
 
-**Estrutura em 2 toques** (sobe a taxa de resposta vs. jogar tudo de uma vez):
+**Tradução pra Focus:** a abertura não vende gestão de tráfego. Ela **entrega (ou
+oferece de bandeja) um presente específico** — e o "sim" que a gente pede é só
+permissão pra mandar o presente. É o pedido mais barato que existe.
 
-1. **Abertura:** contexto real (onde te achou) → observação específica que prova
-   que olhou → ponto cego como oportunidade → micro-pedido de baixo atrito
-   ("posso te mostrar?"). Curto.
-2. **Depois que responde:** aí sim mostra o que viu, conecta com resultado e
-   propõe uma conversa rápida (10-15 min).
-3. **Follow-up:** 1 toque leve depois de 2-3 dias se não responder. Nunca mais que isso.
+### O presente (lead magnet) — o que entregar de graça
 
-**Adaptar ao canal:** Direct (Insta/TikTok) = curto, minúsculo, humano.
-WhatsApp (Maps) = pode ser um tico mais completo, ainda direto.
+Escolher conforme o valor do prospect (não gastar Loom com 🟡):
+
+- **🔥 quente:** **vídeo de 60-90s (Loom/gravação de tela)** passando por 2-3 brechas
+  reais do perfil/GMN dele, já com o que mudaria. É o que mais converte. Vale o
+  trabalho só nos 🔥.
+- **🟡 morno / volume:** **uma ideia concreta já dada em texto** (1 anúncio que eu
+  rodaria, ou um print do perfil com 2 anotações). Barato de produzir, ainda é "dado".
+- Em todos: enquadrar como **"é seu, usa com quem quiser, zero compromisso"** (tira a
+  pressão — gatilho do Sobral, reduz a defesa de "lá vem vendedor").
+
+### Canal por origem (aborda pelo mesmo lugar onde achou)
+
+- Google Maps → **WhatsApp** · Instagram → **Direct** · TikTok → **Direct** · LinkedIn → **Mensagem/InMail**
+- Direct = curtíssimo e humano. WhatsApp = pode ser um tico mais completo, ainda direto.
+
+### Estrutura da abertura (5 peças, nessa ordem, curta)
+
+1. **Humano + prova de que olhou de verdade** — abrir como gente e citar **1 detalhe
+   específico** que só quem entrou no feed notaria (não o número do header). *Liking.*
+2. **Tira a pressão** — "talvez seja útil, talvez não" / "sem compromisso". Desarma o vendedor.
+3. **Nomeia a brecha como dinheiro na mesa** — o ponto cego ligado a **resultado/cliente
+   perdido**, nunca "você faz errado". Uma só, a mais visceral.
+4. **Entrega/oferece o presente** — "gravei/separei [X] pra você, é seu" → o valor já feito.
+5. **Micro-pedido preso ao presente** — "posso te mandar aqui? é só dizer sim." Atrito zero.
+
+**2 toques:** (1) abertura acima; (2) quando responder, manda o presente de fato,
+conecta com o resultado e aí sim propõe conversa rápida (10-15 min).
+**Follow-up:** 1 toque leve depois de 2-3 dias. Nunca mais que isso.
+
+### Alavancas de persuasão (usar quando forem VERDADE)
+
+- **Prova social** (Sobral): "já cuido de [N] estúdios da zona norte". Só se for real.
+- **Escassez/exclusividade** (Cialdini): "tô pegando só 2 [nicho] da ZN esse mês". Só se for real.
+- **Autoridade específica**: 1 observação técnica concreta que só um profissional faria
+  (ex: "vi que os posts impulsionados tão indo no público errado") — prova competência sem pitch.
 
 ### O que MATA a conversa (nunca fazer)
 
-O dono recebe 3 dessas por semana e ignora todas. Se a mensagem tiver qualquer
-um desses, refazer:
+O dono recebe 3 dessas por semana e ignora todas. Se a mensagem tiver qualquer um, refazer:
 
-- ❌ Abrir com *"Oi! Vi o perfil de vocês…"* — abertura de robô de agência, ele já sabe que é vendedor no segundo 1.
-- ❌ Citar número que só prova que leu o cabeçalho (*"181 posts e 5 estrelas"*) — isso não prova que você OLHOU, qualquer um lê o contador.
-- ❌ Falar de si no início (*"trabalho com tráfego pago…"*) — vira sobre você; ele não quer saber o que você faz.
-- ❌ Jargão (*"sem depender do algoritmo", "colocar cliente pela porta", "escalar", "alavancar"*) — soa a guru, é o ranço da `preferencias.md`.
-- ❌ Pedir reunião/tempo antes de entregar valor (*"topa um papo de 15 min?"*) — está pedindo a coisa mais cara dele sem ter dado nada.
+- ❌ **Pedir em vez de dar** (*"posso te mostrar uma ideia?"* sem ter dado nada). O erro-raiz.
+- ❌ Abrir com *"Oi! Vi o perfil de vocês…"* — abertura de robô de agência.
+- ❌ Citar número do header (*"15 mil seguidores e 5 estrelas"*) — não prova que olhou.
+- ❌ Falar de si no início (*"trabalho com tráfego pago…"*) — vira sobre você.
+- ❌ Jargão de guru (*"escalar", "alavancar", "sem depender do algoritmo"*) — ranço da `preferencias.md`.
+- ❌ Pedir reunião/tempo antes de entregar valor — é a coisa mais cara dele, sem ter dado nada.
 
-### O que FUNCIONA
+### Exemplos de abertura — no tom certo (give-first)
 
-1. **Prova de que olhou de verdade:** citar algo que só quem *entrou no feed* notaria — um post específico, um detalhe do trabalho, um padrão. Não o número do header.
-2. **Uma brecha só, enquadrada como dinheiro na mesa**, não como "você faz errado".
-3. **Soar gente, não empresa.** Minúsculo, direto, como uma pessoa real falaria no Direct.
-4. **Micro-pedido, oferecendo antes de pedir:** *"posso te mandar o que eu faria?"* — não "vamos marcar uma call".
+- **🔥 com Loom:** *"oi! não vou te enrolar — achei vocês no Google e fiquei um tempo no perfil (aquele [detalhe real] tá ótimo). reparei numa coisa que tá deixando cliente na mesa: [brecha ligada a resultado]. gravei um vídeo rápido de 2 min mostrando 3 coisas que eu mudaria — é seu, usa com quem quiser, sem compromisso. posso te mandar aqui?"*
+- **🟡 com ideia pronta:** *"e aí, tudo certo? caí no perfil de vocês procurando [nicho] em [bairro], o trabalho é bom — vi [detalhe real]. me veio uma ideia de [anúncio/post] que eu rodaria pra vocês; já deixei pronta. te mando? é de graça, faz o que quiser com ela."*
 
-**Exemplos de gancho (abertura) — no tom certo:**
-- Feed parado: *"e aí, tudo certo? caí no perfil de vocês procurando [nicho] em [bairro]. o trabalho é bom — vi aquele [detalhe real do feed]. mas o último post é de [mês]; quem chega novo acha que fechou. isso espanta cliente sem você ver. dá pra resolver rápido — posso te mandar o que eu faria?"*
-- Sem site: *"te achei agora no Google procurando [nicho] em [bairro]. vocês aparecem, mas sem site quem não te conhece bate o olho e vai pro concorrente ao lado. reparei nisso — posso te mostrar uma coisa rápida?"*
-- Sem link/contato na bio: *"tô no perfil de vocês e não achei como agendar — nem link, nem WhatsApp na bio. todo dia tem gente que quer marcar e desiste aí. posso te mostrar?"*
-
-> "Não anuncia" **não é gancho de abertura sozinho** (ver Decisão). Só entra depois, como upside, pra quem já tinha outra brecha real.
+> **"Não anuncia" não é abertura.** É a brecha que vai DENTRO do presente, ligada a
+> resultado ("nada trazendo gente nova de fora todo dia"), nunca como "vocês não anunciam".
 
 ## Meta diária
 
