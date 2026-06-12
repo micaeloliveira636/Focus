@@ -15,16 +15,16 @@ A escolha é o caminho do meio:
 
 **Vertical âncora + ponta de lança.** Ancorar na vertical **beleza & estética**
 (onde já moram 5 dos 6 nichos) e liderar com UM sub-nicho até fechar os primeiros
-casos. Dentro da vertical, **a prova transfere**: um caso de barbearia convence uma
-dona de estúdio de lash — mesmo comprador (empreendedor de beleza, 35-45), mesma
-objeção, mesma linguagem de criativo.
+casos. Dentro da vertical, **a prova transfere**: um caso de lash convence uma dona
+de salão — mesmo comprador (empreendedora de beleza, 35-45), mesma objeção, mesma
+linguagem de criativo.
 
 | Camada | O que é | Papel |
 |---|---|---|
 | **Vertical âncora** | Beleza & estética | Toda comunicação, criativo e prova vivem aqui |
-| **Ponta de lança** | Barbearia estruturada | Fecha os 2-3 primeiros casos (porte garantido, resultado rápido) |
-| **Motor de volume** | Estúdios de beleza (lash/sobrancelha/design) estruturados | Brecha altíssima + muito alvo por bairro |
-| **Expansão** | Salão estruturado, estética média | Entram quando há caso pra mostrar |
+| **Ponta de lança** | **Estúdio de lash/cílios estruturado** *(barbearia descartada — mercado ruim de lidar)* | Fecha os 2-3 primeiros casos (brecha altíssima + volume) |
+| **Motor de volume** | Sobrancelha/design + salão estruturados | Muito alvo por bairro, mesma compradora |
+| **Expansão** | Demais sub-nichos de beleza, estética média | Entram quando há caso pra mostrar |
 | **Oportunista** | Restaurante · Tier A (clínica alto ticket) | Só quando cruzar um bom de brecha — sem varredura |
 
 ---
@@ -50,14 +50,13 @@ porte** (≥R$50k/mês):
 
 ## Como o ano se organiza (fases, não datas)
 
-**Fase 1 — Ponta de lança.** Liderar com **barbearia estruturada**, varrendo as
-regiões Tier B na ordem de ataque. Objetivo: fechar **2-3 casos de barbearia**.
+**Fase 1 — Ponta de lança.** Liderar com **estúdio de lash/cílios estruturado**,
+varrendo as regiões Tier B na ordem de ataque. Objetivo: fechar **2-3 casos de lash**.
 A transição pra Fase 2 é disparada por *caso fechado*, não por esgotar a fila — na
 prática os contatos de outros sub-nichos já vão se misturando, tudo bem.
 
-**Fase 2 — Expansão.** Com prova de barbearia na mão, abrir lash → sobrancelha →
-salão → estética média, **nas mesmas regiões já mapeadas**, reaproveitando criativo
-e caso.
+**Fase 2 — Expansão.** Com prova de lash na mão, abrir sobrancelha → salão →
+estética média, **nas mesmas regiões já mapeadas**, reaproveitando criativo e caso.
 
 Ritmo de referência: **~5 missões/semana** (1 missão ≈ 1 dia ≈ 33 análises). O Tier B
 sozinho tem ~80 micro-bairros × 5 sub-nichos ≈ **400 missões** — material pra anos.
@@ -72,7 +71,7 @@ O gargalo nunca é falta de alvo; é tempo de execução. Por isso a fila só pr
 > marcar a cobertura na grade e mover o ponteiro abaixo.
 
 ### ▶ Próxima missão
-**`barbearia estruturada × Santana (Norte)`** — começar pelo núcleo Santana e descer
+**`estúdio de lash/cílios × Santana (Norte)`** — começar pelo núcleo Santana e descer
 nos micro-bairros. *(Atualizar esta linha ao avançar.)*
 
 ### Sequência de regiões (Tier B — sweet spot)
@@ -86,8 +85,8 @@ nos micro-bairros. *(Atualizar esta linha ao avançar.)*
 7. **Butantã (Oeste)** — micro a levantar
 
 ### Dentro de cada região — rotação de sub-nicho
-Na Fase 1, **só a ponta de lança** (barbearia) varre a região inteira. Na Fase 2, a
-mesma região roda na ordem: **lash → sobrancelha → salão → estética média**.
+Na Fase 1, **só a ponta de lança** (lash/cílios) varre a região inteira. Na Fase 2, a
+mesma região roda na ordem: **sobrancelha → salão → estética média**.
 
 ### Tier A (oportunista, alto ticket — só quando priorizar)
 Clínica de estética / harmonização em: Moema · Vila Mariana · Pinheiros · Itaim ·
