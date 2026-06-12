@@ -122,7 +122,11 @@ Escolher conforme o valor do prospect (não gastar Loom com 🟡):
 ### Estrutura da abertura (5 peças, nessa ordem, curta)
 
 1. **Humano + prova de que olhou de verdade** — abrir como gente e citar **1 detalhe
-   específico** que só quem entrou no feed notaria (não o número do header). *Liking.*
+   específico e funcional** que só quem entrou no feed notaria. **Funcional = é o motivo
+   do presente existir**, não enfeite. Tem que ser tão concreto que **só serviria pra
+   aquele negócio** (um post real, um serviço que ela oferece, um padrão do feed) — e
+   dito **em palavras de gente**, não de marketing. NÃO é o número do header, NÃO é fato
+   da bio ("3 anos"), NÃO é elogio decorativo. *Liking — mas funcional, não bajulação.*
 2. **Tira a pressão** — "talvez seja útil, talvez não" / "sem compromisso". Desarma o vendedor.
 3. **Nomeia a brecha como dinheiro na mesa** — o ponto cego ligado a **resultado/cliente
    perdido**, nunca "você faz errado". Uma só, a mais visceral.
@@ -147,6 +151,7 @@ O dono recebe 3 dessas por semana e ignora todas. Se a mensagem tiver qualquer u
 - ❌ **Pedir em vez de dar** (*"posso te mostrar uma ideia?"* sem ter dado nada). O erro-raiz.
 - ❌ Abrir com *"Oi! Vi o perfil de vocês…"* — abertura de robô de agência.
 - ❌ Citar número do header (*"15 mil seguidores e 5 estrelas"*) — não prova que olhou.
+- ❌ **Elogio decorativo + vocabulário de marketing** (*"feed com identidade de verdade, parabéns"*) — "parabéns" é aquecimento de vendedor e "identidade" é palavra de agência: te entrega no segundo 1. Elogio só se for **específico e em palavra de gente**.
 - ❌ Falar de si no início (*"trabalho com tráfego pago…"*) — vira sobre você.
 - ❌ Jargão de guru (*"escalar", "alavancar", "sem depender do algoritmo"*) — ranço da `preferencias.md`.
 - ❌ Pedir reunião/tempo antes de entregar valor — é a coisa mais cara dele, sem ter dado nada.
