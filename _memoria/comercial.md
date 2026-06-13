@@ -112,6 +112,8 @@ Escolher conforme o valor do prospect (não gastar Loom com 🟡):
   `comercial/roteiro-loom.md`.**
 - **🟡 morno / volume:** **uma ideia concreta já dada em texto** (1 anúncio que eu
   rodaria, ou um print do perfil com 2 anotações). Barato de produzir, ainda é "dado".
+  **Swipe file pronto (4 ângulos de anúncio de lash + espião do concorrente):
+  `comercial/swipe-lash.md`** — troca 3 campos e tá pronto.
 - Em todos: enquadrar como **"é seu, usa com quem quiser, zero compromisso"** (tira a
   pressão — gatilho do Sobral, reduz a defesa de "lá vem vendedor").
 
