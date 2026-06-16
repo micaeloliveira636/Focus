@@ -56,6 +56,16 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 - **Devices de marcação (a assinatura do estilo):** círculo desenhado à mão (marcador) em volta da palavra-chave · sublinhado-marcador · texto **riscado** (line-through roxo). Usar com parcimônia, 1 por slide.
 - **Recorrentes:** lobo só-símbolo em **contorno branco** (`logo-simbolo-branco.png`) no topo · **pílula vertical** de contorno (roxo ou teal) como acento · **"ARRASTA →"** em pílula no rodapé · CTA final com lockup completo + botão roxo.
 
+### Inspiração externa (refs do dono em `identidade/referencias/inspiracao/`)
+
+Direções a puxar dessas refs (sempre traduzindo pra paleta Focus — roxo + teal sobre escuro):
+
+- **Capa liderada por FOTO** + uma palavra/frase gigante por cima (estilo @macroplaneta / @adarshdesign). Foto cinematográfica de fundo com overlay escuro + título bold. Depende de foto (Canva / OpenAI / banco / foto do cliente).
+- **Tipografia misturada:** display pesada + um **acento manuscrito/script** numa palavra (estilo @adarshdesign "Stop Using *Montserrat*"). Combina com o device de rabisco à mão.
+- **Pop de cor** num único elemento (verde/teal neon ou roxo saturado) — nunca poluir, é 1 acento.
+- **Pessoa recortada** + cor forte + rabisco na palavra-chave (estilo @pinovaa.psd) pra posts mais punchy.
+- Variante **editorial/sofisticada** (serifa, clima premium — estilo @cacaubelragocreative) pra temas de autoridade/branding.
+
 ---
 
 ## Elementos-chave
