@@ -16,15 +16,11 @@
     background:var(--preto); color:var(--branco);
     padding:96px 90px; display:flex; flex-direction:column;
   }
-  /* textura de estrelas sutil */
+  /* textura real de estrelas (black overlay da marca) sobre o glow */
   .slide::before{
-    content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
-    background-image:
-      radial-gradient(1.5px 1.5px at 18% 22%, rgba(255,255,255,.20), transparent),
-      radial-gradient(1.5px 1.5px at 72% 14%, rgba(255,255,255,.14), transparent),
-      radial-gradient(1.5px 1.5px at 40% 60%, rgba(255,255,255,.10), transparent),
-      radial-gradient(1.5px 1.5px at 86% 70%, rgba(255,255,255,.12), transparent),
-      radial-gradient(1.5px 1.5px at 28% 84%, rgba(255,255,255,.10), transparent);
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:url('../../../identidade/textura-stars.png') center/cover no-repeat;
+    opacity:.6; mix-blend-mode:screen;
   }
   /* glow roxo radial — posição varia por slide */
   .g-tr{ background:radial-gradient(120% 80% at 100% 0%, #3D1766 0%, #161616 55%); }
