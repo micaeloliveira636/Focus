@@ -10,6 +10,7 @@
 **Equipe:** Sozinho (toca tudo — comercial, gestão de tráfego, conteúdo, atendimento)
 **Ferramentas:** ClickUp (CRM e operação) — conectado via MCP. *(preencher mais conforme conectar — Meta Ads, Google Ads, etc.)*
 **Principais entregas:** Gestão de tráfego (anúncios), estruturação de presença/conteúdo em redes sociais, geração de leads e vendas
+**Instagram:** @focusprogress (handle oficial — usar em todo conteúdo/legenda)
 
 ## Perfil de cliente ideal
 

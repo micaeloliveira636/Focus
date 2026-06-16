@@ -14,7 +14,7 @@
 5. **NÚMERO** — 9 em 10 pesquisam online antes de escolher um serviço local. / Se nessa busca você não aparece, a decisão acontece sem você na mesa.
 6. **A VIRADA** — Presença digital não é postar. É *aparecer na hora certa.* / Não é sobre seguidor ou dancinha. É estar visível exatamente quando alguém está decidindo comprar aquilo que você vende.
 7. **O QUE MUDA** — Um canal de venda que não depende de sorte. / Anúncio que coloca seu nome na frente de quem está procurando, e uma presença que confirma que você é a escolha certa. A indicação vira reforço — não a sua única fonte de cliente.
-8. **CTA FINAL** — Quer ver como o seu negócio aparece hoje? / A Focus faz um diagnóstico da sua presença digital — sem compromisso. → @agenciafocus
+8. **CTA FINAL** — Quer ver como o seu negócio aparece hoje? / A Focus faz um diagnóstico da sua presença digital — sem compromisso. → @focusprogress
 
 ## Títulos de capa alternativos (não usados)
 - A: Seu negócio é bom. Mas ninguém te acha.

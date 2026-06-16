@@ -8,16 +8,22 @@
 
 ## Cores
 
-> Valores lidos do brand board real da Focus (`focus-brandboard.png`, baixado do Drive da marca).
+> HEX oficiais do brand board da Focus (confirmados pelo dono da marca).
 
-- **Fundo principal:** Preto / quase-preto (#0A0A0A) — com brilho roxo radial sutil + textura de estrelas ao fundo
+**Paleta:**
 
-- **Cor de destaque / CTA:** Roxo Focus (#7C2FD6) — violeta vibrante e saturado, o protagonista
+| Cor | HEX | Uso |
+|---|---|---|
+| Branco | `#FFFFFF` | Texto principal sobre escuro |
+| Roxo Focus | `#692ABF` | Destaque / CTA — protagonista |
+| Roxo médio | `#4E208D` | Apoio, cards, variação |
+| Roxo escuro | `#421F74` | Apoio, profundidade |
+| Roxo profundo | `#150827` | Fundo escuro alternativo / cards |
+| Preto Focus | `#161616` | Fundo principal (não é preto puro) |
 
-- **Texto principal:** Branco (#FFFFFF)
+**Degradê oficial:** `#3D1766` → `#4C1D83` → `#481B7B` → `#150824` (roxo profundo → quase-preto). Usar em fundos com profundidade, faixas e CTAs.
 
-- **Fundo alternativo / cards:** Roxo profundo / degradê roxo→preto (#3D1466)
-
+- **Fundo principal:** Preto Focus (`#161616`) com brilho roxo radial sutil + textura de estrelas (black overlay)
 - **Cor proibida:** Tons pastéis, cores quentes (laranja/amarelo) — fogem da marca
 
 ---
@@ -46,6 +52,21 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 - Border-radius dos cards: suave (cantos levemente arredondados)
 - Botões: roxo sólido ou contorno roxo sobre fundo escuro
 - Sombras: glow/brilho roxo sutil; texturas "liquid" e "black overlay"
+
+### Texturas (3 oficiais, vistas no brand board)
+
+1. **Black overlay** (`identidade/textura-stars.png`) — papel preto amassado com respingos brancos (estrelas reais). Textura de fundo principal dos materiais escuros. **Preferir o arquivo real a simular estrelas em CSS** → usar como `background-image` dos slides escuros, com overlay escuro por cima pra preservar a legibilidade.
+2. **Liquid texture** (`identidade/textura-liquid.png`) — textura líquida/ondulada escura, para fundos com mais profundidade.
+3. **Elementos geométricos** (`identidade/textura-geometrica.png`) — padrão de linhas topográficas finas (mesma linguagem do traço do lobo).
+
+> Os 3 arquivos vêm do Drive da marca. Se ainda não estiverem em `identidade/`, pedir pro dono soltar lá com esses nomes.
+
+### Variações de logo (brand board)
+
+- **Selo circular:** lobo no centro com "AGÊNCIA FOCUS • AGÊNCIA FOCUS •" girando ao redor (versão branca e versão sobre roxo)
+- **Lockup horizontal:** lobo + "AGÉNCIA | FOCUS" deitado (versão sobre branco e sobre roxo)
+- **Lockup vertical:** lobo + "FOCUS" embaixo (o `logo.png` / `logo-transp.png`)
+- Todas existem em branco (sobre fundo escuro/roxo) e em roxo (sobre fundo claro)
 
 ---
 
