@@ -14,6 +14,11 @@ Thumbs.db
 .claude/file-history/
 .claude/backups/
 
+# Segredos / chaves de API (NUNCA versionar)
+.env
+.env.*
+!.env.example
+
 # Dependências
 node_modules/
 
