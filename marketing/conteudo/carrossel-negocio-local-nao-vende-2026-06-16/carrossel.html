@@ -3,188 +3,194 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   *{ margin:0; padding:0; box-sizing:border-box; }
   :root{
-    --preto:#161616; --roxo:#692ABF; --roxo-claro:#9B5FE0; --roxo-fundo:#3D1766;
-    --roxo-deep:#150824; --branco:#FFFFFF; --cinza:#B9B4C7; --cinza2:#7d7690;
+    --roxo:#692ABF; --roxo-claro:#9B5FE0; --teal:#19E0C0;
+    --branco:#FFFFFF; --cinza:#C9C3D6;
+    --tex-liquid:url('../../../identidade/textura-liquid.png');
+    --tex-geo:url('../../../identidade/textura-geometrica.png');
   }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; -webkit-font-smoothing:antialiased; }
 
-  .slide{
-    width:1080px; height:1350px; position:relative; overflow:hidden;
-    background:var(--preto); color:var(--branco);
-    padding:96px 90px; display:flex; flex-direction:column;
-  }
-  /* textura real de estrelas (black overlay da marca) sobre o glow */
-  .slide::before{
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:url('../../../identidade/textura-stars.png') center/cover no-repeat;
-    opacity:.6; mix-blend-mode:screen;
-  }
-  /* glow roxo radial — posição varia por slide */
-  .g-tr{ background:radial-gradient(120% 80% at 100% 0%, #3D1766 0%, #161616 55%); }
-  .g-bl{ background:radial-gradient(110% 75% at 0% 100%, #3D1766 0%, #161616 55%); }
-  .g-c { background:radial-gradient(90% 60% at 50% 45%, #4C1D83 0%, #150824 62%); }
-  .g-deep{ background:radial-gradient(130% 90% at 100% 100%, #481B7B 0%, #150824 60%); }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
+    color:var(--branco); padding:96px 84px; display:flex; flex-direction:column;
+    background:#0c0b11; }
+  /* glow de canto (varia por slide via style inline) */
+  .slide{ background-color:#0c0b11; }
+  /* textura liquid sutil sobre o glow */
+  .slide::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+    background:var(--tex-liquid) center/cover no-repeat; opacity:.22; mix-blend-mode:screen; }
+  .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
 
-  .conteudo{ position:relative; z-index:2; display:flex; flex-direction:column; height:100%; }
+  /* topo */
+  .topo{ display:flex; align-items:flex-start; justify-content:space-between; }
+  .topo img{ height:54px; width:auto; }
+  .pill-v{ width:17px; height:58px; border:2px solid rgba(155,95,224,.75); border-radius:12px; }
+  .pill-v.teal{ border-color:rgba(25,224,192,.7); }
 
-  /* topo: logo + contador */
-  .topo{ display:flex; align-items:center; justify-content:space-between; }
-  .topo img{ width:118px; height:auto; }
-  .contador{ font-size:17px; font-weight:600; letter-spacing:.18em; color:var(--cinza2); }
-
-  /* eyebrow / kicker */
-  .kicker{ font-size:16px; font-weight:800; letter-spacing:.30em; text-transform:uppercase; color:var(--roxo-claro); }
-  .regua{ width:74px; height:4px; background:linear-gradient(90deg,var(--roxo),transparent); border-radius:3px; margin:26px 0; }
-
-  /* corpo central */
+  /* tipografia */
+  .kicker{ font-size:15px; font-weight:800; letter-spacing:.3em; text-transform:uppercase; color:var(--roxo-claro); }
   .meio{ flex:1; display:flex; flex-direction:column; justify-content:center; }
-  h1{ font-size:88px; font-weight:800; line-height:1.0; letter-spacing:-.04em; }
-  h1 .roxo{ color:var(--roxo-claro); }
-  h2{ font-size:62px; font-weight:800; line-height:1.05; letter-spacing:-.035em; }
-  h2 .roxo{ color:var(--roxo-claro); }
-  p.corpo{ font-size:27px; font-weight:400; line-height:1.55; color:var(--cinza); margin-top:30px; max-width:830px; }
+  h1{ font-size:80px; font-weight:900; line-height:.98; letter-spacing:-.02em; text-transform:uppercase; }
+  h2{ font-size:50px; font-weight:900; line-height:1.02; letter-spacing:-.015em; text-transform:uppercase; }
+  p.corpo{ font-size:26px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:26px; max-width:830px; }
+  p.corpo b{ color:#fff; font-weight:700; }
 
-  /* numeral gigante */
-  .numero{ font-size:188px; font-weight:800; line-height:.9; letter-spacing:-.04em;
-    white-space:nowrap; color:var(--roxo-claro); text-shadow:0 0 80px rgba(105,42,191,.6); }
+  .hl{ color:var(--roxo-claro); }
+  /* sublinhado marcador */
+  .ul{ box-shadow: inset 0 -.10em 0 0 rgba(105,42,191,.85); }
+  /* riscado */
+  .strike{ text-decoration: line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:5px; }
+  /* círculo desenhado à mão (marcador) */
+  .circ{ position:relative; display:inline-block; padding:0 .18em; }
+  .circ::before{ content:""; position:absolute; inset:-22% -6%; z-index:-1;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%239B5FE0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%; }
 
-  /* rodapé / handle */
-  .rodape{ display:flex; align-items:center; justify-content:space-between;
-    border-top:1px solid rgba(255,255,255,.12); padding-top:26px; }
-  .handle{ font-size:20px; font-weight:600; color:var(--cinza); letter-spacing:.02em; }
-  .arrasta{ font-size:18px; font-weight:600; color:var(--roxo-claro); letter-spacing:.06em; }
+  /* numeral */
+  .num{ font-size:150px; font-weight:900; line-height:.9; letter-spacing:-.03em; }
 
-  /* capa */
-  .capa h1{ font-size:96px; }
-  .sub{ font-size:28px; font-weight:400; color:var(--cinza); margin-top:30px; line-height:1.5; max-width:820px; }
+  /* arrasta */
+  .arrasta{ position:absolute; right:84px; bottom:74px; z-index:4;
+    border:1.5px solid rgba(255,255,255,.42); border-radius:40px; padding:13px 28px;
+    font-size:17px; font-weight:600; letter-spacing:.14em; color:#fff; text-transform:uppercase; }
 
-  /* CTA final */
-  .cta{ align-items:center; text-align:center; }
-  .cta .logo-grande{ width:240px; height:auto; margin-bottom:8px; }
-  .cta h2{ font-size:66px; margin-top:10px; }
-  .cta .pill{ display:inline-block; margin-top:44px; background:var(--roxo); color:#fff;
-    font-size:26px; font-weight:700; letter-spacing:.01em; padding:26px 52px; border-radius:60px;
-    box-shadow:0 0 60px rgba(105,42,191,.5); }
-  .cta .handle-cta{ margin-top:34px; font-size:24px; font-weight:600; color:var(--cinza); letter-spacing:.04em; }
+  /* ===== slide claro (estatística) ===== */
+  .slide.claro{ background:#F2EEE6; color:#161616; }
+  .slide.claro::after{ background:var(--tex-geo) center/cover no-repeat; opacity:.16; mix-blend-mode:multiply; }
+  .slide.claro .kicker{ color:var(--roxo); }
+  .slide.claro p.corpo{ color:#4a4458; }
+  .slide.claro .num{ color:var(--roxo); }
+  .slide.claro .marca-badge{ width:84px; height:84px; border-radius:20px; background:#161616;
+    display:flex; align-items:center; justify-content:center; }
+  .slide.claro .marca-badge img{ height:48px; }
+  .slide.claro .arrasta{ border-color:rgba(22,22,22,.35); color:#161616; }
+  .slide.claro .pill-v{ border-color:rgba(105,42,191,.6); }
+
+  /* ===== CTA final ===== */
+  .cta .meio{ align-items:center; text-align:center; justify-content:center; }
+  .cta .logo-grande{ height:120px; margin-bottom:26px; }
+  .cta h2{ font-size:58px; }
+  .cta .botao{ display:inline-block; margin-top:40px; background:var(--roxo); color:#fff;
+    font-size:23px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    padding:24px 50px; border-radius:54px; box-shadow:0 0 70px rgba(105,42,191,.55); }
+  .cta .handle{ margin-top:30px; font-size:23px; font-weight:600; color:var(--cinza); }
 </style>
 </head>
 <body>
 
-<!-- ===== SLIDE 1 — CAPA ===== -->
-<section class="slide g-tr capa">
+<!-- 1 CAPA -->
+<section class="slide" style="background:
+    radial-gradient(70% 50% at 12% 4%, rgba(105,42,191,.42), transparent 60%),
+    radial-gradient(60% 45% at 100% 100%, rgba(25,224,192,.12), transparent 55%), #0c0b11;">
   <div class="conteudo">
     <div class="topo">
-      <img src="logo.png" alt="FOCUS">
-      <span class="contador">01 / 08</span>
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS">
+      <div class="pill-v teal"></div>
     </div>
     <div class="meio">
       <span class="kicker">Presença digital</span>
-      <div class="regua"></div>
-      <h1>Te indicaram.<br>A pessoa procurou.<br><span class="roxo">Não te achou.</span></h1>
-      <p class="sub">Como negócios locais bons perdem cliente todo dia sem nem perceber — e o que muda quando você passa a aparecer.</p>
-    </div>
-    <div class="rodape">
-      <span class="handle">@focusprogress</span>
-      <span class="arrasta">arrasta →</span>
+      <h1 style="margin-top:22px;">Te indicaram.<br>A pessoa procurou.<br><span class="hl circ">Não te achou.</span></h1>
+      <p class="corpo">Como negócio local bom perde cliente todo dia sem nem perceber — e o que muda quando você passa a aparecer.</p>
     </div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 2 — A CENA ===== -->
-<section class="slide g-bl">
+<!-- 2 A CENA -->
+<section class="slide" style="background:
+    radial-gradient(65% 50% at 100% 0%, rgba(105,42,191,.38), transparent 58%), #0c0b11;">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">02 / 08</span></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">A cena</span>
-      <div class="regua"></div>
-      <h2>Alguém ouviu falar de você e foi te procurar no Google.</h2>
-      <p class="corpo">Digitou o nome do seu serviço na sua cidade. O que apareceu? Três concorrentes, um mapa, um monte de avaliação. Você não estava lá.</p>
+      <h2 style="margin-top:20px;">Ouviram falar de você e foram <span class="hl">te procurar no Google</span></h2>
+      <p class="corpo">Digitou o nome do seu serviço na sua cidade. O que apareceu? Três concorrentes, um mapa, um monte de avaliação. <b>Você não estava lá.</b></p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 3 — O PROBLEMA ===== -->
-<section class="slide g-deep">
+<!-- 3 O PROBLEMA -->
+<section class="slide" style="background:
+    radial-gradient(70% 55% at 0% 100%, rgba(105,42,191,.40), transparent 60%), #0c0b11;">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">03 / 08</span></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v teal"></div></div>
     <div class="meio">
       <span class="kicker">O problema</span>
-      <div class="regua"></div>
-      <h2>Boca a boca só alcança <span class="roxo">quem já te conhece.</span></h2>
-      <p class="corpo">É o melhor marketing que existe — e tem um teto. Ele para onde a sua rede de contatos para. Quem está um passo além nunca ouve o seu nome.</p>
+      <h2 style="margin-top:20px;">Boca a boca só alcança <span class="ul">quem já te conhece</span></h2>
+      <p class="corpo">É o melhor marketing que existe — e tem um teto. Ele para onde a sua rede de contatos para. Quem está um passo além <b>nunca ouve o seu nome.</b></p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 4 — ONDE VAZA ===== -->
-<section class="slide g-tr">
+<!-- 4 ONDE VAZA -->
+<section class="slide" style="background:
+    radial-gradient(60% 50% at 100% 8%, rgba(105,42,191,.36), transparent 58%),
+    radial-gradient(50% 40% at 0% 100%, rgba(25,224,192,.10), transparent 55%), #0c0b11;">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">04 / 08</span></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">Onde vaza</span>
-      <div class="regua"></div>
-      <h2>A indicação te levou até a porta. A internet abriu a do concorrente.</h2>
-      <p class="corpo">A pessoa recebeu seu nome, foi pesquisar pra confirmar e esbarrou em quem investiu pra aparecer. Você perdeu uma venda que era sua — sem nem saber que ela existiu.</p>
+      <h2 style="margin-top:20px;">A indicação te levou à porta. A internet abriu a <span class="hl">do concorrente</span></h2>
+      <p class="corpo">A pessoa recebeu seu nome, foi pesquisar pra confirmar e esbarrou em quem investiu pra aparecer. <b>Você perdeu uma venda que era sua</b> — sem nem saber que ela existiu.</p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 5 — NÚMERO ===== -->
-<section class="slide g-c">
+<!-- 5 NÚMERO (claro) -->
+<section class="slide claro">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">05 / 08</span></div>
+    <div class="topo"><div class="marca-badge"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"></div><div class="pill-v"></div></div>
     <div class="meio">
-      <span class="numero">9&nbsp;em&nbsp;10</span>
-      <h2 style="margin-top:34px;">pesquisam online antes de escolher um serviço local.</h2>
+      <span class="num"><span class="circ">9 em 10</span></span>
+      <h2 style="margin-top:36px; color:#161616;">pesquisam online antes de escolher um serviço local</h2>
       <p class="corpo">Se nessa busca você não aparece, a decisão acontece sem você na mesa.</p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 6 — A VIRADA ===== -->
-<section class="slide g-deep">
+<!-- 6 A VIRADA -->
+<section class="slide" style="background:
+    radial-gradient(70% 55% at 100% 100%, rgba(105,42,191,.42), transparent 60%), #0c0b11;">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">06 / 08</span></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v teal"></div></div>
     <div class="meio">
       <span class="kicker">A virada</span>
-      <div class="regua"></div>
-      <h2>Presença digital não é postar. É <span class="roxo">aparecer na hora certa.</span></h2>
+      <h2 style="margin-top:20px;">Presença digital não é postar. É <span class="hl circ">aparecer na hora certa</span></h2>
       <p class="corpo">Não é sobre seguidor ou dancinha. É estar visível exatamente quando alguém está decidindo comprar aquilo que você vende.</p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 7 — O QUE MUDA ===== -->
-<section class="slide g-bl">
+<!-- 7 O QUE MUDA -->
+<section class="slide" style="background:
+    radial-gradient(65% 50% at 6% 0%, rgba(105,42,191,.40), transparent 58%), #0c0b11;">
   <div class="conteudo">
-    <div class="topo"><img src="logo.png" alt="FOCUS"><span class="contador">07 / 08</span></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">O que muda</span>
-      <div class="regua"></div>
-      <h2>Um canal de venda que não depende de sorte.</h2>
-      <p class="corpo">Anúncio que coloca seu nome na frente de quem está procurando, e uma presença que confirma que você é a escolha certa. A indicação vira reforço — não a sua única fonte de cliente.</p>
+      <h2 style="margin-top:20px;">Um canal de venda que <span class="hl">não depende de sorte</span></h2>
+      <p class="corpo">Anúncio que coloca seu nome na frente de quem está procurando, e uma presença que confirma que você é a escolha certa. <b>A indicação vira reforço</b> — não a sua única fonte de cliente.</p>
     </div>
-    <div class="rodape"><span class="handle">@focusprogress</span><span class="arrasta">arrasta →</span></div>
   </div>
+  <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- ===== SLIDE 8 — CTA FINAL ===== -->
-<section class="slide g-c cta">
-  <div class="conteudo" style="justify-content:center; align-items:center; text-align:center;">
-    <div class="meio" style="flex:none; align-items:center;">
-      <img class="logo-grande" src="logo.png" alt="FOCUS">
-      <h2>Quer ver como o seu negócio<br>aparece hoje?</h2>
-      <p class="corpo" style="text-align:center;">A Focus faz um diagnóstico da sua presença digital — sem compromisso.</p>
-      <span class="pill">Chama no direct →</span>
-      <span class="handle-cta">@focusprogress</span>
+<!-- 8 CTA FINAL -->
+<section class="slide cta" style="background:
+    radial-gradient(75% 55% at 50% 38%, rgba(105,42,191,.5), transparent 62%), #0c0b11;">
+  <div class="conteudo">
+    <div class="meio">
+      <img class="logo-grande" src="../../../identidade/logo-transp.png" alt="FOCUS">
+      <h2>Quer ver como o seu<br>negócio aparece hoje?</h2>
+      <p class="corpo" style="text-align:center; max-width:720px;">A Focus faz um diagnóstico da sua presença digital — sem compromisso.</p>
+      <span class="botao">Chama no direct →</span>
+      <span class="handle">@focusprogress</span>
     </div>
   </div>
 </section>

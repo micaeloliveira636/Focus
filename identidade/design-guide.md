@@ -46,6 +46,18 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 
 ---
 
+## Estética de carrossel (padrão do designer)
+
+> Referências reais do designer em `identidade/referencias/`. Todo carrossel deve seguir isso.
+
+- **Fundo escuro full-bleed** (#0c0b11) com **textura sutil** — liquid marble em **baixa opacidade (~20%, blend screen)**. Textura NUNCA em 100% (fica feio). Glows de canto: roxo principal + **toque de teal/verde** (`#19E0C0`) como acento secundário sutil.
+- **Slide de estatística/dado em fundo CLARO** (#F2EEE6) com a textura **geométrica/topográfica** em cinza claro (~16%, blend multiply) + texto escuro. É a exceção ao "marca vive no escuro" — usar só pra dado/número, como o designer faz.
+- **Tipografia:** Montserrat **900, CAIXA-ALTA**, kerning apertado (-0.02em) nos títulos. Palavra-chave em **roxo claro** (`#9B5FE0`).
+- **Devices de marcação (a assinatura do estilo):** círculo desenhado à mão (marcador) em volta da palavra-chave · sublinhado-marcador · texto **riscado** (line-through roxo). Usar com parcimônia, 1 por slide.
+- **Recorrentes:** lobo só-símbolo em **contorno branco** (`logo-simbolo-branco.png`) no topo · **pílula vertical** de contorno (roxo ou teal) como acento · **"ARRASTA →"** em pílula no rodapé · CTA final com lockup completo + botão roxo.
+
+---
+
 ## Elementos-chave
 
 - Bordas: finas, geométricas, em roxo sobre fundo escuro
