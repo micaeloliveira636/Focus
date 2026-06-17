@@ -6,15 +6,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   *{ margin:0; padding:0; box-sizing:border-box; }
   :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
-    --liquid:url('../../../identidade/textura-liquid.png');
-    --stars:url('../../../identidade/textura-stars.png');
-    --geo:url('../../../identidade/textura-geometrica.png'); }
+    --plastic:url('../../../identidade/textura-plastic.png');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg'); }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
 
-  /* cena integrada (a estrela) com leve realce de grade */
+  /* cena integrada (a estrela): recuada só um tiquinho (blur leve + escurece) pro texto mandar */
   .cena{ position:absolute; inset:0; z-index:0; background:url('pecas/cap-cena.png') center/cover no-repeat;
-    filter:contrast(1.07) saturate(1.06) brightness(1.02); }
+    filter:contrast(1.06) saturate(1.05) brightness(.94) blur(0.9px); transform:scale(1.02); }
   /* respiro de desfoque: o canto escuro da esquerda recua levemente, empurra o texto pra frente */
   .blur{ position:absolute; left:0; top:0; width:46%; height:100%; z-index:1; pointer-events:none;
     backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
@@ -26,29 +26,25 @@
   /* scrim só na esquerda, garante leitura sem apagar a parede */
   .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none;
     background:linear-gradient(95deg, rgba(10,7,15,.72) 0%, rgba(10,7,15,.34) 34%, rgba(10,7,15,0) 56%); }
-  /* pilha das 3 texturas da identidade (grit, integra o texto à superfície) */
-  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none;
-    background-image: var(--geo), var(--stars), var(--liquid);
-    background-position:center; background-repeat:no-repeat; background-size:cover,160%,cover;
-    background-blend-mode: soft-light, overlay, normal; opacity:.30; mix-blend-mode:soft-light; }
+  /* OVERLAY DE TEXTURA sobre a imagem de fundo (texturização real, mata o liso de IA) */
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:soft-light; opacity:.30; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.24; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.14; }
   /* sombra macia ATRÁS do bloco de texto (separa do fundo, dá densidade) */
   .sombratxt{ position:absolute; z-index:3; left:-120px; top:420px; width:720px; height:520px; pointer-events:none;
     background:radial-gradient(closest-side, rgba(5,3,9,.82), rgba(5,3,9,.4) 58%, transparent 78%);
     filter:blur(14px); }
 
   /* tipografia limpa no espaço negativo da esquerda */
-  .kicker{ position:absolute; z-index:5; left:84px; top:476px; font-size:18px; font-weight:700;
-    letter-spacing:.5em; text-transform:uppercase; color:var(--roxo-claro); text-shadow:0 2px 16px rgba(0,0,0,.9); }
-  .hero{ position:absolute; z-index:5; left:80px; top:520px; font-weight:900; text-transform:uppercase;
-    font-size:106px; line-height:.92; letter-spacing:-.035em; color:#fff;
-    text-shadow:0 6px 36px rgba(0,0,0,.85), 0 2px 8px rgba(0,0,0,.7), 0 1px 2px rgba(0,0,0,.6); }
-  .hero .ac{ color:var(--roxo-claro); text-shadow:0 6px 30px rgba(105,42,191,.55), 0 2px 8px rgba(0,0,0,.7); }
-  /* fiozinho de acento */
-  .rule{ position:absolute; z-index:5; left:86px; top:498px; width:54px; height:3px; background:var(--roxo-claro);
-    box-shadow:0 0 18px rgba(155,95,224,.7); }
-  /* rabisco à mão sob "DO NADA" (1 device, parcimônia) */
-  .rabisco{ position:absolute; z-index:5; left:74px; top:812px; width:452px; height:70px; pointer-events:none;
-    filter:drop-shadow(0 4px 10px rgba(105,42,191,.5)); }
+  .hero{ position:absolute; left:80px; top:520px; font-weight:900; text-transform:uppercase;
+    font-size:108px; line-height:.92; letter-spacing:-.035em; }
+  /* sombra PROJETADA do próprio texto (camada dupla deslocada, atrás) */
+  .heroShadow{ z-index:4; color:rgba(3,2,6,.92); transform:translate(7px,20px); filter:blur(6px); }
+  .heroShadow .ac{ color:rgba(3,2,6,.92); }
+  .heroFront{ z-index:5; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,.6); }
+  .heroFront .ac{ color:var(--roxo-claro); text-shadow:0 4px 22px rgba(105,42,191,.5), 0 2px 6px rgba(0,0,0,.6); }
 
   .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
   .topo img{ height:70px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
@@ -58,7 +54,7 @@
     font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
 
   /* grão fino unificando o texto à cena */
-  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.32; mix-blend-mode:overlay;
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.52; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:300px 300px; }
   .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
     background:radial-gradient(125% 95% at 60% 45%, transparent 56%, rgba(0,0,0,.5) 100%); }
@@ -70,7 +66,11 @@
     <div class="blur"></div>
     <div class="warm"></div>
     <div class="scrim"></div>
-    <div class="tex"></div>
+    <div class="tex">
+      <span class="t-plastic"></span>
+      <span class="t-scratch"></span>
+      <span class="t-fabric"></span>
+    </div>
     <div class="sombratxt"></div>
 
     <div class="topo">
@@ -78,13 +78,8 @@
       <div class="pill-v"></div>
     </div>
 
-    <div class="rule"></div>
-    <div class="kicker">Criatividade</div>
-    <div class="hero">Ninguém<br>cria<br><span class="ac">do nada</span></div>
-    <svg class="rabisco" viewBox="0 0 452 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 38 C 96 22 196 44 286 32 C 350 23 412 39 444 27" stroke="#B98BEE" stroke-width="8" stroke-linecap="round"/>
-      <path d="M22 52 C 110 40 210 58 300 47 C 356 40 410 52 436 44" stroke="#9B5FE0" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
-    </svg>
+    <div class="hero heroShadow">Ninguém<br>cria<br><span class="ac">do nada</span></div>
+    <div class="hero heroFront">Ninguém<br>cria<br><span class="ac">do nada</span></div>
 
     <div class="arrasta">Arrasta →</div>
     <div class="grain"></div>
