@@ -8,211 +8,226 @@
   :root{
     --roxo:#692ABF; --roxo-claro:#9B5FE0; --branco:#FFFFFF; --cinza:#C9C3D6;
     --liquid:url('../../../identidade/textura-liquid.png');
+    --stars:url('../../../identidade/textura-stars.png');
     --geo:url('../../../identidade/textura-geometrica.png');
   }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; -webkit-font-smoothing:antialiased; }
 
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
-    color:var(--branco); padding:92px 80px; display:flex; flex-direction:column; background:#0b0a10; }
-  /* pilha de texturas da identidade (liquid + stars + geométrica) — aparente */
-  .slide.design::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
-    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
-    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
-    background-blend-mode: soft-light, overlay, normal; opacity:.5; mix-blend-mode:soft-light; }
-  .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
+    color:var(--branco); padding:88px 80px; display:flex; flex-direction:column; background:#0b0a10; }
+  .conteudo{ position:relative; z-index:5; display:flex; flex-direction:column; height:100%; }
+
+  /* ===== MOODBOARD: cards de referência espalhados (usa as 3 texturas) ===== */
+  .moodboard{ position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .card{ position:absolute; border:1.5px solid rgba(155,95,224,.22); border-radius:9px;
+    box-shadow:0 30px 70px rgba(0,0,0,.65); background-size:cover; background-position:center; }
+  .tex-liquid{ background-image:var(--liquid); }
+  .tex-stars{ background-image:var(--stars); background-color:#0d0a16; }
+  .tex-geo{ background-image:var(--geo); background-color:#150827; }
+  .card-roxo{ background:linear-gradient(135deg,#7B34D6,#481B7B); }
+  /* véu radial: centro escuro pro texto, bordas deixam os cards aparecerem */
+  .veu{ position:absolute; inset:0; z-index:1; pointer-events:none; background:
+    radial-gradient(62% 52% at 50% 50%, rgba(11,10,16,.80) 0%, rgba(11,10,16,.6) 60%, rgba(11,10,16,.42) 100%),
+    radial-gradient(80% 60% at 50% 50%, rgba(105,42,191,.16), transparent 70%); }
+  /* faixa de linework geométrico (geometrica como gráfico, não fundo) */
+  .linework{ position:absolute; z-index:1; pointer-events:none; opacity:.5; mix-blend-mode:screen;
+    background:var(--geo) center/cover no-repeat; }
 
   /* topo */
   .topo{ display:flex; align-items:flex-start; justify-content:space-between; }
-  .topo img{ height:74px; width:auto; }
-  .pill-v{ width:16px; height:56px; border:2px solid rgba(155,95,224,.8); border-radius:12px; }
+  .topo img{ height:72px; width:auto; }
+  .pill-v{ width:16px; height:54px; border:2px solid rgba(155,95,224,.8); border-radius:12px; }
 
-  .kicker{ font-size:15px; font-weight:800; letter-spacing:.32em; text-transform:uppercase; color:var(--roxo-claro);
-    text-shadow:0 2px 14px rgba(0,0,0,.6); }
-  .meio{ flex:1; display:flex; flex-direction:column; justify-content:center; }
-  .meio.bottom{ justify-content:flex-end; padding-bottom:78px; }
-  .foto .meio.bottom p.corpo{ max-width:680px; }
-  h1{ font-size:61px; font-weight:900; line-height:1.02; letter-spacing:-.025em; text-transform:uppercase; }
-  h2{ font-size:52px; font-weight:900; line-height:1.03; letter-spacing:-.02em; text-transform:uppercase; }
-  p.corpo{ font-size:25px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:22px; max-width:800px; }
+  /* ===== TEXTO: SEMPRE centralizado e grande ===== */
+  .meio{ flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+  .kicker{ font-size:16px; font-weight:800; letter-spacing:.36em; text-transform:uppercase; color:var(--roxo-claro);
+    text-shadow:0 2px 14px rgba(0,0,0,.7); margin-bottom:30px; }
+  .hero{ font-size:104px; font-weight:900; line-height:.94; letter-spacing:-.035em; text-transform:uppercase;
+    text-shadow:0 8px 44px rgba(0,0,0,.55); }
+  h2{ font-size:70px; font-weight:900; line-height:1.0; letter-spacing:-.028em; text-transform:uppercase;
+    text-shadow:0 6px 34px rgba(0,0,0,.7); }
+  p.corpo{ font-size:27px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:30px; max-width:740px;
+    text-shadow:0 2px 18px rgba(0,0,0,.8); }
   p.corpo b{ color:#fff; font-weight:700; }
-  .foto h1,.foto h2,.foto p.corpo{ text-shadow:0 3px 30px rgba(0,0,0,.9); }
-  .foto p.corpo{ color:#E6E1F0; }
 
   .hl{ color:var(--roxo-claro); }
-  .ul{ box-shadow: inset 0 -.10em 0 0 rgba(105,42,191,.9); }
-  .strike{ text-decoration:line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:5px; }
+  .strike{ text-decoration:line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:6px; }
   .circ{ position:relative; display:inline-block; padding:0 .14em; }
-  .circ::before{ content:""; position:absolute; inset:-20% -5%; z-index:-1;
+  .circ::before{ content:""; position:absolute; inset:-22% -6%; z-index:-1;
     background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%239B5FE0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%; }
-
-  /* grifo-bloco (marca de marcador roxo atrás da palavra) */
-  .mark{ position:relative; display:inline-block; padding:0 .1em; color:#fff; }
-  .mark::before{ content:""; position:absolute; inset:8% -5%; z-index:-1;
-    background:var(--roxo); transform:rotate(-1.4deg); border-radius:4px; box-shadow:0 6px 26px rgba(105,42,191,.5); }
-
-  /* texto extrudado 3D (palavra-herói) */
+  .mark{ position:relative; display:inline-block; padding:0 .12em; color:#fff; }
+  .mark::before{ content:""; position:absolute; inset:6% -5%; z-index:-1;
+    background:var(--roxo); transform:rotate(-1.4deg); border-radius:4px; box-shadow:0 8px 30px rgba(105,42,191,.55); }
+  /* extrusão 3D roxa */
   .ext{ color:#fff; text-shadow:
-    1px 1px 0 #4E208D, 2px 2px 0 #481B7B, 3px 3px 0 #421F74,
-    4px 4px 0 #3a1a66, 5px 5px 0 #321557, 6px 6px 0 #2a1149,
-    7px 7px 0 #220e3b, 8px 8px 18px rgba(0,0,0,.55); }
+    1px 1px 0 #5A23A6, 2px 2px 0 #4E208D, 3px 3px 0 #481B7B, 4px 4px 0 #421F74,
+    5px 5px 0 #3a1a66, 6px 6px 0 #321557, 7px 7px 0 #2a1149, 8px 8px 0 #220e3b, 10px 12px 26px rgba(0,0,0,.6); }
+  /* palavra-fantasma em outline atrás (profundidade tipográfica) */
+  .ghost{ position:absolute; z-index:0; font-weight:900; text-transform:uppercase; letter-spacing:-.04em;
+    color:transparent; -webkit-text-stroke:2px rgba(155,95,224,.22); white-space:nowrap; }
 
-  /* seta desenhada à mão */
-  .seta{ display:block; width:120px; height:90px; margin:8px 0 -6px;
-    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Cpath d='M14 18 C70 26 110 52 132 96' fill='none' stroke='%239B5FE0' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M132 96 L112 64 M132 96 L96 104' fill='none' stroke='%239B5FE0' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left center/contain; }
-
-  .arrasta{ position:absolute; right:80px; bottom:70px; z-index:4;
+  .arrasta{ position:absolute; right:80px; bottom:66px; z-index:6;
     border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:12px 26px;
-    font-size:16px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase;
-    backdrop-filter:blur(2px); }
+    font-size:16px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; backdrop-filter:blur(2px); }
 
-  /* ===== CAPA: roxo em massa (coragem) ===== */
-  .slide.capa{ background:
-    radial-gradient(120% 90% at 50% 0%, #7B34D6 0%, #5A23A6 38%, #481B7B 66%, #2a1149 100%); }
-  .slide.capa::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
-    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
-    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
-    background-blend-mode: soft-light, overlay, normal; opacity:.42; mix-blend-mode:soft-light; }
-  /* vinheta escura nos cantos pra dar profundidade ao roxo */
-  .slide.capa .conteudo::before{ content:""; position:absolute; inset:-92px -80px; z-index:0; pointer-events:none;
-    box-shadow: inset 0 0 320px 80px rgba(20,8,39,.85); }
-  .capa .hero{ font-size:101px; font-weight:900; line-height:.96; letter-spacing:-.035em; text-transform:uppercase;
-    text-shadow:0 6px 40px rgba(0,0,0,.4); }
-  .capa .kicker{ color:#E9DAFF; }
-
-  /* ===== slides com FOTO ===== */
+  /* ===== slide com IMAGEM CONCEITUAL ===== */
   .slide.foto{ background-size:cover; background-position:center; background-color:#0b0a10; }
   .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2;
-    backdrop-filter:blur(2px) brightness(.8) saturate(.92); -webkit-backdrop-filter:blur(2px) brightness(.8) saturate(.92); }
-  .slide.foto.ov-bottom::before{ background:
-    linear-gradient(to top, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
-    radial-gradient(80% 40% at 20% 100%, rgba(105,42,191,.28), transparent 70%); }
+    backdrop-filter:brightness(.82) saturate(.95); -webkit-backdrop-filter:brightness(.82) saturate(.95);
+    background:radial-gradient(60% 50% at 50% 54%, rgba(8,7,12,.72) 0%, rgba(8,7,12,.55) 55%, rgba(8,7,12,.86) 100%); }
+  /* texturas distintas sobre a imagem: stars (grão) + geometrica (linework) */
   .slide.foto::after{ content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
-    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
-    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
-    background-blend-mode: soft-light, overlay, normal; opacity:.3; mix-blend-mode:soft-light; }
+    background-image: var(--geo), var(--stars);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 170%;
+    background-blend-mode: soft-light, overlay; opacity:.34; mix-blend-mode:soft-light; }
 
-  /* ===== slide claro (respiro/frase-chave) ===== */
+  /* ===== slide claro (respiro) ===== */
   .slide.claro{ background:#F2EEE6; color:#161616; }
   .slide.claro::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
-    background:var(--geo) center/cover no-repeat; opacity:.16; mix-blend-mode:multiply; }
+    background:var(--geo) center/cover no-repeat; opacity:.18; mix-blend-mode:multiply; }
   .slide.claro .kicker{ color:var(--roxo); text-shadow:none; }
-  .slide.claro p.corpo{ color:#4a4458; }
-  .slide.claro h2{ color:#161616; }
+  .slide.claro h2{ color:#161616; text-shadow:none; }
   .slide.claro .arrasta{ border-color:rgba(22,22,22,.4); color:#161616; }
   .slide.claro .pill-v{ border-color:rgba(105,42,191,.6); }
-  .slide.claro .circ::before{ filter:none; }
+
+  /* ===== ROXO EM MASSA (capa + CTA — o que o dono curtiu) ===== */
+  .slide.massa{ background:radial-gradient(120% 95% at 50% 0%, #7B34D6 0%, #5A23A6 36%, #481B7B 64%, #2a1149 100%); }
+  .slide.massa::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background-image: var(--geo), var(--stars), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 170%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.4; mix-blend-mode:soft-light; }
+  .slide.massa .conteudo::before{ content:""; position:absolute; inset:-88px -80px; z-index:0; pointer-events:none;
+    box-shadow: inset 0 0 320px 90px rgba(20,8,39,.82); }
+  /* sombra/halo roxo logo atrás do texto (o detalhe que o dono curtiu) */
+  .slide.massa .meio::before{ content:""; position:absolute; width:780px; height:520px; z-index:-1;
+    background:radial-gradient(circle, rgba(155,95,224,.4) 0%, transparent 68%); filter:blur(10px); }
 
   /* ===== CTA ===== */
-  .cta .meio{ align-items:center; text-align:center; justify-content:center; }
-  .cta .logo-grande{ height:158px; margin-bottom:26px; }
-  .cta h2{ font-size:50px; }
-  .cta .botao{ display:inline-block; margin-top:38px; background:var(--roxo); color:#fff;
-    font-size:22px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
-    padding:23px 48px; border-radius:54px; box-shadow:0 0 70px rgba(105,42,191,.6); }
-  .cta .handle{ margin-top:28px; font-size:22px; font-weight:600; color:var(--cinza); }
+  .cta .logo-grande{ height:150px; margin-bottom:30px; }
+  .cta h2{ font-size:58px; }
+  .cta .handle{ margin-top:30px; font-size:23px; font-weight:700; color:var(--roxo-claro); letter-spacing:.04em; }
 </style>
 </head>
 <body>
 
-<!-- 1 CAPA (roxo em massa + palavra-herói + extrusão) -->
-<section class="slide capa">
-  <div class="conteudo">
-    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
-    <div class="meio bottom">
-      <span class="kicker">Criatividade</span>
-      <h1 class="hero" style="margin-top:14px;">Ninguém<br>cria<br><span class="ext">do nada.</span></h1>
-    </div>
-  </div>
-  <div class="arrasta">Arrasta →</div>
-</section>
-
-<!-- 2 O MITO (design) -->
-<section class="slide design" style="background:
-    radial-gradient(70% 52% at 0% 100%, rgba(105,42,191,.42), transparent 60%), #0b0a10;">
+<!-- 1 CAPA: roxo em massa + palavra-herói extrudada (estilo que o dono curtiu) -->
+<section class="slide massa">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
-      <span class="kicker">O mito</span>
-      <h2 style="margin-top:18px;">Todo mundo trata<br>criatividade como <span class="ul">dom</span></h2>
-      <p class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre.</p>
+      <span class="kicker">Criatividade</span>
+      <h1 class="hero">Ninguém<br>cria<br><span class="ext">do nada.</span></h1>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 3 A VERDADE (foto — tipo com profundidade) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-3.png');">
+<!-- 2 O MITO -->
+<section class="slide">
+  <div class="moodboard">
+    <div class="card tex-geo" style="width:320px;height:400px;left:-90px;top:90px;transform:rotate(7deg);opacity:.5;"></div>
+    <div class="card tex-liquid" style="width:280px;height:360px;right:-75px;bottom:130px;transform:rotate(-8deg);opacity:.55;"></div>
+  </div>
+  <div class="veu"></div>
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
-    <div class="meio bottom">
-      <span class="kicker">A verdade</span>
-      <h2 style="margin-top:16px;">Seu cérebro<br>não inventa do zero</h2>
-      <p class="corpo">Ele <b>combina o que já viu.</b> Toda ideia "nova" é uma mistura de coisas que entraram antes.</p>
+    <div class="meio">
+      <span class="ghost" style="font-size:300px; top:120px; left:-40px;">MITO</span>
+      <span class="kicker">O mito</span>
+      <h2>Criatividade<br>não é <span class="strike">dom</span></h2>
+      <p class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre. Mentira.</p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 4 REFERÊNCIA ≠ CÓPIA (design — palavra-herói + riscado) -->
-<section class="slide design" style="background:
-    radial-gradient(64% 50% at 100% 0%, rgba(105,42,191,.4), transparent 58%), #0b0a10;">
+<!-- 3 A VERDADE (imagem conceitual: dupla exposição) -->
+<section class="slide foto" style="background-image:url('foto-3.png');">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">A verdade</span>
+      <h2>Sua mente é<br>feita do que<br>ela já <span class="hl">viu</span></h2>
+      <p class="corpo">Seu cérebro não inventa do zero. Ele <b>combina</b>. Toda ideia "nova" é uma remistura.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 4 REFERÊNCIA ≠ CÓPIA -->
+<section class="slide">
+  <div class="moodboard">
+    <div class="card tex-stars" style="width:300px;height:380px;left:-80px;top:80px;transform:rotate(-7deg);opacity:.55;"></div>
+    <div class="card card-roxo" style="width:240px;height:300px;right:-60px;top:150px;transform:rotate(9deg);opacity:.5;"></div>
+    <div class="card tex-geo" style="width:300px;height:370px;right:-85px;bottom:100px;transform:rotate(-6deg);opacity:.55;"></div>
+    <div class="card tex-liquid" style="width:260px;height:330px;left:-60px;bottom:120px;transform:rotate(7deg);opacity:.5;"></div>
+  </div>
+  <div class="veu"></div>
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">A diferença</span>
-      <h2 style="margin-top:18px;">Referência não<br>é <span class="strike">cópia</span></h2>
+      <h2>Referência<br>não é <span class="strike">cópia</span></h2>
       <p class="corpo">Cópia é pegar <b>uma</b> e clonar.<br>Repertório é juntar <span class="mark">cem</span> e misturar até virar seu.</p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 5 FRASE-CHAVE (claro — respiro, aprovado) -->
+<!-- 5 FRASE-CHAVE (claro / respiro) -->
 <section class="slide claro">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-roxo.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">Em uma frase</span>
-      <h2 style="margin-top:22px; font-size:62px;">Quanto mais você guarda,<br>mais você tem<br>para <span class="circ" style="color:var(--roxo)">misturar</span></h2>
+      <h2 style="font-size:64px;">Quanto mais<br>você guarda,<br>mais você tem<br>para <span class="circ" style="color:var(--roxo)">misturar</span></h2>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 6 A PRÁTICA (foto — pôster de filme) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-6.png');">
+<!-- 6 A PRÁTICA (moodboard cheio — "eu coleciono tudo") -->
+<section class="slide">
+  <div class="moodboard">
+    <div class="card tex-liquid" style="width:300px;height:380px;left:-70px;top:40px;transform:rotate(-10deg);opacity:.7;"></div>
+    <div class="card tex-geo" style="width:270px;height:340px;left:170px;top:-40px;transform:rotate(5deg);opacity:.6;"></div>
+    <div class="card card-roxo" style="width:260px;height:330px;right:-60px;top:50px;transform:rotate(9deg);opacity:.62;"></div>
+    <div class="card tex-stars" style="width:290px;height:360px;left:-80px;bottom:60px;transform:rotate(7deg);opacity:.66;"></div>
+    <div class="card tex-geo" style="width:250px;height:320px;right:120px;bottom:-50px;transform:rotate(-6deg);opacity:.58;"></div>
+    <div class="card tex-liquid" style="width:270px;height:340px;right:-70px;bottom:90px;transform:rotate(-9deg);opacity:.64;"></div>
+  </div>
+  <div class="veu" style="background:radial-gradient(54% 42% at 50% 50%, rgba(11,10,16,.9) 0%, rgba(11,10,16,.72) 55%, rgba(11,10,16,.5) 100%), radial-gradient(80% 60% at 50% 50%, rgba(105,42,191,.18), transparent 70%);"></div>
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
-    <div class="meio bottom">
+    <div class="meio">
       <span class="kicker">Na prática</span>
-      <h2 style="margin-top:16px;">Por isso eu<br>coleciono tudo</h2>
+      <h2>Por isso eu<br><span class="hl">coleciono</span> tudo</h2>
       <p class="corpo">Salvo print, carrossel, anúncio bom. Não pra copiar, e sim pra ter <b>munição</b> na hora de criar.</p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 7 A VIRADA (foto) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-7.png');">
+<!-- 7 A VIRADA (imagem conceitual: cores se misturando) -->
+<section class="slide foto" style="background-image:url('foto-7.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
-    <div class="meio bottom">
+    <div class="meio">
       <span class="kicker">A virada</span>
-      <h2 style="margin-top:16px;">A tela nunca mais<br>fica em <span class="hl">branco</span></h2>
-      <p class="corpo">Você abre seu banco de ideias, mistura várias referências… e sai algo que <b>parece só seu.</b></p>
+      <h2>A tela nunca<br>mais fica em<br><span class="hl">branco</span></h2>
+      <p class="corpo">Você abre seu banco de ideias, mistura várias referências e sai algo que <b>parece só seu.</b></p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 8 CTA (design) -->
-<section class="slide design cta" style="background:
-    radial-gradient(70% 45% at 50% 72%, rgba(105,42,191,.5), transparent 60%), #0b0a10;">
+<!-- 8 CTA (roxo em massa, igual capa — sugestão do dono) -->
+<section class="slide cta massa">
   <div class="conteudo">
     <div class="meio">
       <img class="logo-grande" src="../../../identidade/logo-transp.png" alt="FOCUS">
-      <h2>Criatividade é repertório.<br>E repertório se constrói.</h2>
-      <p class="corpo" style="text-align:center; max-width:720px;">Comece a guardar suas referências a partir de hoje. Daqui a um mês você não encara mais a tela em branco.</p>
+      <h2>Criatividade<br>é repertório.</h2>
+      <p class="corpo">E repertório se constrói. Comece a guardar suas referências a partir de hoje. Daqui a um mês a tela não fica mais em branco.</p>
       <span class="handle">@focusprogress</span>
     </div>
   </div>

@@ -48,6 +48,8 @@ O texto é o elemento mais importante de todo carrossel/post estático. **Imagem
 - Imagem = trabalho do ChatGPT (manipulação/grade pesada **assada na imagem**). Texto/identidade/acabamento = trabalho do Claude.
 - Não usar API OpenAI (não disponível). `.env` existe sem chave.
 
+**Peças variadas por slide (não "uma imagem e acabou"):** dentro de um mesmo slide eu posso pedir ao ChatGPT **vários elementos avulsos** pra eu compor o design: objeto recortado (em fundo liso, sem sombra, pra passar no `remove-bg.js`), elemento 3D, rabisco/traço, pedaço de textura, forma com glow, polaroid/card de referência, etc. Eu monto a colagem no HTML (camadas, oclusão do texto, sombras, profundidade). Esse é o caminho da criatividade alta que o dono quer (estilo @geisianedsgn/@giovana.psd). Pedir os elementos como **PNG fácil de recortar**: "single [objeto] centered on a flat plain light-grey background, no shadow, no text, product-cutout style".
+
 ---
 
 ## 5. Template de prompt pro ChatGPT (imagem)
@@ -82,7 +84,11 @@ Compor as 3 num mesmo layer com `background-blend-mode: soft-light, overlay, nor
 
 **Slide com foto (receita):** `backdrop-filter: blur(~2px) brightness(.8)` no fundo (recua a foto, leve) + **pilha de texturas ~.34 soft-light** + **scrim escuro FORTE** (gradiente quase opaco no terço do texto) + `text-shadow` reforçado.
 
-**Posição do texto:** SEMPRE no **meio ou embaixo**. ❌ Nunca no topo (atrapalha a leitura).
+**Posição do texto (PADRÃO FIXO):** SEMPRE **centralizado e grande, no meio** (vertical e horizontal), igual ao slide claro/respiro e ao CTA. ❌ Nunca no topo. ❌ Não usar mais o layout canto-inferior-esquerdo (kicker pequeno + h2 + corpo encostado embaixo) como base.
+
+**Barra de criatividade (regra dura — chega de "texto sobre foto crua"):** carrossel sem tratamento criativo = reprovado. Toda peça precisa de pelo menos um gesto de design real: **colagem/moodboard**, **tipo como arte** (textura dentro da letra, outline+fill, escala absurda), **extrusão 3D**, **mídia mista**, **recorte de sujeito composto sobre fundo desenhado** (oclusão). Imagem nunca entra **crua**: ou é **conceitual/manipulada** (dupla exposição, colagem dentro de silhueta, surreal) gerada assim no ChatGPT, ou é **sujeito recortado** composto por mim. Referência da régua: @geisianedsgn e @giovana.psd.
+
+**As 3 texturas, SEMPRE distintas (não só liquid):** `liquid` = atmosfera/profundidade no fundo · `stars` = campo de estrelas/grão por cima e dentro de cards · `geometrica` = linework gráfico (faixa, divisor, dentro de letra/card). Usar as três no carrossel, com papéis diferentes. Só liquid = errado.
 
 **Devices:** rabisco à mão (SVG roxo em volta da palavra), sublinhado-marcador, riscado — **1 por slide**, com parcimônia. Pílula vertical de acento + "ARRASTA →" em pílula no rodapé.
 
