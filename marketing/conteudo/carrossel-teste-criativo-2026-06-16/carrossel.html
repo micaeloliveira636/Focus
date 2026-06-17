@@ -14,9 +14,10 @@
 
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
     color:var(--branco); padding:92px 80px; display:flex; flex-direction:column; background:#0b0a10; }
-  /* textura sutil nos slides de design (escuros) */
+  /* textura como GRÃO sutil (não como foto) — quase imperceptível, só dá superfície */
   .slide.design::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
-    background:var(--liquid) center/cover no-repeat; opacity:.20; mix-blend-mode:screen; }
+    background:url('../../../identidade/textura-stars.png') center/cover no-repeat;
+    background-size:160%; opacity:.10; mix-blend-mode:soft-light; }
   .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
 
   /* topo */
