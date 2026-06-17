@@ -71,8 +71,9 @@ Estrutura: `[cena/sujeito] + [ângulo/lente] + [luz] + [clima] + [grade de cor F
 **Logo (arquivos em `identidade/`):**
 - `logo-simbolo-branco.png` — lobo branco, pra fundo escuro.
 - `logo-simbolo-roxo.png` — lobo roxo, pra fundo claro (NUNCA pôr quadro preto atrás).
-- `logo-transp.png` — lockup completo (lobo + FOCUS), pro CTA.
-- Tamanho topo ~74px. Recorte limpo (threshold alto, sem halo). Nunca sombra por cima.
+- `logo-transp.png` — lockup completo (lobo + FOCUS). O dono **prefere o lobo-só** mesmo no CTA (o lockup renderiza "bugado"); usar `logo-simbolo-branco.png` no CTA também.
+- Tamanho topo ~72px. Recorte limpo (threshold alto, sem halo). Nunca sombra por cima.
+- **CTA:** roxo em massa (igual capa), lobo-só branco **centralizado e grande (~150px)** no topo do bloco (não no canto), título + corpo + `@focusprogress`. Sombra **preta** (não roxa/clara) atrás do texto. Sem botão.
 
 **Texturas (`identidade/`) — usar como PILHA blendada (aparente, é identidade):**
 Compor as 3 num mesmo layer com `background-blend-mode: soft-light, overlay, normal`:
