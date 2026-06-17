@@ -92,7 +92,7 @@ Compor as 3 num mesmo layer com `background-blend-mode: soft-light, overlay, nor
 
 **Devices:** rabisco à mão (SVG roxo em volta da palavra), sublinhado-marcador, riscado — **1 por slide**, com parcimônia. Pílula vertical de acento + "ARRASTA →" em pílula no rodapé.
 
-**Estrutura padrão (8 slides):** 4 foto (1, 2, 4, 6) + 4 design (3, 5, 7, 8). Ritmo alternado foto/design pra dar respiro e o texto reinar. CTA (8) sempre limpo. `@focusprogress`.
+**Estrutura padrão (8 slides) — abordagem VENCEDORA (jun/2026):** quase todo slide tem **imagem conceitual própria** gerada no ChatGPT (cada uma com prompt separado e criativo), inclusive a **capa** (o dono exige a capa criativa). Exceções: 1 slide claro de respiro + 1 CTA em roxo em massa (esses dois são puro design). Texto sempre centralizado/no meio (ou meio-baixo quando o sujeito da imagem fica em cima). Imagem que vem em fundo claro (recorte) → passar no `remove-bg.js` e compor sobre fundo escuro (ex.: a cabeça-colagem). **Exemplar de referência: `marketing/conteudo/carrossel-referencias-criatividade-2026-06-17/` ("Ninguém cria do nada") — seguir esse nível.**
 
 ---
 

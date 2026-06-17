@@ -75,16 +75,33 @@
     border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:12px 26px;
     font-size:16px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; backdrop-filter:blur(2px); }
 
-  /* ===== slide com IMAGEM CONCEITUAL ===== */
+  /* ===== slide com IMAGEM CONCEITUAL (a imagem é a estrela, sem desfoque) ===== */
   .slide.foto{ background-size:cover; background-position:center; background-color:#0b0a10; }
-  .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2;
-    backdrop-filter:brightness(.82) saturate(.95); -webkit-backdrop-filter:brightness(.82) saturate(.95);
-    background:radial-gradient(60% 50% at 50% 54%, rgba(8,7,12,.72) 0%, rgba(8,7,12,.55) 55%, rgba(8,7,12,.86) 100%); }
+  .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2; }
+  /* texto no meio: scrim radial garante leitura, bordas mostram a arte */
+  .slide.foto.ov-center::before{ background:
+    radial-gradient(80% 52% at 50% 50%, rgba(8,7,12,.86) 0%, rgba(8,7,12,.5) 56%, rgba(8,7,12,.12) 100%); }
+  /* texto embaixo: pro caso do sujeito ficar em cima (lâmpada, vórtice) */
+  .slide.foto.ov-bottom::before{ background:
+    linear-gradient(to top, rgba(8,7,12,.98) 0%, rgba(8,7,12,.9) 22%, rgba(8,7,12,.42) 50%, rgba(8,7,12,.1) 74%, rgba(8,7,12,.32) 100%),
+    radial-gradient(70% 40% at 50% 100%, rgba(105,42,191,.26), transparent 70%); }
+  .slide.foto.ov-bottom .meio{ justify-content:flex-end; padding-bottom:22px; }
   /* texturas distintas sobre a imagem: stars (grão) + geometrica (linework) */
-  .slide.foto::after{ content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+  .slide.foto::after{ content:""; position:absolute; inset:0; z-index:3; pointer-events:none;
     background-image: var(--geo), var(--stars);
     background-position:center; background-repeat:no-repeat; background-size:cover, 170%;
-    background-blend-mode: soft-light, overlay; opacity:.34; mix-blend-mode:soft-light; }
+    background-blend-mode: soft-light, overlay; opacity:.26; mix-blend-mode:soft-light; }
+
+  /* ===== slide COMPOSTO (recorte da cabeça-colagem) ===== */
+  .slide.comp .cut-head{ position:absolute; z-index:2; top:-8px; left:50%; transform:translateX(-50%);
+    height:770px; width:auto; filter:drop-shadow(0 28px 60px rgba(0,0,0,.55)); }
+  .slide.comp::before{ content:""; position:absolute; inset:0; z-index:3; pointer-events:none; background:
+    linear-gradient(to top, rgba(8,7,12,.98) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.35) 50%, transparent 70%); }
+  .slide.comp::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background-image: var(--geo), var(--stars), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 170%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.4; mix-blend-mode:soft-light; }
+  .slide.comp .meio{ justify-content:flex-end; padding-bottom:22px; }
 
   /* ===== slide claro (respiro) ===== */
   .slide.claro{ background:#F2EEE6; color:#161616; }
@@ -117,21 +134,20 @@
 </head>
 <body>
 
-<!-- 1 CAPA: roxo em massa + palavra-herói extrudada (estilo que o dono curtiu) -->
-<section class="slide massa">
+<!-- 1 CAPA: figura diante da parede-galáxia de referências -->
+<section class="slide foto ov-center" style="background-image:url('foto-1.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">Criatividade</span>
-      <h1 class="hero">Ninguém<br>cria<br><span class="ext">do nada.</span></h1>
+      <h1 class="hero">Ninguém<br>cria<br>do nada.</h1>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 2 O MITO -->
-<section class="slide dark" style="background:
-    radial-gradient(78% 56% at 50% 10%, rgba(105,42,191,.42), transparent 62%), #0b0a10;">
+<!-- 2 O MITO (lâmpada apagada no vazio) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-2.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -143,34 +159,29 @@
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 3 A VERDADE (imagem conceitual: dupla exposição) -->
-<section class="slide foto" style="background-image:url('foto-3.png');">
+<!-- 3 A VERDADE (cabeça-colagem recortada + texto embaixo) -->
+<section class="slide comp" style="background:
+    radial-gradient(58% 50% at 50% 38%, rgba(105,42,191,.42), transparent 60%), #0b0a10;">
+  <img class="cut-head" src="foto-3-cut.png" alt="">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">A verdade</span>
-      <h2>Sua mente é<br>feita do que<br>ela já <span class="hl">viu</span></h2>
-      <p class="corpo">Seu cérebro não inventa do zero. Ele <b>combina</b>. Toda ideia "nova" é uma remistura.</p>
+      <h2>Sua mente é feita<br>do que ela já <span class="hl">viu</span></h2>
+      <p class="corpo">Seu cérebro não inventa do zero. Ele <b>combina</b>. Toda ideia "nova" é uma mistura.</p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 4 REFERÊNCIA ≠ CÓPIA -->
-<section class="slide">
-  <div class="moodboard">
-    <div class="card tex-stars" style="width:300px;height:380px;left:-80px;top:80px;transform:rotate(-7deg);opacity:.55;"></div>
-    <div class="card card-roxo" style="width:240px;height:300px;right:-60px;top:150px;transform:rotate(9deg);opacity:.5;"></div>
-    <div class="card tex-geo" style="width:300px;height:370px;right:-85px;bottom:100px;transform:rotate(-6deg);opacity:.55;"></div>
-    <div class="card tex-liquid" style="width:260px;height:330px;left:-60px;bottom:120px;transform:rotate(7deg);opacity:.5;"></div>
-  </div>
-  <div class="veu"></div>
+<!-- 4 REFERÊNCIA ≠ CÓPIA (vórtice de fotos fundindo numa só) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-4.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
       <span class="kicker">A diferença</span>
       <h2>Referência<br>não é <span class="strike">cópia</span></h2>
-      <p class="corpo">Cópia é pegar <b>uma</b> e clonar.<br>Repertório é juntar <span class="mark">cem</span> e misturar até virar seu.</p>
+      <p class="corpo">Cópia é pegar <b>uma</b> e clonar. Repertório é juntar <span class="mark">cem</span> e misturar até virar seu.</p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
@@ -188,17 +199,8 @@
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 6 A PRÁTICA (moodboard cheio — "eu coleciono tudo") -->
-<section class="slide">
-  <div class="moodboard">
-    <div class="card tex-liquid" style="width:300px;height:380px;left:-70px;top:40px;transform:rotate(-10deg);opacity:.7;"></div>
-    <div class="card tex-geo" style="width:270px;height:340px;left:170px;top:-40px;transform:rotate(5deg);opacity:.6;"></div>
-    <div class="card card-roxo" style="width:260px;height:330px;right:-60px;top:50px;transform:rotate(9deg);opacity:.62;"></div>
-    <div class="card tex-stars" style="width:290px;height:360px;left:-80px;bottom:60px;transform:rotate(7deg);opacity:.66;"></div>
-    <div class="card tex-geo" style="width:250px;height:320px;right:120px;bottom:-50px;transform:rotate(-6deg);opacity:.58;"></div>
-    <div class="card tex-liquid" style="width:270px;height:340px;right:-70px;bottom:90px;transform:rotate(-9deg);opacity:.64;"></div>
-  </div>
-  <div class="veu" style="background:radial-gradient(54% 42% at 50% 50%, rgba(11,10,16,.9) 0%, rgba(11,10,16,.72) 55%, rgba(11,10,16,.5) 100%), radial-gradient(80% 60% at 50% 50%, rgba(105,42,191,.18), transparent 70%);"></div>
+<!-- 6 A PRÁTICA (moodboard real na parede) -->
+<section class="slide foto ov-center" style="background-image:url('foto-6.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -210,8 +212,8 @@
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 7 A VIRADA (imagem conceitual: cores se misturando) -->
-<section class="slide foto" style="background-image:url('foto-7.png');">
+<!-- 7 A VIRADA (ribbons de cor se fundindo numa só) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-7.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
