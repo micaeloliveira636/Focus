@@ -483,3 +483,37 @@ ouro + arame farpado + luz dramática. Estudar slide a slide.
   mostrar o "conteúdo"; (5) trocar dourado pelo roxo, manter grunge + rim light.
   É literalmente o molde da nossa capa "busto quebrado".
 
+## DYiphqLDGPG — "MINHAS fontes favoritas" (@yoloartv) · 6 slides
+**Mostruário de fontes (type specimen)** — editorial quente e escuro, template
+consistente onde a própria fonte é a estrela. Bom molde pra "fontes/ferramentas
+que uso".
+
+- **Slide 1 (capa):** foto cinematográfica quente de uma **luminária de vidro
+  laranja** numa mesa lateral, sofá verde-escuro. "MINHAS *fontes* favoritas" —
+  "fontes" em **serifa itálica** branca grande, resto sans. Abas "ESTÁ EM / OS
+  TIPOS / DI FONTES". Glow laranja aconchegante.
+- **Slides 2-6 (specimens):** fundo verde-oliva/marrom escuro; em cada um, o **nome
+  da fonte renderizado nela mesma** + um lorem ipsum naquela fonte: "Poppins"
+  (geométrica), "Apple Garamond" (serifa, acento itálico), "YoloCRTV" (mono/code),
+  "Fortalesia Script" (script, teal), "navyzredkeds" (display estilizada). Labels
+  de aba "MINHAS / FONTES / FAVORITAS" emoldurando topo e base.
+- **Texturas/luz/sombra:** grão leve, foto da capa quente com glow; slides internos
+  quase flat (cor de fundo + tipo). Oliva/marrom + creme + acentos por fonte.
+- **Roubar pra Focus:** carrossel de **mostruário** (fonte/ferramenta como herói de
+  cada slide) com template fixo e abas. Capa quente fotográfica + internos sóbrios.
+  Trocar acentos pelo roxo.
+
+## DYSRkcfEcDh — designer ("DESIGNS QUE EU...") · captura PARCIAL (1 de 5)
+⚠️ **Falha de captura:** os 5 prints saíram idênticos — o "Avançar" não avançou
+neste post (provável 1º item em vídeo/reel ou layout diferente). Descrevo só o que
+veio (slide 1). *Recapturar manualmente se for relevante.* Micael marcou o slide 3
+(não capturado).
+
+- **Slide 1 (montagem):** **colagem/grade** — selfie no espelho de mulher (top
+  marrom, jeans, gravata solta) à esquerda; **fichário/caderno** com **doodles de
+  estrela** à direita; faixa inferior "DESIGNS QUE EU FE[CHEI]" em caixa-alta branca
+  com estrelas; caneca de café. Vibe colagem pessoal + estrelas como elemento
+  gráfico, fundo creme/quente.
+- **Roubar pra Focus:** o pouco que dá — **estrelas/sparkles desenhadas** como
+  elemento lúdico e **colagem de selfie + objetos**. (Avaliar recaptura pro slide 3.)
+
