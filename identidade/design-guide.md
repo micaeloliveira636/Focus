@@ -48,6 +48,7 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 
 ## Estética de carrossel (padrão do designer)
 
+> **Guia completo (gostos, vetos, fluxo, prompts, specs): `identidade/carrossel-playbook.md` — ler antes de criar carrossel.**
 > Referências reais do designer em `identidade/referencias/`. Todo carrossel deve seguir isso.
 
 - **Fundo escuro full-bleed** (#0c0b11) com **textura sutil** — liquid marble em **baixa opacidade (~20%, blend screen)**. Textura NUNCA em 100% (fica feio). Glows de canto: roxo principal + **toque de teal/verde** (`#19E0C0`) como acento secundário sutil.
