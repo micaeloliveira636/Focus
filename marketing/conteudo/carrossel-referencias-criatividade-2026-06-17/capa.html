@@ -29,9 +29,9 @@
   /* OVERLAY DE TEXTURA sobre a imagem de fundo (texturização real, mata o liso de IA) */
   .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
   .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
-  .t-plastic{ background-image:var(--plastic); mix-blend-mode:soft-light; opacity:.30; }
-  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.24; }
-  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.14; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.20; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.15; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.08; }
   /* sombra macia ATRÁS do bloco de texto (separa do fundo, dá densidade) */
   .sombratxt{ position:absolute; z-index:3; left:-120px; top:420px; width:720px; height:520px; pointer-events:none;
     background:radial-gradient(closest-side, rgba(5,3,9,.82), rgba(5,3,9,.4) 58%, transparent 78%);
