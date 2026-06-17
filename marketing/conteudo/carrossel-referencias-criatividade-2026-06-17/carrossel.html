@@ -92,16 +92,15 @@
     background-position:center; background-repeat:no-repeat; background-size:cover, 170%;
     background-blend-mode: soft-light, overlay; opacity:.26; mix-blend-mode:soft-light; }
 
-  /* ===== slide COMPOSTO (recorte da cabeça-colagem) ===== */
-  .slide.comp .cut-head{ position:absolute; z-index:2; top:-8px; left:50%; transform:translateX(-50%);
-    height:770px; width:auto; filter:drop-shadow(0 28px 60px rgba(0,0,0,.55)); }
+  /* ===== slide COMPOSTO (objeto recortado atrás do texto centralizado) ===== */
+  .slide.comp .cut-obj{ position:absolute; z-index:2; width:auto; filter:drop-shadow(0 30px 60px rgba(0,0,0,.5)); }
   .slide.comp::before{ content:""; position:absolute; inset:0; z-index:3; pointer-events:none; background:
-    linear-gradient(to top, rgba(8,7,12,.98) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.35) 50%, transparent 70%); }
+    radial-gradient(82% 54% at 50% 50%, rgba(8,7,12,.84) 0%, rgba(8,7,12,.5) 56%, rgba(8,7,12,.14) 100%); }
   .slide.comp::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
     background-image: var(--geo), var(--stars), var(--liquid);
     background-position:center; background-repeat:no-repeat; background-size:cover, 170%, cover;
     background-blend-mode: soft-light, overlay, normal; opacity:.4; mix-blend-mode:soft-light; }
-  .slide.comp .meio{ justify-content:flex-end; padding-bottom:22px; }
+  .slide.comp .meio{ justify-content:center; }
 
   /* ===== slide claro (respiro) ===== */
   .slide.claro{ background:#F2EEE6; color:#161616; }
@@ -147,7 +146,7 @@
 </section>
 
 <!-- 2 O MITO (lâmpada apagada no vazio) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-2.png');">
+<section class="slide foto ov-center" style="background-image:url('foto-2.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -162,7 +161,7 @@
 <!-- 3 A VERDADE (cabeça-colagem recortada + texto embaixo) -->
 <section class="slide comp" style="background:
     radial-gradient(58% 50% at 50% 38%, rgba(105,42,191,.42), transparent 60%), #0b0a10;">
-  <img class="cut-head" src="foto-3-cut.png" alt="">
+  <img class="cut-obj" src="foto-3-cut.png" alt="" style="left:50%; bottom:-40px; transform:translateX(-50%); height:1080px; -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 97%); mask-image:linear-gradient(to bottom,#000 74%,transparent 97%);">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -175,7 +174,7 @@
 </section>
 
 <!-- 4 REFERÊNCIA ≠ CÓPIA (vórtice de fotos fundindo numa só) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-4.png');">
+<section class="slide foto ov-center" style="background-image:url('foto-4.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -212,8 +211,10 @@
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 7 A VIRADA (ribbons de cor se fundindo numa só) -->
-<section class="slide foto ov-bottom" style="background-image:url('foto-7.png');">
+<!-- 7 A VIRADA (blob 3D — algo novo que surgiu da mistura) -->
+<section class="slide comp" style="background:
+    radial-gradient(58% 50% at 50% 48%, rgba(105,42,191,.4), transparent 60%), #0b0a10;">
+  <img class="cut-obj" src="foto-7b-cut.png" alt="" style="left:50%; top:50%; transform:translate(-50%,-50%); height:880px;">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
@@ -229,7 +230,7 @@
 <section class="slide cta massa">
   <div class="conteudo">
     <div class="meio">
-      <img class="logo-grande" src="../../../identidade/logo-transp.png" alt="FOCUS">
+      <img class="logo-grande" src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS">
       <h2>Criatividade<br>é repertório.</h2>
       <p class="corpo">E repertório se constrói. Comece a guardar suas referências a partir de hoje. Daqui a um mês a tela não fica mais em branco.</p>
       <span class="handle">@focusprogress</span>
