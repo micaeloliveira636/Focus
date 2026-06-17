@@ -8,7 +8,7 @@
   :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
     --couro:url('../../../identidade/textura-couro.jpg');
     --scratched:url('../../../identidade/textura-scratched.jpg');
-    --wrap:url('../../../identidade/textura-wrap.jpg'); }
+    --plastic:url('../../../identidade/textura-plastic.png'); }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
 
@@ -23,7 +23,7 @@
   .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
   .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; opacity:.07; }
   .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.04; }
-  .t-wrap{ background-image:var(--wrap); mix-blend-mode:soft-light; opacity:.03; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.045; }
 
   /* bloco de texto embaixo */
   .bloco{ position:absolute; z-index:5; left:80px; bottom:158px; max-width:600px; }
@@ -58,7 +58,7 @@
     <div class="tex">
       <span class="t-couro"></span>
       <span class="t-scratch"></span>
-      <span class="t-wrap"></span>
+      <span class="t-plastic"></span>
     </div>
 
     <div class="topo">
