@@ -94,6 +94,7 @@ Compor as 3 num mesmo layer com `background-blend-mode: soft-light, overlay, nor
 
 - **Designer da Focus:** `identidade/referencias/` (`ref-post-apenas-comece.png`, `post-carrosel---Consistência_01..05.png`).
 - **Inspiração externa (IG):** `identidade/referencias/inspiracao/` — @macroplaneta (foto + tipo), @cacaubelragocreative (editorial), @pinovaa (rabisco/pop de cor), @adarshdesign x2 (compositing cinematográfico, type integrado à foto).
+- **Leva jun/2026 (curadoria do dono, ~40 refs):** `identidade/referencias/inspiracao-2026-06/` — índice completo em `REFERENCIAS.md` + grades capturadas. **Favoritos disparados: @geisianedsgn e @giovana.psd.** Ver seção 10 abaixo (técnicas destiladas).
 
 > **Vídeos de roteiro ≠ carrossel.** O dono compartilhou reels no Direct da conta logada (`gestordaquebrada`) como referência de **roteiro pra VÍDEOS** — é uma trilha separada, não material de carrossel. Limitação: não dá pra transcrever o áudio falado dos reels por aqui.
 
@@ -120,3 +121,50 @@ Tema "negócio local não vende online". Servem de molde — trocar a cena, mant
 
 **A virada (negócio vivo, acolhedor):**
 > Vertical 4:5 cinematic photorealistic photograph. A warm, thriving small local business in the early evening, from the sidewalk: golden interior light spilling through a large window, two or three softly out-of-focus happy customers inside, tasteful decor and plants, welcoming premium atmosphere. Outside, dusk with purple-blue ambient sky and faint teal accents; wet pavement reflecting the warm glow. Mood: hopeful, alive. Color grade: cinematic, warm interior balanced against cool purple exterior, gently muted/low-key, film grain baked in. Composition: lower third (dark foreground sidewalk) clean negative space for text. 35mm, shallow depth of field. No text, signage, logos or watermark.
+
+---
+
+## 10. Técnicas criativas a roubar (estudo dos favoritos — jun/2026)
+
+Destilado das grades de @geisianedsgn, @giovana.psd, @mazzeidesign_, @typosters e do post `DWWP_UtDYTO` (o que o dono mais elogiou). Detalhe em `referencias/inspiracao-2026-06/REFERENCIAS.md`. **Tudo traduzido pra paleta Focus — roxo + escuro + lobo + Montserrat. Texto continua sendo o rei.**
+
+1. **Palavra-herói gigante.** Uma palavra/frase domina o slide em Montserrat 900 caixa-alta, escala enorme (até "estourar" a margem, cortando levemente nas bordas). O resto vira apoio pequeno. Esse é o gesto nº 1 dos favoritos. → Usar na capa e em 1-2 slides de virada.
+
+2. **Tipo integrado à foto com PROFUNDIDADE (a "manipulação" que ele amou).** A letra não fica "colada por cima" — ela divide o espaço 3D com a cena. Receita técnica no nosso HTML:
+   - Gerar a foto com um **elemento de primeiro plano** (sujeito, planta, objeto) e fundo escuro vazio.
+   - Rodar `remove-bg.js` pra recortar esse primeiro plano.
+   - Empilhar: **foto-fundo → texto → recorte do primeiro plano por cima**. O sujeito passa **na frente** de parte das letras = oclusão = profundidade real. (É o "THERE IS NO SECRET RECIPE" com a grama na frente das letras.)
+   - Alternativa mais leve: texto com `mix-blend-mode` sobre a textura + leve `text-shadow` interno pra parecer "dentro" da superfície.
+
+3. **Roxo com CORAGEM (lição da Giovana).** Ela usa magenta em peso, sem medo. Nosso equivalente: blocos de **roxo Focus saturado** (`#692ABF`) chapado como fundo de slide inteiro ou de faixa, palavra-herói preenchida de roxo. Parar de usar roxo só como glow tímido — pode ser massa de cor.
+
+4. **Palavra-chave em 3D extrudado** (estilo "TEXTURAS" da Geisiane): letra com extrusão/profundidade na cor roxa. Fazer em CSS com camadas de `text-shadow` empilhadas em roxo escuro (`#421F74`/`#150827`) descendo na diagonal. Usar 1x por carrossel, na palavra mais importante.
+
+5. **Slide "pôster de filme" (estilo mazzei):** retrato/cena escura com **luz dramática roxa** rasgando de um lado (rim light roxo), altíssimo contraste, palavra-herói embaixo. Pra slides de tensão/problema.
+
+6. **Tipo experimental como gráfico (estilo typosters):** em 1 slide de respiro, deixar a tipografia ser o visual — palavra em ângulo, escala absurda, sobreposição com a do slide anterior, recorte. Sem foto. Cor chapada (escuro + roxo).
+
+## 11. Rabiscos e texturas criativas (ampliar o repertório)
+
+Hoje usamos só o círculo à mão. Ampliar o vocabulário de **devices desenhados** (SVG roxo `#9B5FE0`/`#692ABF`, traço de marcador, 1 por slide):
+- **Seta à mão** curva apontando pra palavra-chave ou pro "arrasta".
+- **Subir/grifar** com retângulo de marcador atrás de 1 palavra (não só circular).
+- **Riscar** a palavra "errada" e escrever a certa à mão do lado (riscado roxo + nota manuscrita — mas a nota também em Montserrat, nunca fonte manuscrita).
+- **Colchetes/parênteses** gigantes à mão emoldurando a frase.
+- **Asterisco/estrela de 4 pontas** (já existe `focus-estrela-*.png`) como ponto de respiro.
+- **Underline duplo** ou ziguezague sob a palavra-herói.
+
+Texturas: além da pilha (liquid + stars + geométrica), testar **grão de papel mais forte** nos slides de design e **extrusão/sombra de bloco** atrás de cards de cor roxa, pra dar a densidade que a Geisiane tem.
+
+## 12. Prompts criativos — leva 2 (molde estendido)
+
+Mesmas regras fixas (vertical 4:5, low-key/muted, espaço negativo, grade roxo Focus + leve teal, grão, **sem texto/letra/logo/marca**) **+ agora pedir explicitamente um elemento de primeiro plano** quando a ideia for tipo-com-profundidade, pra possibilitar a oclusão no HTML.
+
+**Molde "tipo com profundidade" (pra técnica nº 2):**
+> Vertical 4:5 cinematic photorealistic photograph. [SUJEITO/OBJETO em primeiro plano nítido] positioned in the [lower/right] portion, set against a deep, almost-empty dark background with soft purple ambient light and gentle volumetric haze. Strong separation between the sharp foreground subject and the clean dark empty space behind it (that empty space is where large text will be placed and the foreground subject should partly overlap it). Low-key, desaturated, deep purple color grade with a faint teal rim light, fine film grain baked in. 35–50mm, shallow depth of field, premium editorial. No text, letters, numbers, logos or watermark.
+
+**Molde "pôster de filme" (técnica nº 5):**
+> Vertical 4:5 dramatic cinematic portrait-style photograph of [CENA], lit by a single hard purple rim light slicing from one side, the rest falling into deep crushed shadow. High contrast, moody, tense, movie-poster energy. Color grade: near-black background, saturated deep purple key accent, subtle teal in the shadows, heavy film grain baked in. Large clean dark negative space in the lower third for text. 50mm. No text, letters, logos or watermark.
+
+**Molde "massa de cor roxa" (técnica nº 3 — quando quiser fundo roxo, não foto):**
+> (Pode ser feito direto no HTML — fundo `#692ABF` chapado + pilha de texturas em soft-light + leve vinheta roxa escura nos cantos. Não precisa de foto do ChatGPT.)
