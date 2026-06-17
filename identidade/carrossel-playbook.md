@@ -2,7 +2,9 @@
 
 > Tudo que o dono (Micael) definiu sobre como os carrosséis/posts devem ser feitos.
 > Consolidado a partir das decisões reais de uma sessão de design.
-> **Ler isto + `design-guide.md` antes de criar qualquer carrossel.** A skill `/carrossel` segue isso.
+> **Ler isto + `design-guide.md` + `referencias/dna-criativo.md` antes de criar qualquer carrossel.** A skill `/carrossel` segue isso.
+>
+> ⚠️ **Antes de criar, abrir `referencias/dna-criativo.md`** (menu de técnicas + checklist anti-genérico). Regra-mãe: criatividade = CENA composta (IA + manipulação), não "foto crua + texto por cima". Variar de técnica entre slides.
 
 ---
 
