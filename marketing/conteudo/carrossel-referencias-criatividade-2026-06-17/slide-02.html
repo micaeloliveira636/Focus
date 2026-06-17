@@ -37,10 +37,8 @@
   .hero{ position:absolute; left:78px; top:584px; font-weight:900; text-transform:uppercase;
     font-size:156px; line-height:.9; letter-spacing:-.04em; }
   .heroShadow{ z-index:4; color:rgba(3,2,6,.92); transform:translate(8px,20px); filter:blur(6px); }
-  .heroFront{ z-index:5; color:#fff; text-shadow:0 3px 6px rgba(0,0,0,.6); }
-  .strike{ position:absolute; z-index:6; left:74px; top:672px; width:332px; height:22px; pointer-events:none;
-    background:var(--roxo-claro); border-radius:4px; transform:rotate(-3deg);
-    box-shadow:0 0 22px rgba(155,95,224,.7); }
+  .heroFront{ z-index:5; color:#fff; text-shadow:0 3px 6px rgba(0,0,0,.6);
+    text-decoration:line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:13px; }
 
   .corpo{ position:absolute; z-index:5; left:82px; top:792px; max-width:470px;
     font-size:27px; font-weight:500; line-height:1.5; color:#C9C3D6; text-shadow:0 2px 14px rgba(0,0,0,.85); }
@@ -79,7 +77,6 @@
     <div class="lead">Te disseram que<br>criatividade é</div>
     <div class="hero heroShadow">Dom</div>
     <div class="hero heroFront">Dom</div>
-    <div class="strike"></div>
     <div class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre. <b>Mentira.</b></div>
 
     <div class="arrasta">Arrasta →</div>
