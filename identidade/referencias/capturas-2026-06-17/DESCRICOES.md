@@ -251,3 +251,105 @@ modelo pra carrossel "técnico/passo a passo".
   Trocar coral pelo roxo, starfield por grão sutil. Contraponto útil ao estilo
   denso — nem todo carrossel precisa ser cena pesada.
 
+## DZVH08NgV1S — "AI Generates Options. Humans Create Meaning" (recap Adobe 99U) · 11 slides
+**Editorial claro / revista** — fundo creme-rosado quente, **serifa display** com
+palavras-acento em coral itálico, fotos em **cards arredondados**, balões de
+citação coloridos, adesivos/**washi tape**. Otimista e arejado, o oposto do dark.
+Micael marcou o slide 4.
+
+- **Slide 1 (capa):** fundo creme com **estrelas/estouros vermelho-laranja**
+  (respingos), **ilustração flat** de mulher com polegar pra cima segurando
+  crachá "ADOBE 99U". Título serifa "AI Generates Options. Humans Create
+  Meaning." + subhead sans; botão-pílula rosa com seta. Combina editorial + flat
+  illustration.
+- **Slides 2-8 (desenvolvimento):** layout de revista — **kicker** em pílula
+  ("ADOBE 99U · ALL ABOUT AI?"), headline serifa com **palavras coral itálico**
+  ("creative careers", "explore, experiment"), corpo sans; **fotos da conferência
+  em cards arredondados** (palco com "99U" vermelho gigante); **balões de citação**
+  em pílulas coloridas (coral/azul/navy) com autor; seções numeradas (#1-#4) em
+  serifa grande. Slide 4 = palco Firefly + quote card + "99" vermelho ao fundo.
+- **Slide 9 (highlights):** **pinboard** — cards espalhados (cartões escuros + um
+  card branco preso com **fita washi** "Design is Problem Solving"), tipo mural de
+  recados.
+- **Slide 10 (takeaway):** "AI is a tool. A powerful one. But the thing it can't
+  replicate is - you!" serifa, lista com bullets em losango coral, foto embaixo.
+- **Slide 11 (CTA):** "If you were to start one creative thing today, what would
+  it be?" serifa + coral itálico, pílula rosa com seta pra baixo.
+- **Texturas/luz/sombra:** grão de papel sutil, estouros/estrelas vetoriais, washi
+  tape; cards com sombra leve (elevação); sem fotografia dramática — luz natural
+  clara. Cor: creme + coral/vermelho + azul/navy de apoio.
+- **Roubar pra Focus:** modelo de **recap/editorial claro** (quando o tema pedir
+  leveza, não peso) — kicker em pílula, palavra-acento itálica, citações em balões,
+  pinboard de highlights. Trocar coral por roxo, manter o ar de revista. Mostra que
+  a Focus pode ter um registro claro também, sem perder identidade.
+
+## DYpxkaaFZQZ — "é por isso que você não tem RESULTADO" (@mazzeidesign_) · 8 slides
+**Pôster de filme** puro (Gab Mazzei): cena hiper-cinematográfica, grade
+vermelho/dourado/preto, fumaça, grão, vinheta, 1 palavra-acento vermelha.
+*(Obs.: o slide-02 capturado é glitch — pegou o painel de legenda do Instagram,
+não um slide. Ignorar.)*
+
+- **Slide 1 (capa):** imagem **caveira/ceifador** em manto dourado ornado (vibe
+  papal), campo de **rosas vermelhas**, fumaça. "resultado" em script/serifa
+  vermelho **sangrando** por cima; "É POR ISSO QUE VOCÊ NÃO TEM" caixa-alta
+  pequena no topo. Grade teal/vermelho de cinema, vinheta, grão.
+- **Slide 3:** fundo preto, mão/figura dourada de esqueleto à direita, corpo
+  branco "Estético e estratégico não são a mesma coisa", "ser inevitável" em
+  vermelho. Fumaça vermelha.
+- **Slide 4:** esqueleto dourado à esquerda + **painel claro** à direita com
+  "Resultado não vem de post bonito... A intenção é o corpo." e bold "a maioria
+  dos designers está vestindo bem um corpo sem direção." (dark image + light text
+  panel justapostos).
+- **Slide 5:** textura de **papel envelhecido/pergaminho** ocupando tudo, corpo de
+  texto com **marcas de edição riscadas** (riscado editorial nas palavras),
+  "Quando isso ficou claro... meu resultado dobrou."
+- **Slide 6:** preto com rosa vermelha + fumaça, "cada arte é como uma conversa"
+  ("uma conversa" vermelho), "emoção que o design desperta" bold.
+- **Slide 7:** abertura rochosa (caverna) pro céu, **pergaminho rasgado** central
+  com "Não é sobre aprender mais ferramenta", "fluxo que transforma" sublinhado,
+  "quem cria muito ganha pouco" vermelho.
+- **Slide 8 (CTA):** retrato do **Gab Mazzei** à direita, "Se você se reconheceu
+  aqui... o próximo passo é aprender do jeito certo." (vermelho); **fileira de
+  capas de produto** (ChatGPT, Prompt, Photoshop...), botão "LINK DO MEU
+  TREINAMENTO NA BIO", "ACESSO VITALÍCIO + 11 BÔNUS POR $67".
+- **Texturas/luz/sombra:** grão pesado, vinheta, fumaça volumétrica; pergaminho;
+  riscado editorial; rim light dramático; sombras esmagadas. Vermelho/ouro/preto.
+- **Roubar pra Focus:** capa-conceito mórbida/cinematográfica; **riscado editorial**
+  como recurso de texto; slide de pergaminho pra "confissão"; CTA com retrato +
+  capas de produto. Trocar vermelho por roxo.
+
+## DX_03f-jEiR — "Sinal de que você é uma MARIONETE do seu cliente" (@mazzeidesign_) · 7 slides
+Mesmo DNA pôster-de-filme, com **props conceituais surreais** (cordas de
+marionete, relógio derretendo, capacete pendurado, pássaros) e **anotações tipo
+blueprint/HUD** sobre a imagem (assinatura do Mazzei). Micael marcou o slide 4.
+
+- **Slide 1 (capa):** homem sentado numa cadeira de **braços erguidos como
+  marionete** (capacete na cabeça), paisagem desolada com musgo, laptop no chão,
+  **linhas técnicas de blueprint** sobre a cena. "MARIONETE" gigante caixa-alta
+  **ocluída pelos braços erguidos** (oclusão); "Sinal de que você é uma" no topo;
+  "do seu cliente" script. Grade muda/cinematográfica, grão.
+- **Slide 2:** **relógio derretendo** (à la Dalí) sobre madeira, "VOCÊ NÃO PERCEBE
+  QUANDO ISSO COMEÇA" caixa-alta, "PERCEBE" em caixa destacada, "sexta-feira"
+  script. Surreal.
+- **Slide 3:** relógio grande + **bússola dourada**, "O cliente não te respeita
+  porque é malvado..." (com highlight), "MESMO SEM PERCEBER..." caixa-alta enorme
+  embaixo.
+- **Slide 4 (marcado):** caverna pro céu, **capacete pendurado por cordas**
+  (marionete), **pergaminho rasgado** com "O designer que não tem método não tem
+  postura" ("não tem postura" destacado em caixa), "E você cede: Sempre" script.
+- **Slide 5:** escuro, **quadros/telas emoldurados** empilhados, "Eu já fui esse
+  cara. Fazia tudo que pediam com medo de perder o trabalho" com **riscado
+  editorial**, "o que eu tava vendendo" script embaixo.
+- **Slide 6:** **pássaro azul** em colina verde, painel creme, "Quando você tem um
+  fluxo real do briefing..." com sublinhados, "pode mudar?" destacado.
+- **Slide 7 (CTA):** beija-flor azul + **mockup de perfil do IG**, "Marionete não
+  tem método. Tem medo? ... comenta: FLUXO" (gigante), "EU TE MANDO MEU PROCESSO
+  COMPLETO NO DIRECT."
+- **Texturas/luz/sombra:** grão, vinheta; **linhas de blueprint/HUD** como camada
+  gráfica recorrente; props surreais com sombra projetada real; highlight-box e
+  sublinhado no keyword. Paleta muda terrosa + acento.
+- **Roubar pra Focus:** (1) **oclusão da palavra-herói** pelo sujeito da cena;
+  (2) **anotações de blueprint** sobre a foto (assinatura gráfica replicável em
+  roxo); (3) prop surreal = metáfora literal (marionete, relógio); (4) CTA com
+  mockup de perfil + palavra-comando.
+
