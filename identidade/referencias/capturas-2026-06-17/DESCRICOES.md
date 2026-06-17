@@ -503,13 +503,162 @@ que uso".
   cada slide) com template fixo e abas. Capa quente fotográfica + internos sóbrios.
   Trocar acentos pelo roxo.
 
-## DYSRkcfEcDh — (RECAPTURADO, 5 slides) · ⏳ pendente de descrição
-A captura original estava furada (pegava um **reel sugerido** — a colagem "DESIGNS
-QUE EU FECHEI" NÃO era este post). Já **recapturado** com slides reais e únicos.
-Descrever na retomada. Micael marcou o slide 3.
+## DYSRkcfEcDh — "Como eu aprendi mais sobre design ao longo dos anos" · 5 slides
+**Photo dump + texto em camadas tipo sticker.** Cada slide é uma foto real do
+cotidiano da designer com **texto empilhado por cima** (branco bold + script
+rosa-magenta + caixa de destaque). Aesthetic "diário pessoal", quente e humano. Cor
+de acento única: **rosa-magenta**. Micael marcou o slide 3.
+
+- **Slide 1 (capa):** foto ao ar livre (praça, palmeiras, parede amarela
+  desbotada) de uma designer de cabelo degradê rosa, óculos escuros, bebendo um
+  copo. Texto em **5 camadas** sobre a foto: "Como eu" em caixinha rosa, "aprendi"
+  gigante branco, "mais" em script rosa, "sobre" branco grande, "design" em script
+  rosa com outline, "ao longo dos anos." em caixa branca. Seta circular de "próximo"
+  no canto.
+- **Slide 2:** foto de uma **escadaria clássica de palacete** (mármore, porta de
+  madeira escura). "Sendo mais *curiosa.*" ("curiosa" em script rosa); corpo à
+  direita sobre área escura da foto ("Tudo começa com questionamentos...").
+- **Slide 3 (marcado):** foto segurando o livro vermelho **"O PODER DO NAMING"**;
+  parede com quadros emoldurados ao fundo. "Lendo **mais.**" + selo script "minha
+  leitura atual" em rosa. Corpo à direita.
+- **Slide 4:** foto de uma **mesa cheia de adesivos/stickers** (cadeira vermelha,
+  placa "caution", magenta dominante) com a **interface da câmera do iPhone**
+  sobreposta (abas SLO-MO / VIDEO / PHOTO / PORTRAIT / SQUARE + botão de disparo).
+  "Entender que **criar não precisa** ser só do trabalho." (palavras-chave em bold),
+  corpo em **caixinhas rosa marca-texto linha a linha**.
+- **Slide 5:** foto aconchegante de uma **fatia de bolo de chocolate** + caderno
+  pautado. "Trabalhar com outros **designers.**" ("designers" em caixa rosa). Corpo
+  centralizado embaixo.
+- **Texturas/luz/sombra:** sem cena composta — são fotos cruas com **leve grão**;
+  luz natural quente; o "efeito" é a **camada tipográfica de sticker** (sombra suave
+  atrás dos blocos de texto pra descolar da foto). O print da UI de câmera no slide
+  4 é um truque esperto de moldura.
+- **Roubar pra Focus:** (1) **texto em camadas sobre foto** (bold + script +
+  caixa) como linguagem de "diário"; (2) **1 cor de acento só** amarrando tudo
+  (trocar magenta por roxo); (3) **palavra-acento em script** repetida slide a slide;
+  (4) o **print de interface** (câmera, app) como moldura conceitual de um slide.
+  Bom molde pra um carrossel pessoal/bastidor da Focus.
+
+## DT24GxxDi8y — "Essa é a mistura: Brasil com a gringa" (@gaia.psd) · 8 slides
+**No tema exato (referências) e um show de cena composta.** Tese: criar com
+referência internacional sem fazer Ctrl-C/Ctrl-V, filtrando pela vivência
+brasileira. Colagem/moodboard pesado + rosa-magenta como cor-assinatura + tipografia
+gigante. Um dos mais ricos do banco.
+
+- **Slide 1 (capa):** **colagem moodboard** sobre off-white — binder clip,
+  foto P&B de moto, lata de spray, croissant, latinha vermelha, flutuando. "ESSA É A
+  MISTURA" + **"BRASIL"** gigante com **efeito glitch/rasgo rosa**, "COM **A GRINGA**"
+  (em caixa rosa), "como criar com refs gringa mas com toque brasileiro". Coluna de
+  @usernames repetidos na lateral (cara de feed). Selo "um post de @gaia.psd".
+- **Slide 2:** fundo preto, foto de violão à direita; @usernames de moodboard
+  espalhados (Starry nails, fredagain outfit...). "A gente está o **TEMPO** todo
+  **consumindo referências** QUE VÊM DE FORA" (caixa rosa), depois "MAS QUANDO ISSO
+  CHEGA NO **NOSSO CONTEXTO**, PRECISA PASSAR POR UM FILTRO: **o da vivência real.**"
+  ("vivência real" em rosa gigante).
+- **Slide 3 (conceito forte):** fundo rosa-magenta chapado, **teclas Ctrl C / Ctrl V**
+  gigantes em outline + **teclas 3D reais** (Ctrl, Ctrl V, Enter) flutuando. "Não
+  **precisa** ser um Ctrl C da referência **internacional.**" + "É sobre entender o
+  que aquela estética tem de melhor e unir com a **nossa cultura.** **Trazer a
+  referência para o nosso cenario**".
+- **Slide 4:** **"BRASIL!"** gigante em **graffiti verde-amarelo**, parede de tijolo,
+  **cadeiras plásticas** (vermelha/verde), garrafa azul, espada-de-são-jorge. "O toque
+  brasileiro no design não está só nas cores vibrantes..." + duas listas: **texturas
+  brasileiras** e **elementos** (cachaça, esmalte, tererê).
+- **Slide 5:** fundo de **pastilha/mosaico rosa**, "Tudo isso também é
+  **REFERÊNCIA.**" gigante preto empilhado, **placa de carro "RIO2A18 · BRASIL"**,
+  "Só que a gente aprendeu a não valorizar."
+- **Slide 6:** fundo branco limpo, "ENTÃO DEIXA **EU MOSTRAR.**" + **moodboard de refs
+  gringas** (posters editoriais de moda, sketches, figuras) em colagem. Rótulo
+  "MOODBOARD DE REFS GRINGAS".
+- **Slide 7:** fundo creme, **ilustração colorida de mulher dançando** (recorte
+  vibrante) com tipografia "MARI NA BOA" sobreposta. "E UM **DESIGN** TRADUZIDO PARA
+  A MINHA **VIVÊNCIA**".
+- **Slide 8 (fecho):** fundo rosa, tipografia gigante empilhada branca: "Criar com
+  **identidade** é entender que **REFERÊNCIA GRINGA** pode ser base não molde. O mundo
+  **pode** inspirar, mas a nossa **IDENTIDADE BRASILEIRA** precisa **permanecer.**"
+  Nota de dólar emoldurada na lateral.
+- **Texturas/luz/sombra:** **colagem** (recortes com sombra projetada própria, cara de
+  scrapbook); **glitch/rasgo** na palavra-herói da capa; teclas 3D com sombra real;
+  grão sutil. Sombra dura atrás dos blocos de texto pra leitura. Paleta:
+  rosa-magenta + preto + off-white, com explosões de cor brasileira pontuais.
+- **Roubar pra Focus (alto valor):** (1) **capa-moodboard** (objetos recortados
+  flutuando = exatamente nosso padrão); (2) **conceito visual de uma ideia** (Ctrl C /
+  Ctrl V) ocupando um slide inteiro; (3) **palavra-herói com tratamento** (glitch,
+  rasgo) na capa; (4) coluna de @usernames / rótulos pra dar cara de "pesquisa real";
+  (5) trocar magenta pelo roxo, manter a lógica de colagem + tipografia gigante.
+
+## DV8sDgnjn4I — "Escolhas que fiz pra melhorar minha rotina como designer" (@gaia.psd) · 7 slides
+**Mesma assinatura da gaia.psd** (rosa-magenta, caixas de destaque, fonte typewriter
+glitch num subtítulo, estrelinhas, coluna de @username, flat-lay de objetos). Aqui o
+tema é rotina/processo, formato lista de "escolhas".
+
+- **Slide 1 (capa):** **grid de selfies repetidas** da designer com tint
+  rosa-magenta. Texto em camadas: "Escolhas que fiz pra" pequeno, "**melhorar
+  minha**" gigante branco, "rotina como" em caixa branca com **fonte typewriter
+  glitch**, "**designer.**" em script rosa gigante.
+- **Slide 2:** fundo creme; **iPad + trackpad/mouse rosa**, ícones **Ai e Ps**,
+  estrelinhas. "Investi em bons **equipamento** para **trabalhar**" (caixas rosa).
+  Corpo sobre travar o Photoshop. Coluna GAIA.PSD repetida topo e base.
+- **Slide 3:** foto de pessoa de **boné bebendo de caneca "OUT OF OFFICE"**,
+  estrelas. "Eu comecei a ter dias pra **trabalhar fora do home office.**"
+- **Slide 4:** fundo creme com **cartas "CONTRATO" voando**. "Eu decidi nunca mais
+  trabalhar **sem contrato** por mais básico que seja o serviço."
+- **Slide 5:** **caixa de papelão** (metáfora de delegar). "Eu aprendi **a delegar**
+  antes de me **sobrecarregar.**", selo "coisa para delegar" em caixa rosa.
+- **Slide 6:** fundo rosa com **estrela preta gigante** ao fundo, **pasta de
+  arquivo manila**. "Eu passei a ter **processos internos** bem definidos. **sem
+  caos, sem neurose.**" (typewriter glitch). Corpo: "...quando a rotina é leve, **a
+  criatividade flui.**"
+- **Slide 7 (CTA):** **flat-lay** sobre jeans — óculos, **câmera Sony Cybershot**,
+  batom, chaveiro de coração. "Essas escolhas **mudaram minha forma de trabalhar.**"
+  (caixas rosa) + "Quero saber de você: o que tem funcionado na sua rotina criativa?"
+  (caixa rosa de pergunta).
+- **Texturas/luz/sombra:** blocos de texto com **caixa de destaque sólida** (rosa ou
+  branca) pra leitura; fotos com leve grão; flat-lays com sombra natural; estrelinhas
+  e coluna de @username como sistema decorativo. Rosa-magenta + creme + preto.
+- **Roubar pra Focus:** (1) **capa = grid da própria pessoa** com tint da cor da
+  marca (forte pra carrossel pessoal); (2) **caixa de destaque sólida** por trás de
+  cada linha (versão roxa); (3) **fonte typewriter/glitch** só no subtítulo pra
+  texturizar; (4) **flat-lay de objetos** como slide de CTA; (5) sistema de selos
+  decorativos (estrela, @username) amarrando a série.
+
+## DX__xKAji1k — "Aulão de alinhamento visual" (@gaia.psd) · 8 slides
+**Carrossel de LANÇAMENTO/venda** — mesma identidade gaia.psd, mas aqui o valor é a
+**estrutura de oferta** (capa → dores → promessa → conteúdo → data → preço → CTA).
+Bom molde pra quando a Focus for vender um serviço/mentoria.
+
+- **Slide 1 (capa):** fundo preto grungy com **texto-fantasma** repetido
+  ("Alinhamento Visual do rascunho à entrega"). "aulão" em script rosa, "ALINHA
+  MENTO" gigante branco, "visual" em script rosa. Selo @gaia.psd.
+- **Slide 2 (dores):** fundo **xadrez rosa**. "Você quer oferecer **alinhamento
+  visual**, mas trava em algum desses pontos?" + **lista de caixas rosa** (não sabe
+  começar / entregar / cobrar / não acha conteúdo). Fecha com "Esse aulão existe pra
+  resolver exatamente isso" gigante em outline.
+- **Slide 3:** fundo rosa com **foto de cachorro tint rosa** + código/números
+  fantasma. "Nada de **teoria solta.**" (riscado). Corpo: "...caminho completo da
+  prospecção até a entrega, do jeito que funciona na prática."
+- **Slide 4 (conteúdo):** fundo preto, **recorte pop** de mulher + celular tela rosa
+  + textura de **onça rosa**; **menu lateral estilo UI** (Photobooth, Supercount,
+  Close, Crop, Boomerang, Layout...). "Nós vamos **falar sobre...**" (caixa rosa) +
+  corpo (prospectar, reunião, briefing).
+- **Slide 5:** fundo rosa com "aulão" fantasma + **estrela rosa**; "Você vai
+  **aprender**" + **post-it amarelo** com o corpo.
+- **Slide 6 (logística):** fundo de **armário/locker rosa**. "e como vai
+  **funcionar?**" + "**23 DE MAIO** das 10h às 14h · ao vivo via Google Meet ·
+  gravação 1 mês · 4h de conteúdo prático".
+- **Slide 7 (preço):** fundo preto, "INVESTIMENTO **R$ 97** VAGAS **LIMITADAS!**" +
+  "as vendas abrem dia 08 de maio às 10h" (caixa rosa).
+- **Slide 8 (CTA):** foto segurando um **cartão/ingresso**, estrelas rosa. "MARCA NA
+  **AGENDA** (caixa rosa) E NÃO PERDE A **OPORTUNIDADE**".
+- **Texturas/luz/sombra:** texto-fantasma repetido ao fundo (profundidade), grão
+  no preto, recortes com sombra; caixas de destaque sólidas. Rosa-magenta + preto +
+  amarelo-post-it pontual.
+- **Roubar pra Focus:** (1) **arquitetura de carrossel de oferta** (dor → promessa →
+  o que aprende → quando → quanto → CTA) reaproveitável direto; (2) **texto-fantasma
+  repetido** ao fundo pra dar profundidade barata; (3) slide de **dores em lista de
+  caixas**; (4) **post-it / objeto** segurando o corpo de texto; trocar rosa por roxo.
 
 > ⏳ **AINDA PENDENTES DE DESCRIÇÃO** (capturados, faltou ler/escrever):
-> DT24GxxDi8y (gaia.psd, 8), DV8sDgnjn4I (7), DX__xKAji1k (8), DYSRkcfEcDh (5),
 > DZir2nQFCeC (6), DXKCLRhjam8 (7), DWl-uvtDcYX (8), DWXGcHdFJmo (7),
 > DWEygDKlAJ0 (7), DVGqndUjaq9 (6), DKIKsNhRL86 (6), DVJAZ3niFq- (10).
 > Mais os **10 perfis extras**: wanrleydesigner, yaojadzn, gaia.psd,
