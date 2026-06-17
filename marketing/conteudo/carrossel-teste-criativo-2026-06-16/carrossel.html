@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --roxo:#692ABF; --roxo-claro:#9B5FE0; --teal:#19E0C0;
+    --branco:#FFFFFF; --cinza:#C9C3D6;
+    --liquid:url('../../../identidade/textura-liquid.png');
+    --geo:url('../../../identidade/textura-geometrica.png');
+  }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; -webkit-font-smoothing:antialiased; }
+
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
+    color:var(--branco); padding:92px 80px; display:flex; flex-direction:column; background:#0b0a10; }
+  .slide::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+    background:var(--liquid) center/cover no-repeat; opacity:.20; mix-blend-mode:screen; }
+  .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
+
+  /* palavra-fantasma gigante ao fundo */
+  .ghost{ position:absolute; z-index:2; font-weight:900; text-transform:uppercase;
+    color:rgba(255,255,255,.035); letter-spacing:-.04em; line-height:.8; pointer-events:none; user-select:none; }
+
+  /* topo */
+  .topo{ display:flex; align-items:flex-start; justify-content:space-between; }
+  .topo img{ height:52px; width:auto; }
+  .pill-v{ width:16px; height:56px; border:2px solid rgba(155,95,224,.75); border-radius:12px; }
+  .pill-v.teal{ border-color:rgba(25,224,192,.8); box-shadow:0 0 22px rgba(25,224,192,.35); }
+
+  .kicker{ font-size:15px; font-weight:800; letter-spacing:.32em; text-transform:uppercase; color:var(--roxo-claro); }
+  .meio{ flex:1; display:flex; flex-direction:column; justify-content:center; }
+  h1{ font-size:72px; font-weight:900; line-height:.98; letter-spacing:-.025em; text-transform:uppercase; }
+  h2{ font-size:48px; font-weight:900; line-height:1.03; letter-spacing:-.015em; text-transform:uppercase; }
+  p.corpo{ font-size:25px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:24px; max-width:820px; }
+  p.corpo b{ color:#fff; font-weight:700; }
+
+  /* acento manuscrito (marker) — a sacada das refs */
+  .marker{ font-family:'Permanent Marker', cursive; text-transform:none; letter-spacing:.005em;
+    color:var(--teal); display:inline-block; }
+  .marker.roxo{ color:var(--roxo-claro); }
+
+  .hl{ color:var(--roxo-claro); }
+  .hl.teal{ color:var(--teal); }
+  .strike{ text-decoration:line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:5px; }
+  .ul-teal{ box-shadow: inset 0 -.10em 0 0 rgba(25,224,192,.7); }
+
+  /* círculo desenhado à mão */
+  .circ{ position:relative; display:inline-block; padding:0 .14em; }
+  .circ::before{ content:""; position:absolute; inset:-20% -5%; z-index:-1;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%2319E0C0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%; }
+  .circ.roxo::before{ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%239B5FE0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+  .num{ font-size:150px; font-weight:900; line-height:.88; letter-spacing:-.03em; }
+
+  .arrasta{ position:absolute; right:80px; bottom:70px; z-index:4;
+    border:1.5px solid rgba(255,255,255,.42); border-radius:40px; padding:12px 26px;
+    font-size:16px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; }
+
+  /* slide claro */
+  .slide.claro{ background:#F2EEE6; color:#161616; }
+  .slide.claro::after{ background:var(--geo) center/cover no-repeat; opacity:.16; mix-blend-mode:multiply; }
+  .slide.claro .kicker{ color:var(--roxo); }
+  .slide.claro p.corpo{ color:#4a4458; }
+  .slide.claro .num{ color:var(--roxo); }
+  .slide.claro .marker{ color:var(--roxo); }
+  .slide.claro .ghost{ color:rgba(22,22,22,.05); }
+  .slide.claro .marca-badge{ width:80px; height:80px; border-radius:20px; background:#161616; display:flex; align-items:center; justify-content:center; }
+  .slide.claro .marca-badge img{ height:46px; }
+  .slide.claro .arrasta{ border-color:rgba(22,22,22,.35); color:#161616; }
+  .slide.claro .pill-v{ border-color:rgba(105,42,191,.6); }
+
+  /* CTA */
+  .cta .meio{ align-items:center; text-align:center; justify-content:center; }
+  .cta .logo-grande{ height:118px; margin-bottom:22px; }
+  .cta h2{ font-size:54px; }
+  .cta .botao{ display:inline-block; margin-top:38px; background:var(--roxo); color:#fff;
+    font-size:22px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:23px 48px; border-radius:54px; box-shadow:0 0 70px rgba(105,42,191,.6); }
+  .cta .handle{ margin-top:28px; font-size:22px; font-weight:600; color:var(--cinza); }
+</style>
+</head>
+<body>
+
+<!-- 1 CAPA -->
+<section class="slide" style="background:
+    radial-gradient(72% 50% at 10% 2%, rgba(105,42,191,.45), transparent 60%),
+    radial-gradient(55% 42% at 100% 100%, rgba(25,224,192,.16), transparent 55%), #0b0a10;">
+  <div class="ghost" style="font-size:300px; top:120px; right:-40px;">?</div>
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v teal"></div></div>
+    <div class="meio">
+      <span class="kicker">Presença digital</span>
+      <h1 style="margin-top:22px;">Te indicaram.<br>A pessoa<br>procurou.</h1>
+      <div style="margin-top:18px; font-family:'Permanent Marker',cursive; font-size:96px; line-height:.95;">
+        <span class="marker circ">não te achou</span>
+      </div>
+      <p class="corpo">Como negócio local bom perde cliente todo dia sem perceber — e o que muda quando você passa a aparecer.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 2 A CENA -->
+<section class="slide" style="background:
+    radial-gradient(62% 48% at 100% 0%, rgba(105,42,191,.40), transparent 58%), #0b0a10;">
+  <div class="ghost" style="font-size:230px; bottom:60px; left:-30px; letter-spacing:-.06em;">GOOGLE</div>
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">A cena</span>
+      <h2 style="margin-top:18px;">Ouviram falar de você<br>e foram te procurar no <span class="marker roxo" style="font-size:62px;">Google</span></h2>
+      <p class="corpo">Digitou o nome do seu serviço na sua cidade. O que apareceu? Três concorrentes, um mapa, um monte de avaliação. <b>Você não estava lá.</b></p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 3 O PROBLEMA -->
+<section class="slide" style="background:
+    radial-gradient(70% 52% at 0% 100%, rgba(105,42,191,.42), transparent 60%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v teal"></div></div>
+    <div class="meio">
+      <span class="kicker">O problema</span>
+      <h2 style="margin-top:18px;">Boca a boca só alcança<br><span class="ul-teal">quem já te conhece</span></h2>
+      <p class="corpo">É o melhor marketing que existe — e tem um teto. Ele para onde a sua rede de contatos para. Quem está um passo além <b>nunca ouve o seu nome.</b></p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 4 ONDE VAZA -->
+<section class="slide" style="background:
+    radial-gradient(58% 48% at 100% 6%, rgba(105,42,191,.38), transparent 58%),
+    radial-gradient(48% 38% at 0% 100%, rgba(25,224,192,.12), transparent 55%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">Onde vaza</span>
+      <h2 style="margin-top:18px;">A indicação te levou à porta.<br>A internet abriu a do <span class="marker" style="font-size:60px;">concorrente</span></h2>
+      <p class="corpo">A pessoa recebeu seu nome, foi pesquisar pra confirmar e esbarrou em quem investiu pra aparecer. <b>Você perdeu uma venda que era sua</b> — sem nem saber que existiu.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 5 NÚMERO (claro) -->
+<section class="slide claro">
+  <div class="ghost" style="font-size:560px; top:-40px; right:-60px; font-weight:900;">9</div>
+  <div class="conteudo">
+    <div class="topo"><div class="marca-badge"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"></div><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="num"><span class="circ roxo">9 em 10</span></span>
+      <h2 style="margin-top:34px; color:#161616;">pesquisam <span class="marker">online</span><br>antes de escolher um serviço local</h2>
+      <p class="corpo">Se nessa busca você não aparece, a decisão acontece sem você na mesa.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 6 A VIRADA -->
+<section class="slide" style="background:
+    radial-gradient(70% 52% at 100% 100%, rgba(105,42,191,.44), transparent 60%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v teal"></div></div>
+    <div class="meio">
+      <span class="kicker">A virada</span>
+      <h2 style="margin-top:18px;">Presença digital não é postar.<br>É <span class="marker circ">aparecer na hora certa</span></h2>
+      <p class="corpo">Não é sobre seguidor ou dancinha. É estar visível exatamente quando alguém está decidindo comprar aquilo que você vende.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 7 O QUE MUDA -->
+<section class="slide" style="background:
+    radial-gradient(64% 48% at 6% 0%, rgba(105,42,191,.42), transparent 58%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">O que muda</span>
+      <h2 style="margin-top:18px;">Um canal de venda que<br><span class="hl teal">não depende de sorte</span></h2>
+      <p class="corpo">Anúncio que coloca seu nome na frente de quem está procurando, e uma presença que confirma que você é a escolha certa. <b>A indicação vira reforço</b> — não a sua única fonte.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 8 CTA -->
+<section class="slide cta" style="background:
+    radial-gradient(78% 56% at 50% 36%, rgba(105,42,191,.52), transparent 62%),
+    radial-gradient(40% 30% at 85% 90%, rgba(25,224,192,.14), transparent 55%), #0b0a10;">
+  <div class="conteudo">
+    <div class="meio">
+      <img class="logo-grande" src="../../../identidade/logo-transp.png" alt="FOCUS">
+      <h2>Quer ver como o seu<br>negócio aparece <span class="marker" style="font-size:64px;">hoje?</span></h2>
+      <p class="corpo" style="text-align:center; max-width:700px;">A Focus faz um diagnóstico da sua presença digital — sem compromisso.</p>
+      <span class="botao">Chama no direct →</span>
+      <span class="handle">@focusprogress</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
