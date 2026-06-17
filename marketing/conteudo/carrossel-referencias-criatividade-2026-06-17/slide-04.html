@@ -32,9 +32,12 @@
   .bloco{ position:absolute; z-index:5; left:80px; bottom:166px; max-width:600px; }
   .lead{ font-weight:800; text-transform:uppercase; font-size:50px; line-height:1.04; letter-spacing:-.02em; color:#fff;
     text-shadow:0 3px 16px rgba(0,0,0,.85); }
-  .hero{ position:relative; font-weight:900; text-transform:uppercase; font-size:128px; line-height:.92; letter-spacing:-.03em;
-    color:transparent; -webkit-text-stroke:3px #fff; margin-top:4px;
-    filter:drop-shadow(6px 14px 10px rgba(0,0,0,.6)); }
+  /* "CÓPIA": branca sólida + eco roxo deslocado atrás (duplicata = cópia) */
+  .hero{ position:relative; display:inline-block; font-weight:900; text-transform:uppercase; font-size:128px;
+    line-height:.92; letter-spacing:-.03em; color:#fff; margin-top:6px; z-index:1;
+    text-shadow:0 6px 16px rgba(0,0,0,.8), 0 2px 4px rgba(0,0,0,.65); }
+  .hero::before{ content:"Cópia"; position:absolute; left:0; top:0; z-index:-1;
+    color:transparent; -webkit-text-stroke:2.5px rgba(155,95,224,.9); transform:translate(16px,13px); }
   .corpo{ margin-top:26px; max-width:520px; font-size:27px; font-weight:500; line-height:1.5; color:#C9C3D6;
     text-shadow:0 2px 14px rgba(0,0,0,.9); }
   .corpo b{ color:#fff; font-weight:700; }
