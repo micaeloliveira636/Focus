@@ -503,17 +503,16 @@ que uso".
   cada slide) com template fixo e abas. Capa quente fotográfica + internos sóbrios.
   Trocar acentos pelo roxo.
 
-## DYSRkcfEcDh — designer ("DESIGNS QUE EU...") · captura PARCIAL (1 de 5)
-⚠️ **Falha de captura:** os 5 prints saíram idênticos — o "Avançar" não avançou
-neste post (provável 1º item em vídeo/reel ou layout diferente). Descrevo só o que
-veio (slide 1). *Recapturar manualmente se for relevante.* Micael marcou o slide 3
-(não capturado).
+## DYSRkcfEcDh — (RECAPTURADO, 5 slides) · ⏳ pendente de descrição
+A captura original estava furada (pegava um **reel sugerido** — a colagem "DESIGNS
+QUE EU FECHEI" NÃO era este post). Já **recapturado** com slides reais e únicos.
+Descrever na retomada. Micael marcou o slide 3.
 
-- **Slide 1 (montagem):** **colagem/grade** — selfie no espelho de mulher (top
-  marrom, jeans, gravata solta) à esquerda; **fichário/caderno** com **doodles de
-  estrela** à direita; faixa inferior "DESIGNS QUE EU FE[CHEI]" em caixa-alta branca
-  com estrelas; caneca de café. Vibe colagem pessoal + estrelas como elemento
-  gráfico, fundo creme/quente.
-- **Roubar pra Focus:** o pouco que dá — **estrelas/sparkles desenhadas** como
-  elemento lúdico e **colagem de selfie + objetos**. (Avaliar recaptura pro slide 3.)
+> ⏳ **AINDA PENDENTES DE DESCRIÇÃO** (capturados, faltou ler/escrever):
+> DT24GxxDi8y (gaia.psd, 8), DV8sDgnjn4I (7), DX__xKAji1k (8), DYSRkcfEcDh (5),
+> DZir2nQFCeC (6), DXKCLRhjam8 (7), DWl-uvtDcYX (8), DWXGcHdFJmo (7),
+> DWEygDKlAJ0 (7), DVGqndUjaq9 (6), DKIKsNhRL86 (6), DVJAZ3niFq- (10).
+> Mais os **10 perfis extras**: wanrleydesigner, yaojadzn, gaia.psd,
+> luisfelipe.design, nana_multimedia, designbyayelet, martavillegaasdesign,
+> designbysergio, rafafrancodesign, gtmshrma.
 
