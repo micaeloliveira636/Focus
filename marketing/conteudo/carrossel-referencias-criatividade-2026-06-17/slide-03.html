@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
+    --couro:url('../../../identidade/textura-couro.jpg');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --wrap:url('../../../identidade/textura-wrap.jpg'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+
+  .cena{ position:absolute; inset:0; z-index:0; background:url('pecas/s03-cena.png') center/cover no-repeat;
+    filter:contrast(1.06) saturate(1.05) brightness(.95) blur(0.9px); transform:scale(1.02); }
+  /* scrim de baixo: garante leitura do texto ancorado embaixo */
+  .scrimb{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(to top, rgba(8,6,12,.97) 0%, rgba(8,6,12,.88) 20%, rgba(8,6,12,.42) 44%, rgba(8,6,12,0) 66%); }
+
+  /* overlay de textura (combo diferente: couro + scratched + wrap) */
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; opacity:.07; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.04; }
+  .t-wrap{ background-image:var(--wrap); mix-blend-mode:soft-light; opacity:.03; }
+
+  /* bloco de texto embaixo */
+  .bloco{ position:absolute; z-index:5; left:80px; bottom:158px; max-width:600px; }
+  .h3{ font-weight:900; text-transform:uppercase; font-size:62px; line-height:.98; letter-spacing:-.03em; color:#fff;
+    text-shadow:0 12px 22px rgba(0,0,0,.85), 0 2px 5px rgba(0,0,0,.7); }
+  .corpo{ margin-top:24px; max-width:520px; font-size:27px; font-weight:500; line-height:1.5; color:#C9C3D6;
+    text-shadow:0 2px 14px rgba(0,0,0,.9); }
+  .corpo b{ color:#fff; font-weight:700; }
+  .hl{ color:var(--roxo-claro); }
+  /* grifo de marcador atrás de "viu" */
+  .mark{ position:relative; color:#fff; padding:0 .06em; z-index:0; }
+  .mark::before{ content:""; position:absolute; inset:8% -10%; z-index:-1; background:var(--roxo);
+    transform:rotate(-1.6deg); border-radius:5px; box-shadow:0 8px 26px rgba(105,42,191,.5); }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:70px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:80px; bottom:64px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.72; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(125% 95% at 50% 42%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="cena"></div>
+    <div class="scrimb"></div>
+    <div class="tex">
+      <span class="t-couro"></span>
+      <span class="t-scratch"></span>
+      <span class="t-wrap"></span>
+    </div>
+
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+
+    <div class="bloco">
+      <div class="h3">Sua mente é feita<br>do que ela já <span class="mark">viu</span></div>
+      <div class="corpo">Seu cérebro não inventa do zero. Ele <b>combina</b>. Toda ideia <span class="hl">"nova"</span> é uma mistura.</div>
+    </div>
+
+    <div class="arrasta">Arrasta →</div>
+    <div class="grain"></div>
+    <div class="vinh"></div>
+  </div>
+</body>
+</html>
