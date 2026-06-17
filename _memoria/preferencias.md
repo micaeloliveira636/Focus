@@ -20,3 +20,6 @@ Usa referências reais quando reforçam o ponto (um estudo, um filme, uma experi
 Autenticidade acima de tudo. Se soar como discurso pronto de vendedor, está errado. Melhor uma frase honesta e simples do que uma cheia de efeito. Simplicidade gera clareza — quanto mais simples, mais a mensagem flui.
 
 ## Preferências adicionais
+
+- **Nunca usar travessão/em-dash (—) em nada.** O dono odeia, acha que não tem nada a ver com o português real. Reescrever a frase com ponto, vírgula ou "e sim". Vale pra todo conteúdo e entrega.
+- Preferir **"seu/sua"** a "teu/tua" no texto dos posts.

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --roxo:#692ABF; --roxo-claro:#9B5FE0; --branco:#FFFFFF; --cinza:#C9C3D6;
+    --liquid:url('../../../identidade/textura-liquid.png');
+    --geo:url('../../../identidade/textura-geometrica.png');
+  }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; -webkit-font-smoothing:antialiased; }
+
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
+    color:var(--branco); padding:92px 80px; display:flex; flex-direction:column; background:#0b0a10; }
+  /* pilha de texturas da identidade (liquid + stars + geométrica) — aparente */
+  .slide.design::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.5; mix-blend-mode:soft-light; }
+  .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
+
+  /* topo */
+  .topo{ display:flex; align-items:flex-start; justify-content:space-between; }
+  .topo img{ height:74px; width:auto; }
+  .pill-v{ width:16px; height:56px; border:2px solid rgba(155,95,224,.8); border-radius:12px; }
+
+  .kicker{ font-size:15px; font-weight:800; letter-spacing:.32em; text-transform:uppercase; color:var(--roxo-claro);
+    text-shadow:0 2px 14px rgba(0,0,0,.6); }
+  .meio{ flex:1; display:flex; flex-direction:column; justify-content:center; }
+  .meio.bottom{ justify-content:flex-end; padding-bottom:78px; }
+  .foto .meio.bottom p.corpo{ max-width:680px; }
+  h1{ font-size:61px; font-weight:900; line-height:1.02; letter-spacing:-.025em; text-transform:uppercase; }
+  h2{ font-size:52px; font-weight:900; line-height:1.03; letter-spacing:-.02em; text-transform:uppercase; }
+  p.corpo{ font-size:25px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:22px; max-width:800px; }
+  p.corpo b{ color:#fff; font-weight:700; }
+  .foto h1,.foto h2,.foto p.corpo{ text-shadow:0 3px 30px rgba(0,0,0,.9); }
+  .foto p.corpo{ color:#E6E1F0; }
+
+  .hl{ color:var(--roxo-claro); }
+  .ul{ box-shadow: inset 0 -.10em 0 0 rgba(105,42,191,.9); }
+  .strike{ text-decoration:line-through; text-decoration-color:var(--roxo-claro); text-decoration-thickness:5px; }
+  .circ{ position:relative; display:inline-block; padding:0 .14em; }
+  .circ::before{ content:""; position:absolute; inset:-20% -5%; z-index:-1;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%239B5FE0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%; }
+
+  /* grifo-bloco (marca de marcador roxo atrás da palavra) */
+  .mark{ position:relative; display:inline-block; padding:0 .1em; color:#fff; }
+  .mark::before{ content:""; position:absolute; inset:8% -5%; z-index:-1;
+    background:var(--roxo); transform:rotate(-1.4deg); border-radius:4px; box-shadow:0 6px 26px rgba(105,42,191,.5); }
+
+  /* texto extrudado 3D (palavra-herói) */
+  .ext{ color:#fff; text-shadow:
+    1px 1px 0 #4E208D, 2px 2px 0 #481B7B, 3px 3px 0 #421F74,
+    4px 4px 0 #3a1a66, 5px 5px 0 #321557, 6px 6px 0 #2a1149,
+    7px 7px 0 #220e3b, 8px 8px 18px rgba(0,0,0,.55); }
+
+  /* seta desenhada à mão */
+  .seta{ display:block; width:120px; height:90px; margin:8px 0 -6px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Cpath d='M14 18 C70 26 110 52 132 96' fill='none' stroke='%239B5FE0' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M132 96 L112 64 M132 96 L96 104' fill='none' stroke='%239B5FE0' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left center/contain; }
+
+  .arrasta{ position:absolute; right:80px; bottom:70px; z-index:4;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:12px 26px;
+    font-size:16px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase;
+    backdrop-filter:blur(2px); }
+
+  /* ===== CAPA: roxo em massa (coragem) ===== */
+  .slide.capa{ background:
+    radial-gradient(120% 90% at 50% 0%, #7B34D6 0%, #5A23A6 38%, #481B7B 66%, #2a1149 100%); }
+  .slide.capa::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.42; mix-blend-mode:soft-light; }
+  /* vinheta escura nos cantos pra dar profundidade ao roxo */
+  .slide.capa .conteudo::before{ content:""; position:absolute; inset:-92px -80px; z-index:0; pointer-events:none;
+    box-shadow: inset 0 0 320px 80px rgba(20,8,39,.85); }
+  .capa .hero{ font-size:101px; font-weight:900; line-height:.96; letter-spacing:-.035em; text-transform:uppercase;
+    text-shadow:0 6px 40px rgba(0,0,0,.4); }
+  .capa .kicker{ color:#E9DAFF; }
+
+  /* ===== slides com FOTO ===== */
+  .slide.foto{ background-size:cover; background-position:center; background-color:#0b0a10; }
+  .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2;
+    backdrop-filter:blur(2px) brightness(.8) saturate(.92); -webkit-backdrop-filter:blur(2px) brightness(.8) saturate(.92); }
+  .slide.foto.ov-bottom::before{ background:
+    linear-gradient(to top, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
+    radial-gradient(80% 40% at 20% 100%, rgba(105,42,191,.28), transparent 70%); }
+  .slide.foto::after{ content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.3; mix-blend-mode:soft-light; }
+
+  /* ===== slide claro (respiro/frase-chave) ===== */
+  .slide.claro{ background:#F2EEE6; color:#161616; }
+  .slide.claro::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:var(--geo) center/cover no-repeat; opacity:.16; mix-blend-mode:multiply; }
+  .slide.claro .kicker{ color:var(--roxo); text-shadow:none; }
+  .slide.claro p.corpo{ color:#4a4458; }
+  .slide.claro h2{ color:#161616; }
+  .slide.claro .arrasta{ border-color:rgba(22,22,22,.4); color:#161616; }
+  .slide.claro .pill-v{ border-color:rgba(105,42,191,.6); }
+  .slide.claro .circ::before{ filter:none; }
+
+  /* ===== CTA ===== */
+  .cta .meio{ align-items:center; text-align:center; justify-content:center; }
+  .cta .logo-grande{ height:158px; margin-bottom:26px; }
+  .cta h2{ font-size:50px; }
+  .cta .botao{ display:inline-block; margin-top:38px; background:var(--roxo); color:#fff;
+    font-size:22px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:23px 48px; border-radius:54px; box-shadow:0 0 70px rgba(105,42,191,.6); }
+  .cta .handle{ margin-top:28px; font-size:22px; font-weight:600; color:var(--cinza); }
+</style>
+</head>
+<body>
+
+<!-- 1 CAPA (roxo em massa + palavra-herói + extrusão) -->
+<section class="slide capa">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio bottom">
+      <span class="kicker">Criatividade</span>
+      <h1 class="hero" style="margin-top:14px;">Ninguém<br>cria<br><span class="ext">do nada.</span></h1>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 2 O MITO (design) -->
+<section class="slide design" style="background:
+    radial-gradient(70% 52% at 0% 100%, rgba(105,42,191,.42), transparent 60%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">O mito</span>
+      <h2 style="margin-top:18px;">Todo mundo trata<br>criatividade como <span class="ul">dom</span></h2>
+      <p class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 3 A VERDADE (foto — tipo com profundidade) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-3.png');">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio bottom">
+      <span class="kicker">A verdade</span>
+      <h2 style="margin-top:16px;">Seu cérebro<br>não inventa do zero</h2>
+      <p class="corpo">Ele <b>combina o que já viu.</b> Toda ideia "nova" é uma mistura de coisas que entraram antes.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 4 REFERÊNCIA ≠ CÓPIA (design — palavra-herói + riscado) -->
+<section class="slide design" style="background:
+    radial-gradient(64% 50% at 100% 0%, rgba(105,42,191,.4), transparent 58%), #0b0a10;">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">A diferença</span>
+      <h2 style="margin-top:18px;">Referência não<br>é <span class="strike">cópia</span></h2>
+      <p class="corpo">Cópia é pegar <b>uma</b> e clonar.<br>Repertório é juntar <span class="mark">cem</span> e misturar até virar seu.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 5 FRASE-CHAVE (claro — respiro, aprovado) -->
+<section class="slide claro">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-roxo.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio">
+      <span class="kicker">Em uma frase</span>
+      <h2 style="margin-top:22px; font-size:62px;">Quanto mais você guarda,<br>mais você tem<br>para <span class="circ" style="color:var(--roxo)">misturar</span></h2>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 6 A PRÁTICA (foto — pôster de filme) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-6.png');">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio bottom">
+      <span class="kicker">Na prática</span>
+      <h2 style="margin-top:16px;">Por isso eu<br>coleciono tudo</h2>
+      <p class="corpo">Salvo print, carrossel, anúncio bom. Não pra copiar, e sim pra ter <b>munição</b> na hora de criar.</p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 7 A VIRADA (foto) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-7.png');">
+  <div class="conteudo">
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
+    <div class="meio bottom">
+      <span class="kicker">A virada</span>
+      <h2 style="margin-top:16px;">A tela nunca mais<br>fica em <span class="hl">branco</span></h2>
+      <p class="corpo">Você abre seu banco de ideias, mistura várias referências… e sai algo que <b>parece só seu.</b></p>
+    </div>
+  </div>
+  <div class="arrasta">Arrasta →</div>
+</section>
+
+<!-- 8 CTA (design) -->
+<section class="slide design cta" style="background:
+    radial-gradient(70% 45% at 50% 72%, rgba(105,42,191,.5), transparent 60%), #0b0a10;">
+  <div class="conteudo">
+    <div class="meio">
+      <img class="logo-grande" src="../../../identidade/logo-transp.png" alt="FOCUS">
+      <h2>Criatividade é repertório.<br>E repertório se constrói.</h2>
+      <p class="corpo" style="text-align:center; max-width:720px;">Comece a guardar suas referências a partir de hoje. Daqui a um mês você não encara mais a tela em branco.</p>
+      <span class="handle">@focusprogress</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

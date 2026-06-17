@@ -1,0 +1,17 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
+const { chromium } = require(path.resolve(__dirname, '..', '..', '..', 'comercial', 'coletor', 'node_modules', 'playwright-core'));
+const file = process.argv[2] || 'capa-complexa.html';
+const out = process.argv[3] || 'instagram/hc-capa.png';
+const html = 'file://' + path.join(__dirname, file).replace(/\\/g, '/');
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+await page.goto(html, { waitUntil: 'networkidle' });
+await page.waitForTimeout(1200);
+await page.locator('.slide').first().screenshot({ path: path.join(__dirname, out) });
+await browser.close();
+console.log('ok →', out);
+process.exit(0);
