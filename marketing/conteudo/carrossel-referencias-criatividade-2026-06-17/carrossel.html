@@ -32,6 +32,11 @@
   /* faixa de linework geométrico (geometrica como gráfico, não fundo) */
   .linework{ position:absolute; z-index:1; pointer-events:none; opacity:.5; mix-blend-mode:screen;
     background:var(--geo) center/cover no-repeat; }
+  /* slide escuro limpo: as 3 texturas sutis (sem cards), tipografia manda */
+  .slide.dark::after{ content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background-image: var(--geo), var(--stars), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 170%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.42; mix-blend-mode:soft-light; }
 
   /* topo */
   .topo{ display:flex; align-items:flex-start; justify-content:space-between; }
@@ -103,6 +108,8 @@
     background:radial-gradient(circle, rgba(155,95,224,.4) 0%, transparent 68%); filter:blur(10px); }
 
   /* ===== CTA ===== */
+  /* sombra PRETA atrás do texto (pedido do dono), no lugar do halo roxo */
+  .cta .meio::before{ background:radial-gradient(circle, rgba(0,0,0,.6) 0%, transparent 70%) !important; filter:blur(14px) !important; }
   .cta .logo-grande{ height:150px; margin-bottom:30px; }
   .cta h2{ font-size:58px; }
   .cta .handle{ margin-top:30px; font-size:23px; font-weight:700; color:var(--roxo-claro); letter-spacing:.04em; }
@@ -123,19 +130,14 @@
 </section>
 
 <!-- 2 O MITO -->
-<section class="slide">
-  <div class="moodboard">
-    <div class="card tex-geo" style="width:320px;height:400px;left:-90px;top:90px;transform:rotate(7deg);opacity:.5;"></div>
-    <div class="card tex-liquid" style="width:280px;height:360px;right:-75px;bottom:130px;transform:rotate(-8deg);opacity:.55;"></div>
-  </div>
-  <div class="veu"></div>
+<section class="slide dark" style="background:
+    radial-gradient(78% 56% at 50% 10%, rgba(105,42,191,.42), transparent 62%), #0b0a10;">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio">
-      <span class="ghost" style="font-size:300px; top:120px; left:-40px;">MITO</span>
       <span class="kicker">O mito</span>
-      <h2>Criatividade<br>não é <span class="strike">dom</span></h2>
-      <p class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre. Mentira.</p>
+      <h2>Te disseram que<br>criatividade<br>é <span class="strike">dom</span></h2>
+      <p class="corpo">Ou você nasceu com ela, ou se contenta em ser o <b>"sem ideia"</b> pra sempre. <b>Mentira.</b></p>
     </div>
   </div>
   <div class="arrasta">Arrasta →</div>
