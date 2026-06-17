@@ -35,7 +35,7 @@
   h2{ font-size:52px; font-weight:900; line-height:1.03; letter-spacing:-.02em; text-transform:uppercase; }
   p.corpo{ font-size:25px; font-weight:500; line-height:1.5; color:var(--cinza); margin-top:22px; max-width:800px; }
   p.corpo b{ color:#fff; font-weight:700; }
-  .foto h1,.foto h2,.foto p.corpo{ text-shadow:0 2px 24px rgba(0,0,0,.7); }
+  .foto h1,.foto h2,.foto p.corpo{ text-shadow:0 3px 30px rgba(0,0,0,.9); }
   .foto p.corpo{ color:#E6E1F0; }
 
   .hl{ color:var(--roxo-claro); }
@@ -54,14 +54,19 @@
 
   /* ===== slides com FOTO ===== */
   .slide.foto{ background-size:cover; background-position:center; }
-  /* overlay escuro + leve tint roxo p/ legibilidade e unidade de marca */
-  .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2; }
+  /* desfoque leve no fundo (recua a foto) — só atrás, o texto fica nítido */
+  .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2;
+    backdrop-filter:blur(3px) brightness(.78) saturate(.92); -webkit-backdrop-filter:blur(3px) brightness(.78) saturate(.92); }
+  /* sombra FORTE embaixo do texto (scrim) — garante o texto dominando */
   .slide.foto.ov-bottom::before{ background:
-    linear-gradient(to top, rgba(11,10,16,.96) 4%, rgba(11,10,16,.62) 34%, rgba(11,10,16,.15) 62%, rgba(11,10,16,.35) 100%),
-    radial-gradient(80% 40% at 20% 100%, rgba(105,42,191,.30), transparent 70%); }
+    linear-gradient(to top, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
+    radial-gradient(80% 40% at 20% 100%, rgba(105,42,191,.28), transparent 70%); }
   .slide.foto.ov-top::before{ background:
-    linear-gradient(to bottom, rgba(11,10,16,.95) 2%, rgba(11,10,16,.6) 30%, rgba(11,10,16,.12) 58%, rgba(11,10,16,.4) 100%),
-    radial-gradient(80% 40% at 80% 0%, rgba(105,42,191,.30), transparent 70%); }
+    linear-gradient(to bottom, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
+    radial-gradient(80% 40% at 80% 0%, rgba(105,42,191,.28), transparent 70%); }
+  /* textura/grão sutil sobre a foto (identidade, não foto) */
+  .slide.foto::after{ content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:url('../../../identidade/textura-stars.png') center/170% no-repeat; opacity:.12; mix-blend-mode:soft-light; }
 
   /* ===== slide claro (dado) ===== */
   .slide.claro{ background:#F2EEE6; color:#161616; }
@@ -93,7 +98,7 @@
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
     <div class="meio bottom">
       <span class="kicker">Presença digital</span>
-      <h1 style="margin-top:16px;">Te indicaram.<br>A pessoa procurou.<br><span class="hl circ">Não te achou.</span></h1>
+      <h1 style="margin-top:16px;">Te indicaram.<br>A pessoa te procurou.<br><span class="hl circ">Não te achou.</span></h1>
       <p class="corpo">Como negócio local bom perde cliente todo dia sem perceber.</p>
     </div>
   </div>

@@ -19,7 +19,7 @@ const dataUrl = await page.evaluate(async (b64) => {
   const d = ctx.getImageData(0, 0, c.width, c.height); const p = d.data;
   for (let i = 0; i < p.length; i += 4) {
     const maxc = Math.max(p[i], p[i+1], p[i+2]);
-    const a = maxc <= 16 ? 0 : Math.min(255, (maxc - 16) * 1.7);
+    const a = maxc <= 60 ? 0 : Math.min(255, (maxc - 60) * 2.8); // threshold alto mata o fundo
     p[i] = 255; p[i+1] = 255; p[i+2] = 255; p[i+3] = a; // branco
   }
   ctx.putImageData(d, 0, 0); return c.toDataURL('image/png');
