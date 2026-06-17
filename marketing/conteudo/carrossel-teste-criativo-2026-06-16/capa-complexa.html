@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#9B5FE0; }
+  html,body{ background:#000; font-family:'Montserrat',sans-serif; -webkit-font-smoothing:antialiased; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0b0a10; }
+
+  /* 1 — fundo: foto graduada (duotone roxo) + blur */
+  .bg{ position:absolute; inset:0; z-index:1;
+    background:url('foto-capa.png') center/cover no-repeat;
+    filter:grayscale(.5) brightness(.46) contrast(1.05) blur(15px); transform:scale(1.18); }
+  /* tint duotone roxo nas sombras/altas */
+  .grade{ position:absolute; inset:0; z-index:2; mix-blend-mode:color;
+    background:linear-gradient(150deg, #7a32d6 0%, #3a1170 60%, #120a22 100%); opacity:.7; }
+  .grade2{ position:absolute; inset:0; z-index:2;
+    background:linear-gradient(to top, rgba(11,10,16,.92) 6%, rgba(11,10,16,.35) 42%, rgba(11,10,16,.55) 100%); }
+  .glow{ position:absolute; inset:0; z-index:2; mix-blend-mode:screen;
+    background:radial-gradient(58% 40% at 18% 8%, rgba(124,47,214,.55), transparent 60%); }
+  /* textura sobre a foto */
+  .tex{ position:absolute; inset:0; z-index:3; mix-blend-mode:overlay; opacity:.5;
+    background:url('../../../identidade/textura-stars.png') center/cover no-repeat; }
+  /* vinheta */
+  .vinheta{ position:absolute; inset:0; z-index:3; box-shadow:inset 0 0 320px 70px rgba(0,0,0,.85); }
+
+  /* 4 — título (atrás do sujeito) */
+  .titulo{ position:absolute; z-index:4; left:80px; right:80px; bottom:150px; }
+  .kicker{ font-size:15px; font-weight:800; letter-spacing:.34em; text-transform:uppercase; color:var(--roxo-claro);
+    text-shadow:0 2px 16px #000; margin-bottom:14px; display:block; }
+  h1{ font-size:80px; font-weight:900; line-height:.96; letter-spacing:-.025em; text-transform:uppercase; color:#fff;
+    text-shadow:0 4px 30px rgba(0,0,0,.8); }
+  .circ{ position:relative; color:var(--roxo-claro); display:inline-block; padding:0 .12em; }
+  .circ::before{ content:""; position:absolute; inset:-18% -4%; z-index:-1;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 130'%3E%3Cpath d='M28 78 C36 30 130 16 214 24 C286 31 300 74 262 100 C206 130 64 126 34 94 C16 76 22 70 30 56' fill='none' stroke='%239B5FE0' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%; }
+
+  /* 5 — sujeito recortado (na FRENTE do título) + glow atrás dele */
+  .sujeito-glow{ position:absolute; inset:0; z-index:4; mix-blend-mode:screen;
+    background:radial-gradient(28% 24% at 72% 46%, rgba(124,47,214,.65), transparent 70%); }
+  .sujeito{ position:absolute; inset:0; z-index:5; width:100%; height:100%;
+    object-fit:cover; object-position:center; transform:scale(1.22) translate(30%, 2%);
+    filter:drop-shadow(-30px 24px 44px rgba(0,0,0,.75)) brightness(1.08) contrast(1.06) saturate(1.08); }
+
+  /* 6 — UI por cima */
+  .ui{ position:absolute; inset:0; z-index:6; }
+  .wolf{ position:absolute; top:84px; left:80px; height:52px; }
+  .pill-v{ position:absolute; top:84px; right:80px; width:16px; height:56px; border:2px solid rgba(155,95,224,.85); border-radius:12px; }
+  .sub{ position:absolute; left:80px; right:80px; bottom:104px; font-size:23px; font-weight:500; color:#E6E1F0; text-shadow:0 2px 14px #000; max-width:640px; }
+  .arrasta{ position:absolute; right:80px; bottom:64px; border:1.5px solid rgba(255,255,255,.5); border-radius:40px;
+    padding:11px 24px; font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; }
+</style></head>
+<body>
+<section class="slide">
+  <div class="bg"></div>
+  <div class="grade"></div>
+  <div class="grade2"></div>
+  <div class="glow"></div>
+  <div class="tex"></div>
+  <div class="vinheta"></div>
+
+  <div class="titulo">
+    <span class="kicker">Presença digital</span>
+    <h1>Te indicaram.<br>A pessoa procurou.<br><span class="circ">Não te achou.</span></h1>
+  </div>
+
+  <div class="sujeito-glow"></div>
+  <img class="sujeito" src="foto-capa-cut.png" alt="">
+
+  <div class="ui">
+    <img class="wolf" src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS">
+    <div class="pill-v"></div>
+    <div class="sub">Como negócio local bom perde cliente todo dia sem perceber.</div>
+    <div class="arrasta">Arrasta →</div>
+  </div>
+</section>
+</body></html>
