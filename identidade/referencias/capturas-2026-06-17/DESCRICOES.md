@@ -353,3 +353,133 @@ blueprint/HUD** sobre a imagem (assinatura do Mazzei). Micael marcou o slide 4.
   roxo); (3) prop surreal = metáfora literal (marionete, relógio); (4) CTA com
   mockup de perfil + palavra-comando.
 
+## DYMimB3CLRi — "7 Design Formulas Every Designer Should Know" (@saurabhux) · 9 slides
+**Educacional dark/UI** baseado em grid. Preto puro, **sans bold tipo Helvetica**,
+acento **rosa/magenta**, navegação por abas, diagramas/mockups. Modelo perfeito
+pra carrossel "X fórmulas/dicas". Micael marcou o slide 6.
+
+- **Slide 1 (capa):** preto, "7 DESIGN FORMULAS EVERY DESIGNER SHOULD KNOW" em sans
+  bold gigante; "7" e "DESIGNER" em magenta. **Linhas de grid** sutis + diagrama da
+  **espiral áurea** (line art) no canto inferior. Pílula-seta no topo, "SWIPE TILL
+  THE LAST FOR BONUS!", "MADE BY @saurabhux".
+- **Slides 2-8 (fórmulas):** **barra de abas** no topo (F1–07 em pílulas
+  segmentadas, a ativa destacada); título bold + **badge "Formula"** em pílula
+  magenta; a fórmula em sans/mono; **diagrama ou mockup** ilustrando (cantos
+  arredondados, comparação de line-height, escala de fontes, painel de colunas do
+  Figma, alvo de toque no polegar, formas de alinhamento óptico, color picker);
+  frase-conclusão em cinza embaixo. Slide 6 (F6, "Optical Alignment") troca o badge
+  por **"Error."** ("não tem fórmula pra isso — confie nos olhos").
+- **Slide 9 (Summary):** card arredondado com **lista das 7 fórmulas + setas**,
+  borda esquerda magenta, "Formulas only work when you use them."
+- **Texturas/luz/sombra:** quase flat; grid sutil, diagramas vetoriais, sombra de
+  elevação nos mockups. Sem fotografia. Magenta + branco/cinza sobre preto.
+- **Roubar pra Focus:** layout de **lista educativa** com abas numeradas + badge de
+  destaque + diagrama por slide + takeaway em cinza. Ótimo pra "X erros / X dicas /
+  passo a passo". Trocar magenta por roxo.
+
+## DUgS1aZiVyn — "photo dump" pessoal (diário, designer) · 8 slides
+**Estética de dump analógico/diário** — o oposto do design polido. Grade de
+**foto-filme** (quente desbotada ou P&B), **molduras de câmera de filme** (Tezza
+"TZ 1080 / LINE SERIES"), **legendas em script manuscrito**, colagens em grade,
+moldura de **coração rendado**. Pessoal, íntimo, "close friends". Micael marcou o
+slide 4.
+
+- **Slide 1:** mulher com microfone segurando uma caixa azul (palco), "últimos dias
+  por aqui" em script.
+- **Slide 2:** laptop sobre mesa de madeira + pernas, "trabalhando em lugar
+  diferente" script. Grade quente desbotada.
+- **Slide 3:** **colagem em grade** (shopping, café/croissant, cinema Paw Patrol,
+  carrinho de mercado), "por elas" script.
+- **Slide 4 (marcado):** foto P&B de duas pessoas deitadas numa rede/barco com um
+  bebê, "dia de chuva com cabaninha" script, **borda de filme** "TEZZA TZ 1080 /
+  LINE SERIES".
+- **Slide 5:** Bíblia aberta marcada com **grifa-texto laranja**, café, jornal,
+  anotação em script.
+- **Slide 6:** casal de pé, "gravando" script, foto-inset pequena.
+- **Slide 7:** bebê no bebê-conforto, "sunday service" script, igreja em inset.
+- **Slide 8:** **moldura de coração rendado** (doily) com foto do casal sobre fundo
+  vermelho, "bday :) it's a private dump" script.
+- **Texturas/luz/sombra:** grão de filme forte, vinheta de câmera analógica,
+  molduras Polaroid/filme com data; legendas manuscritas brancas; grade quente ou
+  P&B. Nada de design gráfico pesado — a "edição" é o tratamento de filme.
+- **Roubar pra Focus:** referência de **tom pessoal / bastidores** (não de design
+  comercial). Se a Focus fizer conteúdo de "diário"/bastidor, esse registro
+  analógico + script manuscrito + colagem dá intimidade. Usar com parcimônia (não
+  é a linha principal da marca).
+
+## DWOqrB5jdOt — devocional cristão (4 slides)
+**Editorial serifa devocional** — fotos de natureza em **motion blur** onírico,
+grade quente/muda, **serifa** com palavras-acento em itálico/script, texto
+centralizado, clima contemplativo. Micael marcou o slide 2.
+
+- **Slide 1:** paisagem verde borrada (motion blur) com cabana minúscula, "Confiar
+  em Deus completamente é obedecer mesmo quando não entendemos completamente."
+  ("completamente" em script).
+- **Slide 2 (marcado):** abstrato verde/dourado borrado, frase em cima e embaixo
+  ("...é um exercício espiritual, um treino invisível." / "onde Deus está ampliando
+  nossa capacidade de permanecer."), acentos itálicos.
+- **Slide 3:** campo borrado, corpo serifa centralizado sobre obediência.
+- **Slide 4:** campo com névoa e uma **ovelha**, citação "Hebreus 5:8" em serifa.
+- **Texturas/luz/sombra:** motion blur como textura/atmosfera, grão leve, luz
+  natural suave/enevoada; sem sombra dura. Verdes dourados muted.
+- **Roubar pra Focus:** registro **suave/elegante** com serifa + foto borrada
+  quando o tema pedir calma. Motion blur é um jeito barato de "recuar a imagem"
+  pro texto mandar. (Tom devocional não é da Focus, mas a técnica serve.)
+
+## DZfX1sYFSBK — "o instagram caiu" (@yoloartv) · 2 slides
+Sans bold + **cor chapada** + 1 objeto retrô + **marca-texto em todas as linhas**.
+Punchy e simples.
+
+- **Slide 1:** fundo **azul chapado**, foto de **monitor/computador bege vintage**,
+  "o instagram caiu" em sans bold branca (minúsculas, gigante), "E se o Instagram
+  não voltasse? Seu negócio sobreviveria?".
+- **Slide 2:** cinza-escuro, "Uma *marca forte* continua existindo mesmo quando o
+  aplicativo fecha." (gigante, "marca forte" em **caixa de destaque azul** itálica);
+  corpo com **grifo marca-texto linha a linha** (retângulos brancos/azuis atrás do
+  texto, cara de impresso marcado).
+- **Texturas/luz/sombra:** flat; objeto retrô com sombra suave; o "efeito" é o
+  marca-texto. Azul + branco + preto.
+- **Roubar pra Focus:** **objeto retrô isolado em cor chapada** (roxo no lugar do
+  azul) pra capa-conceito simples; **marca-texto linha a linha** como destaque (usar
+  pontual — pode pesar se em tudo).
+
+## DZnFHREASfA — card de citação único (1 slide)
+- **Slide único:** foto **P&B de papoulas/flores**, citação "Nada é mais criativo do
+  que uma mente em constante observação. — Virginia Woolf" com **caixa de destaque
+  laranja** atrás do texto, centralizada.
+- **Texturas/luz/sombra:** P&B suave, leve grão; highlight laranja sólido.
+- **Roubar pra Focus:** **card de citação** simples e forte (foto P&B + frase em
+  caixa de cor) — bom pra post avulso de autoridade. Trocar laranja por roxo.
+
+## DZIHgVdke2I — "Meu baú de REFERÊNCIAS para criar carrosséis" (@geisianedsgn ⭐) · 4 slides
+**A FAVORITA em ação — e no tema certo (referências).** É o exemplar perfeito da
+"cena composta" que o Micael quer: **composição pesada de Photoshop** + grunge +
+ouro + arame farpado + luz dramática. Estudar slide a slide.
+
+- **Slide 1 (capa):** fundo preto grungy; **baú de tesouro ornamentado** aberto com
+  um **cavalo de carrossel** de mármore/ouro saindo de dentro, **moldura dourada**
+  flutuando, folha de palmeira, **arame farpado** atravessando o topo, luz dourada
+  rasante. "Meu baú de" pequeno + "REFERÊNCIAS" gigante em **caixa-alta dourada**,
+  "para criar carrosséis" em script. Selo "Brought to you by · Geisiane Marques".
+  *Composição = várias peças fundidas numa cena só, não foto crua.*
+- **Slide 2:** arame farpado no topo, **estátua de cavalo dourada** (arreios
+  ornados) à direita, texto à esquerda "Antes de colocar a mão na massa, ou melhor,
+  no Photoshop, eu sempre busco referências..." ("no Photoshop" e "REFERÊNCIAS
+  INCRÍVEIS." em dourado). Textura de **parede preta arranhada/grunge**.
+- **Slide 3:** "tá, mas antes de tudo... DEIXA EU TE MOSTRAR O QUE TEM NESSE BAÚ:"
+  + **mockup 3D de tablet** mostrando um board do Pinterest, sliver de estátua
+  dourada + fone à esquerda. "outros designers" em dourado.
+- **Slide 4 (CTA):** fundo de **concreto arranhado**, arame farpado, "NÃO PRECISA
+  MAIS SE DESESPERAR PROCURANDO REFERÊNCIAS!" em dourado, "Basta comentar a palavra
+  'REFERÊNCIA'...". Selo Geisiane repetido.
+- **Texturas/luz/sombra:** grão pesado; **textura de parede preta arranhada**
+  (scratched) + concreto; **arame farpado** como elemento gráfico recorrente;
+  **rim light dourado** esculpindo os objetos; sombras projetadas reais dos objetos
+  fundidos na cena. Paleta preto + dourado/âmbar.
+- **Roubar pra Focus (alto valor):** (1) **capa = cena composta** (objeto-símbolo +
+  moldura + elemento-textura empilhados, não foto única); (2) elemento gráfico
+  recorrente atravessando os slides (arame → no nosso caso pode ser um traço roxo /
+  fio); (3) selo "Brought to you by" fixo (sistema); (4) **mockup 3D de device** pra
+  mostrar o "conteúdo"; (5) trocar dourado pelo roxo, manter grunge + rim light.
+  É literalmente o molde da nossa capa "busto quebrado".
+
