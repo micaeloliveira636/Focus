@@ -658,8 +658,157 @@ Bom molde pra quando a Focus for vender um serviço/mentoria.
   repetido** ao fundo pra dar profundidade barata; (3) slide de **dores em lista de
   caixas**; (4) **post-it / objeto** segurando o corpo de texto; trocar rosa por roxo.
 
+## DZir2nQFCeC — "4 estilos de design para copiar — parte 01" (@marcas.design) · 6 slides
+**Carrossel-catálogo de estilos visuais** — cada slide apresenta um "estilo" com
+cards de exemplo empilhados. Útil em dois níveis: ideia de conteúdo (listar estilos)
+e biblioteca de técnicas. Layout limpo, fundo de cor sólida por estilo.
+
+- **Slide 1 (capa):** fundo azul-claro; **mulher recortada** (camisa amarela do
+  Brasil), **ícones de pasta azul** (folder macOS) flutuando, cursor, janela
+  "AirDrop". "4 estilos de design" branco + "para copiar" preto bold + "**parte 01**"
+  em **pill azul**.
+- **Slide 2 — Estilo 01 "CAMERA INTERFACE":** **cards** de fotos urbanas
+  cinematográficas com **overlay de UI de câmera** (focus boxes amarelos, REC).
+  Empilhamento levemente girado.
+- **Slide 3 — Estilo 02 "IOS CORE":** colagem de **elementos de UI do iOS/macOS**
+  (janelas, AirDrop, sliders, "Summer 2025") sobre foto desfocada. Cards brancos
+  arredondados.
+- **Slide 4 — Estilo 03 "STICKER AESTHETIC":** cards com **adesivos/stickers**
+  (fisica movement, bolsa coberta de stickers, "only the best NEW"). Fundo laranja.
+- **Slide 5 — continua Sticker Aesthetic:** **posters tipo rave/flyer** (amarelo
+  "SIX HOUSE SHOW", lineup "EVERMIND"), smiley sticker, fundo de palmeira verde.
+- **Slide 6 (CTA):** fundo branco, **pastas azuis** flutuando, "**salve & aplique**"
+  gigante (azul + preto) com cursor, "comente para a parte 2" em pill azul.
+- **Texturas/luz/sombra:** cards com **sombra projetada suave** (efeito empilhado/
+  flutuante), cantos arredondados; cor de fundo chapada definindo cada estilo; pouco
+  grão, visual limpo. Azul + laranja + amarelo por seção.
+- **Roubar pra Focus:** (1) **formato "N estilos/técnicas pra copiar"** como série de
+  conteúdo (alto valor pra autoridade); (2) **cards empilhados com sombra** como
+  forma de mostrar exemplos; (3) **ícone de pasta / cursor / UI** como elemento
+  gráfico de "arquivo"; (4) **pill de cor** pra rótulo (parte 01, CTA). Adaptar paleta
+  pro roxo, um fundo sólido por slide.
+
+## DXKCLRhjam8 — "A comparação vai f#der sua cabeça" (@geisianedsgn ⭐) · 7 slides
+**A FAVORITA no auge da "cena composta".** É o exemplar mais completo do DNA que o
+Micael quer traduzir: **cenas surreais montadas no Photoshop/IA**, grunge pesado,
+**arame farpado** como elemento recorrente, palavra-herói dourada, paleta
+papel-bege + **teal petróleo** + âmbar + preto. Tema emocional (comparação) com
+narrativa em arco. Estudar slide a slide.
+
+- **Slide 1 (capa):** fundo de **papel/concreto bege grungy**, **arame farpado** nas
+  bordas (com chapa amarela atrás), **máscara teatral preta estilhaçada** no chão
+  (olho vazando luz âmbar), cacos espalhados. "A **comparação**" (dourado com sombra)
+  "vai f#der sua *cabeça*" ("cabeça" em script itálico). Selo "Brought to you by ·
+  Geisiane Marques" + pill "Continue arrastando".
+- **Slide 2:** fundo papel quadriculado, arame no topo, **mão realista coberta de
+  musgo/flores** saindo da direita (surreal). Lista de **frases em caixas amarelas
+  marca-texto**: "O design dele é melhor." / "Ela fatura mais." / "Começou depois e já
+  tá na frente." / "Tem mais seguidores postando menos." / "O setup dele é outro
+  nível." / "Eu já deveria estar mais longe." + "Esses pensamentos são mais comuns do
+  que parecem."
+- **Slide 3:** fundo **teal petróleo texturizado**, **braço robótico/cyborg** saindo
+  do chão rachado à esquerda, folhas escuras no topo, objeto âmbar quebrado embaixo.
+  "**Você começa a se questionar em silêncio.**" (dourado) + 3 perguntas em itálico +
+  "E isso vai corroendo sua confiança."
+- **Slide 4 (cena-chave):** fundo teal; **astronauta sentado num Porsche 911
+  enferrujado tomado por plantas**, fazendo "shhh" (cena IA surreal). "O problema é
+  que **você só vê o resultado.**" (dourado) + "...Você se compara com o palco... sem
+  conhecer os **bastidores.**"
+- **Slide 5:** fundo teal, **chapa amarela** central, arame no topo, **armadilha de
+  urso de metal** (dentes) embaixo. "Eu também já caí nessa **ARMADILHA.**" (gigante
+  preto) + "Mais de uma vez, inclusive. E toda vez que me comparei, me senti menor do
+  que realmente era."
+- **Slide 6:** fundo teal, **arame farpado dos dois lados**. "Eu só superei quando
+  parei de olhar pro lado..." + "**VOCÊ JÁ EVOLUIU MUITO MAIS DO QUE IMAGINA.**"
+  (dourado gigante empilhado).
+- **Slide 7 (CTA):** fundo papel bege grid limpo, selo Geisiane repetido. "E você, já
+  se *comparou assim?*" (itálico dourado) "Me conta nos comentários."
+- **Texturas/luz/sombra:** **papel/concreto arranhado** + **tela texturizada teal**
+  como fundos; grão pesado; **arame farpado** atravessando como assinatura; objetos
+  com **sombra projetada real** fundidos na cena (montagem, não foto); **rim light
+  âmbar** esculpindo as peças metálicas; viés sépia no bege, frio no teal. Paleta
+  bege + teal + dourado/âmbar + preto.
+- **Roubar pra Focus (alto valor):** (1) **arco emocional** (capa-tese → sintomas →
+  dúvida → virada → confissão → reframe → CTA) — molde de roteiro; (2) **cena composta
+  surreal** com 1 objeto-símbolo por slide (máscara, mão, astronauta, armadilha);
+  (3) **elemento gráfico recorrente** atravessando (arame → traço/fio roxo no nosso);
+  (4) **palavra-herói dourada** → no nosso, roxo-claro; (5) **frases-sintoma em caixas
+  marca-texto**; (6) selo "Brought to you by" como sistema. Trocar dourado/teal pela
+  paleta roxo+escuro, manter grunge + rim light + montagem.
+
+## DWl-uvtDcYX — "Mentiras que todo designer já contou" (@geisianedsgn ⭐) · 8 slides
+**Favorita — formato "Mentira × Verdade" com template fixo.** Mesma paleta da
+Geisiane (teal + dourado + grunge), capa de cena composta e internos num gabarito
+repetido de duas caixas. Humor relacionável. Molde de carrossel "verdade vs mentira"
+pronto pra adaptar.
+
+- **Slide 1 (capa):** teal grungy; **Pinóquio de madeira** com boné NY e **jaqueta
+  de couro com spikes**, **nariz crescendo e virando um galho com folhas** (montagem
+  surreal), **correntes de cobre** nos cantos. "**MEN TI RAS**" gigante dourado
+  empilhado + "que todo *designer* já contou" (script itálico branco). Selo "Brought
+  to you by · Geisiane Marques".
+- **Slides 2–7 (template fixo):** fundo teal texturizado, **correntes + galhos de
+  carvalho** nos cantos. Label script "**Mentira:**" + **caixa âmbar** (a mentira) /
+  label script "**A verdade:**" + **caixa cinza** (a verdade):
+  - "Tá quase pronto." → "(Nem abri o arquivo ainda)"
+  - "Demora porque eu sou detalhista." → "Procrastinei 4 dias e fiz tudo na última noite"
+  - "Tô com a agenda cheia" → "A agenda não tá cheia. Mas escassez vende."
+  - "Esse fim de semana eu descanso." → "Abri o Photoshop 'só pra ver uma coisa' e trabalhei 6 horas"
+  - "Isso foi proposital." → "Foi um erro que deu certo e eu fingi que planejei"
+  - "Adorei o briefing, ficou bem claro." → "Não entendi nada mas vou fingir até entender pelo contexto"
+- **Slide 8 (CTA):** fundo papel bege grunge, corrente à esquerda. "**hablei? haha**"
+  (manuscrito dourado) + "Tu já contou alguma dessas mentiras? Me conta nos
+  comentários" + linha menor "Se você nunca contou nenhuma dessas, você é um designer
+  melhor que eu." Selo Geisiane.
+- **Texturas/luz/sombra:** fundo de **tela/papel texturizado teal**; **correntes e
+  galhos** como moldura recorrente (montados com sombra real); caixas com leve
+  bevel/borda de seleção (cara de "objeto editável"); grão; capa com rim light na
+  madeira. Teal + dourado + cinza + bege.
+- **Roubar pra Focus:** (1) **template de 2 caixas (Mentira × Verdade / Mito × Real)**
+  reaplicável a qualquer tema; (2) **labels em script** contrastando com caixas
+  retas; (3) **moldura recorrente** (correntes/galhos → no nosso, fio/traço roxo) que
+  amarra a série; (4) capa com **objeto-símbolo surreal** (Pinóquio = mentira). Trocar
+  teal/dourado por roxo+escuro.
+
+## DWXGcHdFJmo — "Texturas que eu não vivo sem" (@geisianedsgn ⭐) · 7 slides
+**JACKPOT — é a bíblia de texturas da favorita.** Lista nominalmente as texturas que
+ela usa (grids, film dust, flow, kraft, halftone) e *como* usa cada uma. Bate direto
+com o vocabulário de textura que a Focus já tem nos slides (scratched, fabric,
+plastic, couro). **Referência técnica de maior valor do banco.**
+
+- **Slide 1 (capa):** canvas bege grunge, **arame farpado** topo e base, **astronauta
+  com papoulas laranjas brotando do traje** (cena composta surreal). "**TEX TU RAS**"
+  gigante dourado **com textura de tecido/burlap dentro das letras**, "que eu *não
+  vivo sem*" (script itálico). Selo Geisiane + "Arraste para o lado".
+- **Slides 2–6 (template moodboard):** **pasta azul "Texturas fav"** + cursor, **cards
+  de packs de textura empilhados**, **pill branca** com o nome + **caixa de borda azul
+  tracejada** com a explicação; galho de papoula continuando da capa:
+  - **Grids:** "Eu SEMPRE uso textura de grids no background dos meus posts. Fica bom
+    tanto no colorido quanto no P&B."
+  - **Film Dust:** "...com o fundo preto, porém você pode dar um **CTRL+I** pra
+    inverter, podendo ser aplicado também no branco."
+  - **Flow Abstract Backgrounds:** "uso de duas formas: como background, mas também
+    como **forma de iluminação**, aplicando desfoque."
+  - **Kraft Paper:** "a melhor que existe! Inclusive estou utilizando ela nesse
+    carrossel."
+  - **Halftone:** "ótima pra finalização e também pra background. Utilizo em cima de
+    **títulos** também (como na capa)."
+- **Slide 7 (CTA):** papel grid, **arame farpado envolvendo círculos amarelos** topo
+  e base. "**Gostou?**" (manuscrito dourado) "Comente **TEXTURE** e vou te mandar
+  todas no direct". Selo Geisiane.
+- **Texturas/luz/sombra:** o próprio tema — **kraft paper** como base do carrossel
+  inteiro, **grids** no fundo, **halftone** sobre os títulos, **grão**; cards
+  empilhados com sombra; capa com rim light no astronauta. Bege + dourado + acentos
+  azul/amarelo dos packs.
+- **Roubar pra Focus (altíssimo valor):** (1) confirma e expande nosso **sistema de
+  texturas nomeadas** — adotar grids no fundo, halftone sobre títulos, kraft como
+  base, flow (gradiente desfocado) como **iluminação**; (2) o truque **CTRL+I** pra
+  inverter film dust preto↔branco; (3) **flow como luz**, não só fundo; (4) formato
+  "ferramentas/texturas que uso" com **pasta + cards + pill + caixa tracejada** como
+  template de slide. Trocar acentos pelo roxo. Vale virar referência fixa do
+  carrossel-playbook.
+
 > ⏳ **AINDA PENDENTES DE DESCRIÇÃO** (capturados, faltou ler/escrever):
-> DZir2nQFCeC (6), DXKCLRhjam8 (7), DWl-uvtDcYX (8), DWXGcHdFJmo (7),
 > DWEygDKlAJ0 (7), DVGqndUjaq9 (6), DKIKsNhRL86 (6), DVJAZ3niFq- (10).
 > Mais os **10 perfis extras**: wanrleydesigner, yaojadzn, gaia.psd,
 > luisfelipe.design, nana_multimedia, designbyayelet, martavillegaasdesign,
