@@ -22,6 +22,7 @@ O texto é o elemento mais importante de todo carrossel/post estático. **Imagem
 - **Slide de dado/estatística em fundo claro** (#F2EEE6) com a textura topográfica bem sutil — é o exemplo certo de "textura usada como textura". (Esse slide ele aprovou; não mexer.)
 - Estética do designer dele: **caixa-alta condensada (Montserrat 900)**, **rabisco à mão** na palavra-chave, **pílula vertical** de acento, **"ARRASTA →"** em pílula, lobo no topo.
 - **Alto nível de complexidade**: textura sobre a foto, sombras, profundidade por foco — *desde que o texto continue dominando*.
+- **Texturas da identidade SEMPRE presentes e APARENTES** (não escondidas). Pilha das 3: **liquid embaixo + overlay/stars + geométrica**, blendadas (soft-light/overlay). Mais aparente nos slides de design; presente também sobre as fotos. É identidade forte — o dono quer ver isso.
 - **Prompts longos, completos e criativos** pro ChatGPT (sem economizar pra "ir rápido").
 
 ## 3. O que o dono NÃO GOSTA ❌ (reprovado, não repetir)
@@ -29,7 +30,7 @@ O texto é o elemento mais importante de todo carrossel/post estático. **Imagem
 - **Fonte manuscrita / marker / script** — testado e reprovado. Só Montserrat.
 - **Letra/palavra colorida em teal** — reprovado. Teal só como **glow sutil de canto**, nunca em texto.
 - **Vinheta pesada / manchas pretas** na imagem — reprovado.
-- **Textura como foto de fundo principal** (ex.: liquid em tela cheia) — reprovado. Textura é **grão sutil** (~10–12%), quase imperceptível.
+- **Textura como foto de fundo principal chapada** (ex.: liquid sozinho em tela cheia no blend screen, parecendo foto/swirl) — reprovado. A textura entra como **pilha blendada (soft-light/overlay)** — aparente e integrada à superfície, **nunca** como uma foto chapada que compete com o texto.
 - **Mover o sujeito de lugar** ou **sombra dura/offset** embaixo do sujeito — reprovado.
 - **Foto forte/vívida** competindo com o texto — reprovado.
 - **Logo bugada**: halo/caixa de ruído em volta do lobo; logo pequena; quadro preto atrás do lobo em fundo claro; qualquer **sombra/glow por cima da logo**. Tudo isso é proibido.
@@ -71,12 +72,17 @@ Estrutura: `[cena/sujeito] + [ângulo/lente] + [luz] + [clima] + [grade de cor F
 - `logo-transp.png` — lockup completo (lobo + FOCUS), pro CTA.
 - Tamanho topo ~74px. Recorte limpo (threshold alto, sem halo). Nunca sombra por cima.
 
-**Texturas (`identidade/`):**
-- `textura-stars.png` — grão sutil sobre escuro (~10–12%, soft-light) e sobre foto. NUNCA em tela cheia visível.
-- `textura-geometrica.png` — topográfica, no slide claro de dado (~16%, multiply).
-- `textura-liquid.png` — NÃO usar como fundo de tela cheia (vira "foto", reprovado).
+**Texturas (`identidade/`) — usar como PILHA blendada (aparente, é identidade):**
+Compor as 3 num mesmo layer com `background-blend-mode: soft-light, overlay, normal`:
+`background-image: var(--geo), textura-stars, var(--liquid)` · `background-size: cover, 175%, cover`.
+- Slides de **design** (escuros): pilha com `opacity:~.5; mix-blend-mode:soft-light` sobre o gradiente roxo — bem aparente.
+- Slides de **foto**: mesma pilha com `opacity:~.34; mix-blend-mode:soft-light` por cima da foto — presente sem brigar com o texto.
+- `textura-geometrica.png` também sozinha no slide claro de dado (~16%, multiply).
+- ❌ Liquid sozinho em tela cheia no screen (vira "foto") — proibido.
 
-**Slide com foto (receita):** `backdrop-filter: blur(~3px) brightness(.78)` no fundo + grão stars ~12% soft-light + **scrim escuro forte** (gradiente quase opaco no terço do texto) + `text-shadow` reforçado.
+**Slide com foto (receita):** `backdrop-filter: blur(~2px) brightness(.8)` no fundo (recua a foto, leve) + **pilha de texturas ~.34 soft-light** + **scrim escuro FORTE** (gradiente quase opaco no terço do texto) + `text-shadow` reforçado.
+
+**Posição do texto:** SEMPRE no **meio ou embaixo**. ❌ Nunca no topo (atrapalha a leitura).
 
 **Devices:** rabisco à mão (SVG roxo em volta da palavra), sublinhado-marcador, riscado — **1 por slide**, com parcimônia. Pílula vertical de acento + "ARRASTA →" em pílula no rodapé.
 

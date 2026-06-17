@@ -14,10 +14,11 @@
 
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden;
     color:var(--branco); padding:92px 80px; display:flex; flex-direction:column; background:#0b0a10; }
-  /* textura como GRÃO sutil (não como foto) — quase imperceptível, só dá superfície */
+  /* pilha de texturas da identidade (liquid embaixo + overlay/stars + geométrica) — aparente */
   .slide.design::after{ content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
-    background:url('../../../identidade/textura-stars.png') center/cover no-repeat;
-    background-size:160%; opacity:.10; mix-blend-mode:soft-light; }
+    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.5; mix-blend-mode:soft-light; }
   .conteudo{ position:relative; z-index:3; display:flex; flex-direction:column; height:100%; }
 
   /* topo */
@@ -56,7 +57,7 @@
   .slide.foto{ background-size:cover; background-position:center; }
   /* desfoque leve no fundo (recua a foto) — só atrás, o texto fica nítido */
   .slide.foto::before{ content:""; position:absolute; inset:0; z-index:2;
-    backdrop-filter:blur(3px) brightness(.78) saturate(.92); -webkit-backdrop-filter:blur(3px) brightness(.78) saturate(.92); }
+    backdrop-filter:blur(2px) brightness(.8) saturate(.92); -webkit-backdrop-filter:blur(2px) brightness(.8) saturate(.92); }
   /* sombra FORTE embaixo do texto (scrim) — garante o texto dominando */
   .slide.foto.ov-bottom::before{ background:
     linear-gradient(to top, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
@@ -64,9 +65,11 @@
   .slide.foto.ov-top::before{ background:
     linear-gradient(to bottom, rgba(8,7,12,.99) 0%, rgba(8,7,12,.92) 26%, rgba(8,7,12,.5) 46%, rgba(8,7,12,.1) 66%, rgba(8,7,12,.34) 100%),
     radial-gradient(80% 40% at 80% 0%, rgba(105,42,191,.28), transparent 70%); }
-  /* textura/grão sutil sobre a foto (identidade, não foto) */
+  /* pilha de texturas da identidade sobre a foto — presente, mas sem brigar com o texto */
   .slide.foto::after{ content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
-    background:url('../../../identidade/textura-stars.png') center/170% no-repeat; opacity:.12; mix-blend-mode:soft-light; }
+    background-image: var(--geo), url('../../../identidade/textura-stars.png'), var(--liquid);
+    background-position:center; background-repeat:no-repeat; background-size:cover, 175%, cover;
+    background-blend-mode: soft-light, overlay, normal; opacity:.34; mix-blend-mode:soft-light; }
 
   /* ===== slide claro (dado) ===== */
   .slide.claro{ background:#F2EEE6; color:#161616; }
@@ -132,11 +135,11 @@
   <div class="arrasta">Arrasta →</div>
 </section>
 
-<!-- 4 ONDE VAZA (foto, texto no topo) -->
-<section class="slide foto ov-top" style="background-image:url('foto-vaza.png');">
+<!-- 4 ONDE VAZA (foto, texto embaixo) -->
+<section class="slide foto ov-bottom" style="background-image:url('foto-vaza.png');">
   <div class="conteudo">
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt="FOCUS"><div class="pill-v"></div></div>
-    <div class="meio top">
+    <div class="meio bottom">
       <span class="kicker">Onde vaza</span>
       <h2 style="margin-top:16px;">A internet abriu a porta<br>do <span class="hl">concorrente</span></h2>
       <p class="corpo">Foram pesquisar pra confirmar e esbarraram em quem investiu pra aparecer. <b>Você perdeu uma venda que era sua.</b></p>
