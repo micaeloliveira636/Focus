@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
+    --plastic:url('../../../identidade/textura-plastic.png');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#1a0b33; }
+
+  /* roxo em massa (igual capa/CTA) */
+  .massa{ position:absolute; inset:0; z-index:0;
+    background:
+      radial-gradient(80% 60% at 50% 32%, #7B34D6 0%, #4C1D83 46%, #2A1056 78%, #150824 100%); }
+  /* texturas reais por cima do roxo (aparentes mas sutis) */
+  .tex{ position:absolute; inset:0; z-index:1; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.10; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.07; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.06; }
+  .vinh{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 42%, transparent 48%, rgba(8,4,18,.7) 100%); }
+
+  .bloco{ position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%); width:880px; text-align:center; }
+  .lobo{ height:150px; width:auto; margin:0 auto 40px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
+  .h{ font-weight:900; text-transform:uppercase; font-size:78px; line-height:.98; letter-spacing:-.03em; color:#fff;
+    text-shadow:0 10px 30px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.5); }
+  .h .ac{ color:#EBDDFB; }
+  .corpo{ margin:30px auto 0; max-width:680px; font-size:28px; font-weight:500; line-height:1.55; color:#E4DAF2;
+    text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .corpo b{ color:#fff; font-weight:700; }
+  .arroba{ margin-top:34px; font-size:26px; font-weight:800; letter-spacing:.02em; color:#fff;
+    text-shadow:0 2px 12px rgba(0,0,0,.5); }
+
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.6; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="massa"></div>
+    <div class="tex">
+      <span class="t-plastic"></span>
+      <span class="t-scratch"></span>
+      <span class="t-fabric"></span>
+    </div>
+    <div class="vinh"></div>
+
+    <div class="bloco">
+      <img class="lobo" src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="h">Criatividade<br>é <span class="ac">repertório</span></div>
+      <div class="corpo">E repertório se constrói. Comece a guardar suas referências <b>a partir de hoje</b>. Daqui a um mês a tela não fica mais em branco.</div>
+      <div class="arroba">@focusprogress</div>
+    </div>
+
+    <div class="grain"></div>
+  </div>
+</body>
+</html>

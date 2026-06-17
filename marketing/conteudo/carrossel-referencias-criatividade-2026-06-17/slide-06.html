@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
+    --fabric:url('../../../identidade/textura-fabric.jpg');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --plastic:url('../../../identidade/textura-plastic.png'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+
+  .cena{ position:absolute; inset:0; z-index:0; background:url('pecas/s06-cena.png') center/cover no-repeat;
+    filter:contrast(1.06) saturate(1.05) brightness(.95) blur(0.9px); transform:scale(1.02); }
+  /* scrim radial no centro p/ texto centralizado */
+  .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(72% 50% at 50% 50%, rgba(8,6,12,.92) 0%, rgba(8,6,12,.62) 50%, rgba(8,6,12,.12) 100%); }
+
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.05; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.045; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.05; }
+
+  .bloco{ position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%); width:880px; text-align:center; }
+  .h{ font-weight:900; text-transform:uppercase; font-size:74px; line-height:1.0; letter-spacing:-.03em; color:#fff;
+    text-shadow:0 12px 26px rgba(0,0,0,.9), 0 2px 6px rgba(0,0,0,.7); }
+  .h .ac{ color:var(--roxo-claro); text-shadow:0 12px 26px rgba(0,0,0,.85), 0 0 30px rgba(105,42,191,.4); }
+  .corpo{ margin-top:26px; font-size:28px; font-weight:500; line-height:1.5; color:#D7D2E0; max-width:720px;
+    margin-left:auto; margin-right:auto; text-shadow:0 2px 14px rgba(0,0,0,.9); }
+  .corpo b{ color:#fff; font-weight:700; }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:70px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:62px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.72; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(125% 95% at 50% 45%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="cena"></div>
+    <div class="scrim"></div>
+    <div class="tex">
+      <span class="t-fabric"></span>
+      <span class="t-scratch"></span>
+      <span class="t-plastic"></span>
+    </div>
+
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+
+    <div class="bloco">
+      <div class="h">Por isso eu<br><span class="ac">coleciono</span> tudo</div>
+      <div class="corpo">Salvo print, carrossel, anúncio bom. Não pra copiar, e sim pra ter <b>munição</b> na hora de criar.</div>
+    </div>
+
+    <div class="arrasta">Arrasta →</div>
+    <div class="grain"></div>
+    <div class="vinh"></div>
+  </div>
+</body>
+</html>
