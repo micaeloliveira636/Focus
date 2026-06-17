@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
+    --couro:url('../../../identidade/textura-couro.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg');
+    --scratched:url('../../../identidade/textura-scratched.jpg'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+
+  .cena{ position:absolute; inset:0; z-index:0; background:url('pecas/s04-cena.png') center/cover no-repeat;
+    filter:contrast(1.06) saturate(1.05) brightness(.95) blur(0.9px); transform:scale(1.02); }
+  /* scrim esquerda + base p/ o texto na coluna escura */
+  .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(80deg, rgba(8,6,12,.92) 0%, rgba(8,6,12,.55) 36%, rgba(8,6,12,0) 60%),
+      linear-gradient(to top, rgba(8,6,12,.85) 0%, rgba(8,6,12,.2) 26%, transparent 44%); }
+
+  /* overlay de textura (combo: couro + fabric + scratched) */
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; opacity:.07; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.05; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.04; }
+
+  .sombratxt{ position:absolute; z-index:3; left:-170px; bottom:230px; width:760px; height:560px; pointer-events:none;
+    background:radial-gradient(closest-side, rgba(5,3,9,.8), rgba(5,3,9,.38) 58%, transparent 78%); filter:blur(16px); }
+
+  .bloco{ position:absolute; z-index:5; left:80px; bottom:166px; max-width:600px; }
+  .lead{ font-weight:800; text-transform:uppercase; font-size:50px; line-height:1.04; letter-spacing:-.02em; color:#fff;
+    text-shadow:0 3px 16px rgba(0,0,0,.85); }
+  .hero{ position:relative; font-weight:900; text-transform:uppercase; font-size:128px; line-height:.92; letter-spacing:-.03em;
+    color:transparent; -webkit-text-stroke:3px #fff; margin-top:4px;
+    filter:drop-shadow(6px 14px 10px rgba(0,0,0,.6)); }
+  .corpo{ margin-top:26px; max-width:520px; font-size:27px; font-weight:500; line-height:1.5; color:#C9C3D6;
+    text-shadow:0 2px 14px rgba(0,0,0,.9); }
+  .corpo b{ color:#fff; font-weight:700; }
+  .hl{ color:var(--roxo-claro); font-weight:700; }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:70px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:80px; bottom:64px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.72; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(125% 95% at 55% 45%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="cena"></div>
+    <div class="scrim"></div>
+    <div class="tex">
+      <span class="t-couro"></span>
+      <span class="t-fabric"></span>
+      <span class="t-scratch"></span>
+    </div>
+    <div class="sombratxt"></div>
+
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+
+    <div class="bloco">
+      <div class="lead">Referência<br>não é</div>
+      <div class="hero">Cópia</div>
+      <div class="corpo">Cópia é pegar <b>uma</b> e clonar. Repertório é juntar <span class="hl">cem</span> e misturar até virar seu.</div>
+    </div>
+
+    <div class="arrasta">Arrasta →</div>
+    <div class="grain"></div>
+    <div class="vinh"></div>
+  </div>
+</body>
+</html>
