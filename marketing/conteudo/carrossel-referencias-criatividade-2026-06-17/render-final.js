@@ -14,15 +14,15 @@ fs.mkdirSync(outDir, { recursive: true });
 const files = ['capa.html', 'slide-02.html', 'slide-03.html', 'slide-04.html', 'slide-05.html', 'slide-06.html', 'slide-07.html', 'slide-08.html'];
 
 const GRADE = `
-  /* dessatura o que vier quente e dá um contraste base uniforme */
-  .cena{ filter: saturate(.74) contrast(1.07) brightness(.95) !important; }
-  /* tinta tudo pro MESMO roxo (color = pega o tom roxo, mantém a luz) */
+  /* leve dessaturação só pra domar extremos (mantém branco do mármore e cores) */
+  .cena{ filter: saturate(.92) contrast(1.04) brightness(.97) !important; }
+  /* tinta LEVE pro mesmo roxo (só harmoniza a temperatura, não monocromático) */
   .grade-col{ position:absolute; inset:0; z-index:4; pointer-events:none;
-    background:#5a2bb0; mix-blend-mode:color; opacity:.34; }
-  /* brilho roxo central pra dar profundidade/glow consistente */
+    background:#5a2bb0; mix-blend-mode:color; opacity:.14; }
+  /* glow roxo central sutil pra profundidade */
   .grade-glow{ position:absolute; inset:0; z-index:4; pointer-events:none;
-    background:radial-gradient(72% 60% at 50% 44%, rgba(123,52,214,.26), transparent 72%);
-    mix-blend-mode:overlay; opacity:.6; }
+    background:radial-gradient(72% 60% at 50% 44%, rgba(123,52,214,.18), transparent 72%);
+    mix-blend-mode:overlay; opacity:.4; }
   /* grão fino extra unificando textura */
   .grade-grain{ position:absolute; inset:0; z-index:9; pointer-events:none; opacity:.30; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:200px 200px; }
