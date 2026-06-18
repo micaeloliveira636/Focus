@@ -371,6 +371,25 @@ batch nível-referência do "Ninguém cria do nada".
 - **Grade final unificado** (13.8) quando misturar fontes.
 - **Texto é o rei** (seção 1) e auto-crítica honesta antes de mostrar (não entrego o que eu
   mesmo acho fraco).
-- ⚠️ Conferir a **fonte certa das fotos** antes de comparar (fotos GPT ficam em
-  `C:\Users\Pichau\Pictures\GPT fotos`, pegar o batch mais recente por hora; Meta vem no
-  Downloads como `tall-vertical-916-*.jpeg`). Não assumir pasta nem batch.
+- ⚠️ Conferir a **fonte certa das fotos** antes de comparar (fotos GPT podem cair em
+  `C:\Users\Pichau\Pictures\GPT fotos` OU no Downloads, nome `ChatGPT Image ...`; pegar o
+  batch mais recente por hora; Meta vem no Downloads como `tall-vertical-916-*.jpeg`). Não
+  assumir pasta nem batch.
+
+### 14.4 CALIBRAÇÃO — não defaultar pro cinematográfico (aprendizado jun/2026)
+⚠️ Vício recorrente meu: encher TODO prompt de "cinematic, Cinestill 800T, volumetric haze,
+50mm, photoreal, deep purple cinematic grade". Isso é **uma nota só**, e o banco do Micael
+NÃO é majoritariamente cinematográfico. Quem carrega as referências é **tipografia + sistema
+gráfico + colagem + cor chapada + destaques** (marca-texto, caixa, scribble), não atmosfera
+de filme.
+- Cinematográfico-photoreal de verdade = só @mazzeidesign_ e @luisfelipe.design (e mesmo
+  esses mais "pôster" que cena pesada). O resto (giovana, typosters, gaia, yoloartv, influxo,
+  monocromáticos BR, UI Gradient, recap, marcas.design) é **gráfico/editorial/colagem/flat**.
+- Geisiane é **composição/colagem editorial** (recorte montado + moldura + palavra-herói +
+  grão), não "filme photoreal".
+- **Regra:** o cinematográfico é EXCEÇÃO, pra 1 slide-clímax, não a régua dos 8. Deixar
+  **tipo e layout carregarem**. Imagem muitas vezes = objeto único, duotone retrô, colagem de
+  recortes, arte clássica em moldura, ou cor chapada flat. Variar a técnica entre slides
+  (molde D da 13.5: peças que EU colo). Mesmo vício-raiz dos fios de luz: quando quero "nível
+  referência", o reflexo preguiçoso corre pra atmosfera em vez de contenção gráfica + tipo
+  forte. Resistir a isso.
