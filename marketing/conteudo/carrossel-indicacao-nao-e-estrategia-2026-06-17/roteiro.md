@@ -60,67 +60,45 @@
 
 ---
 
-## PROMPTS (Meta AI — imagem 9:16, SEM linha/fio, corte 4:5)
+## PROMPTS (Meta AI, 9:16, SEM linha/fio, corte 4:5) — COMPLETOS, regra embutida
 
-> **Regras fixas (colar junto em cada prompt):**
-> Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the
-> main subject and the clean dark empty space within the central 80% of the frame, and
-> leave the very bottom strip simple and empty (it gets cropped, removing the corner
-> watermark). Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple
-> dominant color grade with a faint teal rim light, gentle volumetric haze, fine film
-> grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak,
-> no string of any kind. No text, letters, numbers, logos or watermark.
+**s1 — telefone**
+```
+A heavy old rotary telephone tumbling and falling through a dark empty void in mid-air, silent and abandoned, dramatic rim light catching its edges, soft smoke and haze drifting around it, strong realistic shadow. Composition: telephone in the lower-right of the central area, large clean dark negative space in the upper-left for text. 50mm, premium editorial. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S1 — Capa (telefone):**
-> A heavy old rotary telephone tumbling and falling through a dark empty void in mid-air,
-> silent and abandoned, dramatic rim light catching its edges, soft smoke and haze
-> drifting around it, strong realistic shadow. Composition: telephone in the lower-right
-> of the central area, large clean dark negative space in the upper-left for text. 50mm,
-> premium editorial.
+**s2 — agenda**
+```
+A worn open paper appointment book resting on a dark wooden desk, most of its pages empty, dusty and faded, only a few faint illegible smudged marks, soft dust floating in a moody hard side light, deep shadows. Composition: book in the lower-center, clean dark empty negative space above it for text. 35mm. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S2 — Mês que chove, mês que seca:**
-> A worn open paper appointment book resting on a dark wooden desk, most of its pages
-> empty, dusty and faded, only a few faint illegible smudged marks, soft dust floating
-> in a moody hard side light, deep shadows. Composition: book in the lower-center, clean
-> dark empty negative space above it for text. 35mm.
+**s3 — mão (areia escorrendo)**
+```
+A single open human hand in dark space, fine dry sand and a few drops of water slipping and falling through the fingers, impossible to hold, dramatic rim light on the skin, everything else in deep shadow. Composition: hand in the lower-center, large dark negative space above for text. 50mm macro, shallow depth of field. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S3 — Faturamento escorrendo da mão:**
-> A single open human hand in dark space, fine dry sand and a few drops of water slipping
-> and falling through the fingers, impossible to hold, dramatic rim light on the skin,
-> everything else in deep shadow. Composition: hand in the lower-center, large dark
-> negative space above for text. 50mm macro, shallow depth of field.
+**s4 — válvula**
+```
+A sturdy industrial metal valve mounted on a dark concrete wall, a hand firmly turning the wheel, a clean steady stream of water pouring straight down from it, the water faintly catching deep purple light, confident and in-control mood, dramatic rim light, deep shadows. Composition: valve in the upper-right of the central area, clean dark negative space on the left for text. 50mm. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S5 — O interruptor (você liga quando quer):**
-> A single light switch on a dark textured wall, a hand reaching in and flipping it on,
-> warm-and-purple light suddenly flooding across the wall from the switch, a decisive
-> "turn it on whenever you want" feeling, dramatic rim light, deep shadow all around.
-> Composition: the switch and hand in the right of the central area, clean dark negative
-> space on the left and upper area for text. 50mm.
+**s5 — interruptor**
+```
+A single light switch on a dark textured wall, a hand reaching in and flipping it on, warm-and-purple light suddenly flooding across the wall from the switch, a decisive turn-it-on-whenever-you-want feeling, dramatic rim light, deep shadow all around. Composition: the switch and hand in the right of the central area, clean dark negative space on the left and upper area for text. 50mm, premium editorial. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S4 — A válvula que você controla:**
-> A sturdy industrial metal valve mounted on a dark concrete wall, a hand firmly turning
-> the wheel, a clean steady stream of water pouring straight down from it, the water
-> faintly catching deep purple light, confident and in-control mood, dramatic rim light,
-> deep shadows. Composition: valve in the upper-right of the central area, clean dark
-> negative space on the left for text. 50mm.
+**s6 — loja**
+```
+A small local business storefront at dusk seen from the sidewalk, warm interior light glowing through the window mixed with a soft purple ambient, several softly out-of-focus people walking in through the open door, alive and thriving, deep blue-purple sky, wet pavement with gentle reflections, hopeful mood. Composition: storefront on the right of the central area, darker foreground sidewalk on the lower-left as clean negative space for text. 35mm, shallow depth of field. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
-**S6 — Loja viva, fluxo de clientes:**
-> A small local business storefront at dusk seen from the sidewalk, warm interior light
-> glowing through the window mixed with a soft purple ambient, several softly
-> out-of-focus people walking in through the open door, alive and thriving, deep
-> blue-purple sky, wet pavement with gentle reflections, hopeful mood. Composition:
-> storefront on the right of the central area, darker foreground sidewalk on the
-> lower-left as clean negative space for text. 35mm, shallow depth of field.
-
-**S7 — O controle do volume:**
-> A hand turning a large premium metal dial or knob in a dark space, the dial glowing
-> with a soft deep-purple light blooming gently outward from under the hand, a clear
-> sense of control and choice, dramatic rim light, deep shadow all around. Composition:
-> dial in the lower-right of the central area, clean dark negative space in the upper-left
-> for text. 50mm.
+**s7 — dial**
+```
+A hand turning a large premium metal dial or knob in a dark space, the dial glowing with a soft deep-purple light blooming gently outward from under the hand, a clear sense of control and choice, dramatic rim light, deep shadow all around. Composition: dial in the lower-right of the central area, clean dark negative space in the upper-left for text. 50mm. Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the main subject and the clean dark empty space within the central 80% of the frame, and leave the very bottom strip simple and empty so it can be cropped off. Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple dominant color grade with a faint teal rim light, gentle volumetric haze, fine film grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak, no string of any kind. No text, letters, numbers, logos or watermark.
+```
 
 ---
 
 ## Próximo passo
-1. Micael gera as 6 imagens (s1, s2, s3, s4, s6, s7) no Meta AI e salva (Downloads serve).
+1. Micael gera as 7 imagens (s1, s2, s3, s4, s5, s6, s7) no Meta AI e salva (Downloads serve).
 2. Claude encaixa em `pecas/` (corte 4:5 tira a marca d'água) e renderiza os 8 slides.
