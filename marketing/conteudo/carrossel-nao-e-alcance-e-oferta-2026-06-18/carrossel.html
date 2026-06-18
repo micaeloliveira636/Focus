@@ -5,71 +5,103 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800&display=swap');
   *{ margin:0; padding:0; box-sizing:border-box; }
-  :root{ --ac:#C9A9F2; --lilas:#E3D3F8; --roxo:#692ABF; --roxo2:#7B34D6; }
+  :root{ --ac:#C9A9F2; --lilas:#E3D3F8; --roxo:#692ABF; --roxo2:#7B34D6;
+    --plastic:url('../../../identidade/textura-plastic.png');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg');
+    --couro:url('../../../identidade/textura-couro.jpg');
+    --geo:url('../../../identidade/textura-geometrica.png'); }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   .wrap{ display:flex; flex-direction:column; align-items:center; gap:40px; padding:20px 0; }
   .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0f0720; }
-  .bg{ position:absolute; inset:0; z-index:0; background-position:center; background-size:cover; }
+  .bg{ position:absolute; inset:0; z-index:0; background-position:center; background-size:cover;
+    filter:contrast(1.08) saturate(.98) brightness(.95) blur(.6px); transform:scale(1.03); }
 
-  /* scrim radial central forte: texto no meio sempre legivel */
-  .scrim{ position:absolute; inset:0; z-index:1; pointer-events:none;
-    background:
-      radial-gradient(86% 62% at 50% 48%, rgba(8,5,15,.9) 0%, rgba(8,5,15,.66) 46%, rgba(8,5,15,.2) 78%, transparent 100%),
-      linear-gradient(180deg, rgba(8,5,15,.7) 0%, transparent 24%, transparent 76%, rgba(8,5,15,.55) 100%); }
-  .sombratxt{ position:absolute; z-index:3; left:50%; top:50%; transform:translate(-50%,-50%);
-    width:880px; height:560px; pointer-events:none;
-    background:radial-gradient(closest-side, rgba(4,2,8,.7), rgba(4,2,8,.34) 58%, transparent 80%); filter:blur(20px); }
+  /* blur que empurra o lado do texto pra frente */
+  .blur-l{ position:absolute; left:0; top:0; width:50%; height:100%; z-index:1; pointer-events:none;
+    backdrop-filter:blur(3px); -webkit-mask-image:linear-gradient(96deg,#000 0%,#000 54%,transparent 100%); mask-image:linear-gradient(96deg,#000 0%,#000 54%,transparent 100%); }
+  .blur-t{ position:absolute; left:0; top:0; width:100%; height:46%; z-index:1; pointer-events:none;
+    backdrop-filter:blur(3px); -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 54%,transparent 100%); mask-image:linear-gradient(180deg,#000 0%,#000 54%,transparent 100%); }
+  /* scrim direcional */
+  .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none; }
+  .scrim-l{ background:linear-gradient(96deg, rgba(8,5,13,.93) 0%, rgba(8,5,13,.6) 30%, rgba(8,5,13,.12) 56%, transparent 74%); }
+  .scrim-t{ background:linear-gradient(180deg, rgba(8,5,13,.92) 0%, rgba(8,5,13,.55) 32%, rgba(8,5,13,.05) 60%, transparent 80%); }
+  .scrim-c{ background:radial-gradient(82% 56% at 50% 47%, rgba(8,5,13,.9) 0%, rgba(8,5,13,.56) 50%, rgba(8,5,13,.14) 82%, transparent 100%); }
+  /* realce quente sutil no lado iluminado */
+  .warm{ position:absolute; inset:0; z-index:2; pointer-events:none; mix-blend-mode:soft-light; }
 
-  .topo{ position:absolute; z-index:6; top:58px; left:88px; right:78px; display:flex; justify-content:space-between; align-items:center; }
-  .topo img{ height:56px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.75)); }
+  /* textura (combo VARIA por slide) */
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-size:cover; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; }
+  .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; }
+  .t-geo{ background-image:var(--geo); mix-blend-mode:overlay; }
+
+  /* grade: tinta roxa unificadora + glow de profundidade */
+  .tint{ position:absolute; inset:0; z-index:3; pointer-events:none; background:#5a2bb0; mix-blend-mode:color; opacity:.12; }
+  .glow{ position:absolute; inset:0; z-index:3; pointer-events:none; mix-blend-mode:screen; opacity:.5;
+    background:radial-gradient(54% 44% at 50% 46%, rgba(150,80,230,.24), transparent 70%); }
+
+  .topo{ position:absolute; z-index:6; top:58px; left:84px; right:78px; display:flex; justify-content:space-between; align-items:center; }
+  .topo img{ height:56px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.8)); }
   .pill-v{ width:14px; height:46px; border:2px solid rgba(201,169,242,.85); border-radius:12px; }
   .dots{ position:absolute; z-index:6; bottom:50px; left:50%; transform:translateX(-50%); display:flex; gap:10px; }
   .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.3); }
   .dots i.on{ background:var(--ac); width:26px; border-radius:6px; }
 
-  /* bloco CENTRALIZADO */
-  .bloco{ position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%); width:940px; text-align:center; }
-  .kick{ display:inline-block; font-size:19px; font-weight:800; letter-spacing:.11em; text-transform:uppercase;
-    color:#1a1030; background:var(--ac); padding:9px 17px; border-radius:6px; margin-bottom:26px; }
+  /* texto: posicao POR SLIDE */
+  .bloco{ position:absolute; z-index:5; }
+  .bloco::before{ content:''; position:absolute; inset:-70px -50px -50px -50px; z-index:-1; pointer-events:none;
+    background:radial-gradient(closest-side, rgba(4,2,8,.66), rgba(4,2,8,.22) 62%, transparent 82%); filter:blur(20px); }
+  .pos-c{ left:50%; top:50%; transform:translate(-50%,-50%); width:930px; text-align:center; }
+  .pos-l{ left:84px; top:50%; transform:translateY(-50%); width:600px; text-align:left; }
+  .pos-tl{ left:84px; top:206px; width:650px; text-align:left; }
+  .pos-t{ left:50%; top:172px; transform:translateX(-50%); width:910px; text-align:center; }
+
+  .kick{ display:inline-block; font-size:18px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    color:#1a1030; background:var(--ac); padding:9px 16px; border-radius:6px; margin-bottom:22px; }
   .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.035em; line-height:.98; color:#fff;
-    text-shadow:0 10px 34px rgba(0,0,0,.92), 0 2px 8px rgba(0,0,0,.85); }
+    text-shadow:5px 15px 12px rgba(0,0,0,.78), 0 2px 6px rgba(0,0,0,.92); }
   .h .it{ font-weight:500; font-style:italic; text-transform:none; letter-spacing:-.01em; color:var(--lilas); }
-  .h .am{ color:var(--ac); }
+  .h .am{ color:var(--ac); text-shadow:5px 15px 12px rgba(0,0,0,.6), 0 4px 22px rgba(123,52,214,.45); }
   .risc{ position:relative; color:#9B81C6; }
   .risc::after{ content:''; position:absolute; left:-6px; right:-6px; top:53%; height:12px; border-radius:6px;
     background:var(--ac); transform:translateY(-50%) rotate(-1.6deg); box-shadow:0 2px 14px rgba(201,169,242,.45); }
-  /* corpo: coluna nitidamente mais ESTREITA que o herói */
-  .corpo{ margin:30px auto 0; max-width:540px; font-size:27px; font-weight:500; line-height:1.5; color:#EADFF6;
+  .corpo{ margin-top:26px; max-width:470px; font-size:25px; font-weight:500; line-height:1.5; color:#EADFF6;
     text-shadow:0 2px 12px rgba(0,0,0,.95); }
+  .pos-c .corpo, .pos-t .corpo{ margin-left:auto; margin-right:auto; }
   .corpo b{ color:#fff; font-weight:800; }
-  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:96px;
-    border:1.5px solid rgba(255,255,255,.45); border-radius:40px; padding:11px 26px;
-    font-size:14px; font-weight:700; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+  .arrasta{ position:absolute; z-index:6; left:84px; bottom:62px;
+    border:1.5px solid rgba(255,255,255,.45); border-radius:40px; padding:11px 24px;
+    font-size:14px; font-weight:700; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
 
-  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.4; mix-blend-mode:overlay;
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.5; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
   .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
-    background:radial-gradient(130% 100% at 50% 44%, transparent 56%, rgba(0,0,0,.52) 100%); }
+    background:radial-gradient(118% 86% at 50% 42%, transparent 42%, rgba(0,0,0,.66) 100%); }
 
-  .tipo{ background:#16092b; }
-  .tipo .bgm{ position:absolute; inset:0; z-index:0; background:radial-gradient(85% 65% at 50% 42%, #4A1C8C 0%, #311263 48%, #1c0b39 80%, #110723 100%); }
-  .cta{ background:#1a0b33; }
+  .tipo .bgm{ position:absolute; inset:0; z-index:0; background:radial-gradient(85% 65% at 42% 40%, #4A1C8C 0%, #311263 48%, #1c0b39 80%, #110723 100%); }
   .cta .bgm{ position:absolute; inset:0; z-index:0; background:radial-gradient(82% 62% at 50% 33%, #7B34D6 0%, #4C1D83 46%, #2A1056 78%, #150824 100%); }
-  .cta .lobo{ height:140px; margin:0 auto 34px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
-  .cta .arroba{ margin-top:34px; font-size:26px; font-weight:800; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .cta .lobo{ height:138px; margin:0 auto 32px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
+  .cta .arroba{ margin-top:32px; font-size:25px; font-weight:800; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- 1 CAPA -->
+  <!-- 1 CAPA — megafone à direita, texto na ESQUERDA -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s1.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-l"></div>
+    <div class="scrim scrim-l"></div>
+    <div class="tex"><span class="t-scratch" style="opacity:.08"></span><span class="t-couro" style="opacity:.06"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
+    <div class="bloco pos-l">
       <div class="kick">Pra quem já gastou com anúncio e não vendeu</div>
-      <div class="h" style="font-size:96px"><span class="it" style="font-size:54px">O problema</span><br>não é <span class="risc">Alcance.</span><br>é <span class="am">Oferta.</span></div>
+      <div class="h" style="font-size:86px"><span class="it" style="font-size:50px">O problema</span><br>não é <span class="risc">Alcance.</span><br>é <span class="am">Oferta.</span></div>
       <div class="corpo">Seu anúncio não falhou. Foi a sua oferta que <b>não convenceu ninguém a comprar</b>.</div>
     </div>
     <div class="arrasta">Arrasta →</div>
@@ -77,90 +109,109 @@
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 2 SINTOMA -->
+  <!-- 2 SINTOMA — amp embaixo, texto no TOPO -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s2.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-t"></div>
+    <div class="scrim scrim-t"></div>
+    <div class="tex"><span class="t-fabric" style="opacity:.05"></span><span class="t-plastic" style="opacity:.08"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:74px">Você subiu a verba<br>e <span class="am">vendeu exatamente<br>a mesma coisa</span></div>
+    <div class="bloco pos-t">
+      <div class="h" style="font-size:70px">Você subiu a verba<br>e <span class="am">vendeu exatamente<br>a mesma coisa</span></div>
       <div class="corpo">Mais alcance, mais gente vendo, e o caixa do mês <b>parado no mesmo lugar</b>. Aí você sobe a verba de novo achando que faltou dinheiro.</div>
     </div>
     <div class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 3 PROBLEMA -->
+  <!-- 3 PROBLEMA — knob centro-baixo, texto no TOPO -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s3.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-t"></div>
+    <div class="scrim scrim-t"></div>
+    <div class="tex"><span class="t-scratch" style="opacity:.07"></span><span class="t-plastic" style="opacity:.06"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:70px">O anúncio só <span class="am">amplifica</span><br>o que você já tem<br>pra dizer</div>
+    <div class="bloco pos-t">
+      <div class="h" style="font-size:66px">O anúncio só <span class="am">amplifica</span><br>o que você já tem pra dizer</div>
       <div class="corpo">Anúncio é volume no talo. Se a mensagem é sem graça, você só faz <b>mais gente bocejar mais alto</b> com o seu negócio.</div>
     </div>
     <div class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 4 PRINCIPIO -->
+  <!-- 4 PRINCIPIO — design, centralizado -->
   <section class="slide tipo">
     <div class="bgm"></div>
+    <div class="tex"><span class="t-couro" style="opacity:.07"></span><span class="t-scratch" style="opacity:.05"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:88px">Quem vende<br>não é o anúncio.<br>é a <span class="am">oferta.</span></div>
-      <div class="corpo" style="max-width:600px">O anúncio só leva o seu recado até mais gente. Quem faz a pessoa <b>tirar o cartão do bolso</b> é o que você está oferecendo.</div>
+    <div class="bloco pos-c">
+      <div class="h" style="font-size:84px">Quem vende<br>não é o anúncio.<br>é a <span class="am">oferta.</span></div>
+      <div class="corpo" style="max-width:560px">O anúncio só leva o seu recado até mais gente. Quem faz a pessoa <b>tirar o cartão do bolso</b> é o que você está oferecendo.</div>
     </div>
     <div class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 5 VIRADA -->
+  <!-- 5 VIRADA — letreiro à direita, texto na ESQUERDA -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s5.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-l"></div>
+    <div class="scrim scrim-l"></div>
+    <div class="warm" style="background:radial-gradient(44% 36% at 78% 40%, rgba(255,196,150,.2), transparent 70%)"></div>
+    <div class="tex"><span class="t-couro" style="opacity:.06"></span><span class="t-fabric" style="opacity:.045"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:68px">Uma boa oferta é<br>o motivo pra alguém<br><span class="am">comprar de você agora</span></div>
-      <div class="corpo">E não é dar desconto. É deixar claro <b>o que é, pra quem é, por que vale e por que agora</b>. Quando isso fica óbvio, o anúncio só precisa achar a gente certa.</div>
+    <div class="bloco pos-l">
+      <div class="h" style="font-size:60px">Uma boa oferta é<br>o motivo pra alguém<br><span class="am">comprar de você<br>agora</span></div>
+      <div class="corpo">E não é dar desconto. É deixar claro <b>o que é, pra quem é, por que vale e por que agora</b>.</div>
     </div>
     <div class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 6 PRATICA -->
+  <!-- 6 PRATICA — radio à direita, texto na ESQUERDA -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s6.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-l"></div>
+    <div class="scrim scrim-l"></div>
+    <div class="tex"><span class="t-plastic" style="opacity:.08"></span><span class="t-scratch" style="opacity:.05"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:64px">Afie a oferta antes<br>de <span class="am">colocar mais dinheiro</span><br>no anúncio</div>
-      <div class="corpo">A mesma verba numa oferta afiada vende <b>mais que o dobro</b> dela numa oferta morna. Primeiro a mensagem, só depois o volume.</div>
+    <div class="bloco pos-l">
+      <div class="h" style="font-size:58px">Afie a oferta antes<br>de <span class="am">colocar mais<br>dinheiro</span> no anúncio</div>
+      <div class="corpo">A mesma verba numa oferta afiada vende <b>mais que o dobro</b> dela numa oferta morna. Primeiro a mensagem.</div>
     </div>
     <div class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 7 RESULTADO -->
+  <!-- 7 RESULTADO — corneta em cima/dir, plateia embaixo, texto ALTO-ESQUERDA -->
   <section class="slide">
     <div class="bg" style="background-image:url('pecas/s7.png')"></div>
-    <div class="scrim"></div><div class="sombratxt"></div>
+    <div class="blur-l"></div>
+    <div class="scrim scrim-l"></div>
+    <div class="warm" style="background:radial-gradient(42% 34% at 70% 30%, rgba(255,196,150,.18), transparent 70%)"></div>
+    <div class="tex"><span class="t-fabric" style="opacity:.05"></span><span class="t-couro" style="opacity:.06"></span></div>
+    <div class="tint"></div><div class="glow"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:66px">Aí o mesmo anúncio,<br>com a mesma verba,<br><span class="am">começa a vender</span></div>
-      <div class="corpo">Nada mudou na ferramenta. Mudou <b>o que ela estava anunciando</b>. Agora é a oferta que carrega o anúncio, e não o contrário.</div>
+    <div class="bloco pos-tl">
+      <div class="h" style="font-size:60px">Aí o mesmo<br>anúncio, com a<br>mesma verba,<br><span class="am">começa a vender</span></div>
+      <div class="corpo">Nada mudou na ferramenta. Mudou <b>o que ela anunciava</b>. Agora a oferta carrega o anúncio.</div>
     </div>
     <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- 8 CTA -->
+  <!-- 8 CTA — design, centralizado -->
   <section class="slide cta">
     <div class="bgm"></div>
-    <div class="bloco">
+    <div class="tex"><span class="t-couro" style="opacity:.06"></span><span class="t-fabric" style="opacity:.05"></span></div>
+    <div class="bloco pos-c">
       <img class="lobo" src="../../../identidade/logo-simbolo-branco.png" alt="">
-      <div class="h" style="font-size:74px">Cansou de queimar<br>verba em <span class="am" style="color:#EBDDFB">anúncio?</span></div>
-      <div class="corpo" style="max-width:600px">Vem montar com a Focus a <b>oferta e o tráfego</b> que transformam clique em venda, não só alcance que não vira caixa.</div>
+      <div class="h" style="font-size:72px">Cansou de queimar<br>verba em <span class="am" style="color:#EBDDFB">anúncio?</span></div>
+      <div class="corpo" style="max-width:580px">Vem montar com a Focus a <b>oferta e o tráfego</b> que transformam clique em venda, não só alcance que não vira caixa.</div>
       <div class="arroba">@focusprogress</div>
     </div>
     <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i></div>
