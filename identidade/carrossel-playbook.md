@@ -432,3 +432,17 @@ corredor, ateliê) ficaram ÓTIMAS porque parecem **fotografia**, e as do megafo
   pior tell). Se quiser continuidade, ancorar em algo **físico**: o chão/parede, um raio de
   luz real, a perspectiva que segue, uma rachadura que continua. Senão, slides photoreal
   standalone (como os bustos) já são o nível.
+
+### 14.7 ÂNCORA DE TEXTO CONSISTENTE — pensar em quem LÊ (jun/2026)
+O Micael reprovou texto em posição "aleatória" (um slide em cima, outro embaixo, outro no
+meio, outro na ponta esquerda). Do ponto de vista de quem ARRASTA, o olho tem que cair
+**sempre no mesmo lugar**; pulo vertical entre slides cansa e parece amador.
+- **Regra:** mesma âncora vertical em toda a série (padrão do Micael: **centralizado no
+  meio**), corpo logo abaixo do herói. NÃO mudar a faixa vertical de slide pra slide (nada de
+  um em cima, outro embaixo, outro no meio).
+- Deslize horizontal LEVE conforme a imagem é ok (um pouco mais pra esquerda quando o sujeito
+  está à direita), mas a âncora vertical fica fixa no meio.
+- Slides de design (princípio, CTA) podem ser centralizados de propósito, como pausa/fecho:
+  o leitor percebe que é outro TIPO de slide, não bagunça.
+- Cada slide bem composto isoladamente (14.6) não basta: a série é lida em RITMO. Compor a
+  sequência, não só a peça.
