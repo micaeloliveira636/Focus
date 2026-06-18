@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --roxo:#692ABF; --roxo-claro:#B98BEE; --roxo-fio:#9B5FE0; --branco:#FFFFFF; --claro:#F2EEE6;
+    --fabric:url('../../../identidade/textura-fabric.jpg');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --geo:url('../../../identidade/textura-geometrica.png');
+    --stars:url('../../../identidade/textura-stars.png');
+  }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; flex-direction:column; align-items:center; gap:40px; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+
+  /* ---------- camadas base (slides com foto) ---------- */
+  .massa{ position:absolute; inset:0; z-index:0;
+    background:radial-gradient(82% 60% at 50% 38%, #3D1766 0%, #2A1056 50%, #170a2c 80%, #0b0613 100%); }
+  .cena{ position:absolute; inset:0; z-index:1; background-position:center; background-size:cover; background-repeat:no-repeat;
+    filter:contrast(1.05) saturate(1.02) brightness(.9) blur(0.9px); transform:scale(1.02); }
+  /* glow roxo (papel "flow" = iluminação) atrás do texto */
+  .glow{ position:absolute; inset:0; z-index:2; pointer-events:none; mix-blend-mode:screen;
+    background:radial-gradient(46% 34% at 50% 50%, rgba(105,42,191,.42), transparent 70%); }
+  /* scrim radial central forte: o texto manda, as bordas mostram a cena */
+  .scrim{ position:absolute; inset:0; z-index:3; pointer-events:none;
+    background:radial-gradient(80% 56% at 50% 50%, rgba(8,5,14,.9) 0%, rgba(8,5,14,.62) 50%, rgba(8,5,14,.14) 100%); }
+  /* texturas (kraft/grids/grão) aparentes mas integradas */
+  .tex{ position:absolute; inset:0; z-index:4; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.05; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.05; }
+  .t-geo{ background-image:var(--geo); mix-blend-mode:overlay; opacity:.06; background-size:140%; }
+
+  /* ---------- fio roxo (motivo recorrente) ---------- */
+  .fio{ position:absolute; inset:0; z-index:5; pointer-events:none; width:1080px; height:1350px; }
+
+  /* ---------- topo (lobo + pílula) ---------- */
+  .topo{ position:absolute; z-index:7; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:66px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:15px; height:50px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+
+  /* ---------- bloco de texto centralizado ---------- */
+  .bloco{ position:absolute; z-index:6; left:50%; top:50%; transform:translate(-50%,-50%); width:920px; text-align:center; }
+  .kicker{ font-size:23px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--roxo-claro);
+    margin-bottom:26px; text-shadow:0 2px 12px rgba(0,0,0,.7); }
+  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.03em; color:#fff; line-height:1.02;
+    text-shadow:0 12px 30px rgba(0,0,0,.92), 0 2px 6px rgba(0,0,0,.7); }
+  .h .ac{ color:var(--roxo-claro); text-shadow:0 6px 24px rgba(105,42,191,.55), 0 2px 6px rgba(0,0,0,.7); }
+  .corpo{ margin:34px auto 0; max-width:720px; font-size:29px; font-weight:500; line-height:1.5; color:#E4DAF2;
+    text-shadow:0 2px 14px rgba(0,0,0,.85); }
+  .corpo b{ color:#fff; font-weight:700; }
+
+  /* ---------- arrasta ---------- */
+  .arrasta{ position:absolute; z-index:7; left:50%; transform:translateX(-50%); bottom:60px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 26px;
+    font-size:15px; font-weight:600; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+
+  /* ---------- grão + vinheta ---------- */
+  .grain{ position:absolute; inset:0; z-index:8; pointer-events:none; opacity:.6; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:9; pointer-events:none;
+    background:radial-gradient(125% 95% at 50% 45%, transparent 56%, rgba(0,0,0,.52) 100%); }
+
+  /* ---------- slide 5 (claro / dado) ---------- */
+  .slide.claro{ background:var(--claro); }
+  .claro .paper{ position:absolute; inset:0; z-index:1; background-image:var(--geo); background-size:130%; background-position:center;
+    mix-blend-mode:multiply; opacity:.12; }
+  .claro .paper2{ position:absolute; inset:0; z-index:1; background-image:var(--fabric); background-size:cover;
+    mix-blend-mode:multiply; opacity:.06; }
+  .claro .num{ position:absolute; z-index:3; left:50%; top:40%; transform:translate(-50%,-50%);
+    font-size:560px; font-weight:900; line-height:.8; color:var(--roxo); letter-spacing:-.04em;
+    text-shadow:14px 22px 0 rgba(66,31,116,.18); }
+  .claro .frase{ position:absolute; z-index:4; left:50%; top:74%; transform:translateX(-50%); width:820px; text-align:center;
+    font-size:38px; font-weight:700; line-height:1.28; color:#1b1320; }
+  .claro .frase .ac{ color:var(--roxo); }
+  .claro .topo img{ filter:none; }
+  .claro .grain{ opacity:.28; mix-blend-mode:multiply; }
+
+  /* ---------- slide 8 (CTA roxo em massa) ---------- */
+  .slide.cta{ background:#1a0b33; }
+  .cta .massa{ background:radial-gradient(82% 62% at 50% 34%, #7B34D6 0%, #4C1D83 46%, #2A1056 78%, #150824 100%); }
+  .cta .tex .t-fabric{ opacity:.06; } .cta .tex .t-scratch{ opacity:.06; }
+  .cta .bloco{ width:880px; }
+  .cta .lobo{ height:148px; width:auto; margin:0 auto 38px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
+  .cta .arroba{ margin-top:38px; font-size:27px; font-weight:800; letter-spacing:.02em; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===================== SLIDE 1 — CAPA ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s1.png')"></div>
+    <div class="glow"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g1" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+      <path d="M 906 -20 C 902 240, 940 470, 904 690 C 880 840, 930 1010, 900 1370" fill="none" stroke="#9B5FE0" stroke-width="9" opacity=".34" filter="url(#g1)"/>
+      <path d="M 906 -20 C 902 240, 940 470, 904 690" fill="none" stroke="#C9A9F2" stroke-width="2.4" opacity=".9"/>
+      <path d="M 904 690 C 880 840, 930 1010, 900 1370" fill="none" stroke="#C9A9F2" stroke-width="2.4" opacity=".75" stroke-dasharray="3 16"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="kicker">Pra quem vive de indicação</div>
+      <div class="h" style="font-size:96px">Indicação<br>não é<br><span class="ac">estratégia</span></div>
+      <div class="corpo" style="font-size:31px">é sorte com outro nome.</div>
+    </div>
+    <div class="arrasta">Arrasta →</div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 2 — SINTOMA ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s2.png')"></div>
+    <div class="glow"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+      <path d="M -20 250 C 240 210, 430 360, 690 300 C 880 256, 1010 400, 1100 330" fill="none" stroke="#9B5FE0" stroke-width="8" opacity=".3" filter="url(#g2)"/>
+      <path d="M -20 250 C 240 210, 430 360, 690 300 C 880 256, 1010 400, 1100 330" fill="none" stroke="#C9A9F2" stroke-width="2.2" opacity=".8" stroke-dasharray="2 14"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="h" style="font-size:74px">Tem mês que <span class="ac">chove.</span><br>Tem mês que <span class="ac">seca.</span></div>
+      <div class="corpo">Entra cliente de todo lado, e do nada o telefone para. Você nunca sabe qual vai ser o próximo mês.</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 3 — PROBLEMA REAL ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s3.png')"></div>
+    <div class="glow"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+      <path d="M 150 -20 C 180 260, 120 470, 180 700 C 220 880, 150 1080, 200 1370" fill="none" stroke="#9B5FE0" stroke-width="9" opacity=".3" filter="url(#g3)"/>
+      <path d="M 150 -20 C 180 260, 120 470, 180 700 C 220 880, 150 1080, 200 1370" fill="none" stroke="#C9A9F2" stroke-width="2.2" opacity=".78" stroke-dasharray="3 15"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="h" style="font-size:70px">O problema não é<br>o seu <span class="ac">serviço</span></div>
+      <div class="corpo">Você é bom no que faz. Seus clientes voltam e te indicam. O problema é que você entregou seu faturamento pra <b>sorte dos outros lembrarem de você</b>.</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 4 — PRINCÍPIO ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s4.png')"></div>
+    <div class="glow"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+      <path d="M 940 -20 C 936 320, 980 620, 930 940 C 905 1110, 945 1230, 930 1370" fill="none" stroke="#9B5FE0" stroke-width="12" opacity=".4" filter="url(#g4)"/>
+      <path d="M 940 -20 C 936 320, 980 620, 930 940 C 905 1110, 945 1230, 930 1370" fill="none" stroke="#D7BEF7" stroke-width="3.4" opacity=".95"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="h" style="font-size:82px">Indicação<br>você <span class="ac">não abre</span></div>
+      <div class="corpo">Quando o caixa aperta, não dá pra ligar a indicação. Um <b>canal de vendas</b>, sim. É essa a diferença.</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 5 — DADO (claro) ===================== -->
+  <section class="slide claro">
+    <div class="paper"></div><div class="paper2"></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none" style="z-index:2;opacity:.5">
+      <path d="M -20 1090 C 260 1060, 470 1130, 720 1080 C 900 1044, 1010 1110, 1100 1070" fill="none" stroke="#9B5FE0" stroke-width="3" opacity=".8"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-roxo.png" alt=""><div class="pill-v" style="border-color:rgba(105,42,191,.6)"></div></div>
+    <div class="num">1</div>
+    <div class="frase">Basta <span class="ac">um canal</span> que você liga quando quer pra parar de torcer pro mês ser bom.</div>
+    <div class="grain"></div>
+  </section>
+
+  <!-- ===================== SLIDE 6 — VIRADA ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s6.png')"></div>
+    <div class="glow" style="background:radial-gradient(48% 36% at 50% 52%, rgba(123,52,214,.5), transparent 70%)"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g6" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+      <path d="M -20 760 C 260 740, 470 720, 700 700 C 860 686, 970 690, 1100 680" fill="none" stroke="#9B5FE0" stroke-width="13" opacity=".42" filter="url(#g6)"/>
+      <path d="M -20 760 C 260 740, 470 720, 700 700 C 860 686, 970 690, 1100 680" fill="none" stroke="#D7BEF7" stroke-width="3.6" opacity=".95"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="h" style="font-size:64px">Uma torneira<br>de clientes que<br><span class="ac">você abre</span></div>
+      <div class="corpo">É o que presença digital e tráfego fazem. Cliente entrando não quando alguém lembra de você, mas <b>quando você decide</b>.</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 7 — NA PRÁTICA ===================== -->
+  <section class="slide">
+    <div class="massa"></div>
+    <div class="cena" style="background-image:url('pecas/s7.png')"></div>
+    <div class="glow"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+      <defs><filter id="g7" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+      <path d="M 920 -20 C 930 300, 900 600, 940 900 C 965 1090, 920 1230, 940 1370" fill="none" stroke="#9B5FE0" stroke-width="13" opacity=".42" filter="url(#g7)"/>
+      <path d="M 920 -20 C 930 300, 900 600, 940 900 C 965 1090, 920 1230, 940 1370" fill="none" stroke="#D7BEF7" stroke-width="3.6" opacity=".95"/>
+    </svg>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="bloco">
+      <div class="h" style="font-size:80px">Você escolhe<br>o <span class="ac">volume</span></div>
+      <div class="corpo">O jogo vira. Você para de esperar o telefone tocar e passa a escolher <b>quantos clientes quer atender</b> esse mês.</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- ===================== SLIDE 8 — CTA ===================== -->
+  <section class="slide cta">
+    <div class="massa"></div>
+    <div class="tex"><span class="t-fabric"></span><span class="t-scratch"></span><span class="t-geo"></span></div>
+    <svg class="fio" viewBox="0 0 1080 1350" preserveAspectRatio="none" style="opacity:.5">
+      <defs><filter id="g8" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+      <path d="M -20 1140 C 260 1115, 470 1180, 720 1130 C 900 1094, 1010 1150, 1100 1115" fill="none" stroke="#C9A9F2" stroke-width="10" opacity=".3" filter="url(#g8)"/>
+      <path d="M -20 1140 C 260 1115, 470 1180, 720 1130 C 900 1094, 1010 1150, 1100 1115" fill="none" stroke="#E4D4FA" stroke-width="2.6" opacity=".8"/>
+    </svg>
+    <div class="bloco">
+      <img class="lobo" src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="h" style="font-size:78px">Cansou de<br>viver na <span class="ac" style="color:#EBDDFB">sorte?</span></div>
+      <div class="corpo">Vem montar com a Focus o <b>canal de vendas</b> que não depende de ninguém lembrar de você.</div>
+      <div class="arroba">@focusprogress</div>
+    </div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+</div>
+</body>
+</html>
