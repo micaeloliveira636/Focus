@@ -199,17 +199,25 @@ Mesmas regras fixas (vertical 4:5, low-key/muted, espaço negativo, grade roxo F
 - **@luisfelipe.design / @yaojadzn:** prova de que **paleta fechada (roxo escuro)** =
   grade coesa e premium. Referência de cor mais próxima da Focus.
 
-### 13.2 Sistema de TEXTURAS com papéis (descoberta do post DWXG — alto valor)
-Texturas não são enfeite solto; cada uma tem função. Adotar como camadas fixas:
-- **Grids** → no **fundo** dos slides (já temos `textura-geometrica`). Vai bem no claro
-  e no escuro.
-- **Halftone** → **sobre os títulos** e na **finalização** (não só fundo).
-- **Kraft / paper** → **base** texturizada do carrossel inteiro (densidade de papel).
-- **Film dust** → poeira/arranhão; truque do CTRL+I pra inverter preto↔branco.
-- **Flow (gradiente desfocado)** → usar como **ILUMINAÇÃO**, não como fundo — mancha de
-  luz roxa desfocada atrás do sujeito. (No nosso: glow roxo + leve teal de canto.)
-> Mapear pros arquivos que já temos (`textura-scratched/fabric/plastic/couro/stars/
-> liquid/geometrica`) e pedir ao ChatGPT os que faltarem como PNG avulso.
+### 13.2 Sistema de TEXTURAS — RECEITA APROVADA (não inventar outra)
+⚠️ **Correção (jun/2026, reprovado pelo Micael):** NÃO jogar a textura geométrica/
+topográfica (grids) por cima das fotos — fica sujo e feio. A receita boa é a do
+carrossel aprovado "Ninguém cria do nada".
+
+**Slides com FOTO (receita exata, copiar do carrossel aprovado):**
+- Pilha de textura: **plastic (overlay .06) + couro (overlay .06) + scratched
+  (overlay .045) + fabric (soft-light .03)**. Baixa opacidade, integra sem sujar.
+- **`.sombratxt`**: sombra radial escura e desfocada (blur ~18px) ATRÁS do bloco de
+  texto. **É o que dá a profundidade/sombra que ele elogiou.** Não esquecer.
+- **scrim** radial central + **grão** (svg noise overlay ~.6) + **vinheta** suave.
+- Sem glow roxo grande por cima (lava a foto) e sem grids sobre a foto.
+
+**Slide claro de DADO:** aí sim a geométrica entra, como papel topográfico
+(multiply ~.12) + fabric (multiply ~.06). É a exceção aprovada.
+
+**Conceitos do DWXG ainda válidos** (pra pedir como PNG avulso ao ChatGPT, não como
+overlay solto): halftone sobre títulos, kraft de base, flow (gradiente desfocado)
+como mancha de luz. Mas a base de todo slide de foto é a receita aprovada acima.
 
 ### 13.3 Moldes de ROTEIRO/ESTRUTURA (roubados dos favoritos)
 - **Arco emocional (DXKC):** capa-tese → sintomas (lista) → dúvida em silêncio →
