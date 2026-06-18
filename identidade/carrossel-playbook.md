@@ -393,3 +393,23 @@ de filme.
   (molde D da 13.5: peças que EU colo). Mesmo vício-raiz dos fios de luz: quando quero "nível
   referência", o reflexo preguiçoso corre pra atmosfera em vez de contenção gráfica + tipo
   forte. Resistir a isso.
+
+### 14.5 IMAGEM-MASTER FATIADA — continuidade real entre slides (virada jun/2026)
+Ideia do Micael, e é o jeito certo de fazer carrossel com **continuidade** (elemento que sai
+de um slide e entra no outro, estilo @mazzeidesign_). Em vez de gerar uma imagem por slide e
+torcer pra emenda bater (fica FALSO, os pixels não continuam):
+1. Pedir pro ChatGPT **UMA imagem panorâmica larga só** (a cena inteira), com os assuntos
+   distribuídos e o elemento conector (jato/luz/partículas) atravessando, e **áreas escuras
+   reservadas pro texto** em cada terço. Pedir a maior largura/resolução possível.
+2. **Fatiar em painéis 4:5 adjacentes** com `sharp` (`.extract` + `.resize(1080,1350)`).
+   Ferramenta: `slice-test.mjs` (na pasta do carrossel de oferta). Um master ~2.2:1 rende
+   **3 fatias 4:5** (não 2); cada terço = 1 slide. Continuidade fica **perfeita e sem emenda**
+   (é a mesma imagem cortada) e luz/textura/coloração são idênticas de graça.
+3. Carrossel de 8 = uns **3 masters contínuos** (cada um vira ~3 fatias). Dentro do master,
+   continuidade perfeita; entre masters, corte normal.
+4. Tipografia trabalhada POR CIMA (`type-test.html` é o gabarito): peso misto dentro do
+   Montserrat (italic + 900 + tamanhos), palavra-chave tratada (riscado / bloco / cor),
+   **acento puxado de uma cor da própria imagem** (ex.: âmbar das partículas) pra tipo e cena
+   conversarem, scrim direcional pra legibilidade, mobília fixa (lobo, pílula, bolinhas).
+5. ⚠️ Resolução: fatiar reduz o px por slide (618x773 -> upscale 1.75x pra 1080x1350). O grão
+   disfarça, aguenta IG; se quiser nitidez, gerar masters maiores.

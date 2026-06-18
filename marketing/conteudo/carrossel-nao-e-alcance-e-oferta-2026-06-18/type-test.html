@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --ambar:#F2A93C; --ambar2:#E8932A; --lilas:#D9C2F5; --roxo2:#7B34D6; }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; flex-direction:column; align-items:center; gap:40px; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0f0720; }
+  .bg{ position:absolute; inset:0; z-index:0; background-position:center; background-size:cover; }
+
+  /* scrim direcional pra assentar o texto (esquerda/topo escuros) */
+  .scrim{ position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:
+      linear-gradient(102deg, rgba(9,5,16,.94) 0%, rgba(9,5,16,.74) 34%, rgba(9,5,16,.18) 60%, transparent 78%),
+      linear-gradient(180deg, rgba(9,5,16,.8) 0%, transparent 30%); }
+
+  /* mobília */
+  .topo{ position:absolute; z-index:6; top:58px; left:88px; right:78px; display:flex; justify-content:space-between; align-items:center; }
+  .topo img{ height:58px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.7)); }
+  .pill-v{ width:14px; height:46px; border:2px solid rgba(242,169,60,.85); border-radius:12px; }
+  .dots{ position:absolute; z-index:6; bottom:52px; left:88px; display:flex; gap:10px; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.3); }
+  .dots i.on{ background:var(--ambar); width:26px; border-radius:6px; }
+
+  /* texto */
+  .blk{ position:absolute; z-index:5; left:88px; width:760px; }
+  .kick{ display:inline-block; font-size:20px; font-weight:800; letter-spacing:.13em; text-transform:uppercase;
+    color:#0f0720; background:var(--ambar); padding:9px 16px; border-radius:6px; margin-bottom:24px; }
+  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.035em; line-height:.96; color:#fff;
+    text-shadow:0 10px 34px rgba(0,0,0,.85), 0 2px 8px rgba(0,0,0,.8); }
+  .h .it{ font-weight:500; font-style:italic; text-transform:none; letter-spacing:-.01em; color:var(--lilas); }
+  .h .am{ color:var(--ambar); }
+  /* riscado */
+  .risc{ position:relative; color:#A98FD0; }
+  .risc::after{ content:''; position:absolute; left:-4px; right:-4px; top:52%; height:12px; border-radius:6px;
+    background:var(--ambar); transform:translateY(-50%) rotate(-1.8deg); box-shadow:0 2px 14px rgba(242,169,60,.5); }
+  /* bloco na palavra */
+  .box{ display:inline-block; background:var(--ambar); color:#160a26; padding:2px 16px 8px; border-radius:9px;
+    transform:rotate(-1.4deg); box-shadow:0 12px 30px rgba(0,0,0,.45); }
+  .corpo{ margin-top:30px; max-width:560px; font-size:30px; font-weight:500; line-height:1.46; color:#EADFF6;
+    text-shadow:0 2px 12px rgba(0,0,0,.9); }
+  .corpo b{ color:#fff; font-weight:800; }
+  /* sublinhado desenhado */
+  .udl{ position:relative; white-space:nowrap; }
+  .udl svg{ position:absolute; left:-2%; bottom:-14px; width:104%; height:16px; }
+
+  .arrasta{ position:absolute; z-index:6; right:74px; bottom:64px;
+    border:1.5px solid rgba(255,255,255,.45); border-radius:40px; padding:11px 24px;
+    font-size:14px; font-weight:700; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.4; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(130% 100% at 40% 40%, transparent 58%, rgba(0,0,0,.45) 100%); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- SLICE 1 — CAPA -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('slice-test/slice-1.png')"></div>
+    <div class="scrim"></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="blk" style="top:215px">
+      <div class="kick">Pra quem já gastou com anúncio</div>
+      <div class="h" style="font-size:104px">
+        <span class="it" style="font-size:60px">Não é</span><br>
+        <span class="risc">Alcance.</span><br>
+        <span class="it" style="font-size:60px">é</span> <span class="am">Oferta.</span>
+      </div>
+      <div class="corpo">Seu anúncio não falhou.<br><b>Sua oferta falhou.</b></div>
+    </div>
+    <div class="arrasta">Arrasta →</div>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- SLICE 2 — AMPLIFICA -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('slice-test/slice-2.png')"></div>
+    <div class="scrim"></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="blk" style="top:170px">
+      <div class="h" style="font-size:82px">Alcance só<br><span class="am">amplifica</span><br>o que você<br>já tem</div>
+      <div class="corpo">Anúncio é volume. Se a mensagem é sem graça, você só faz <b>mais gente bocejar mais alto</b>.</div>
+    </div>
+    <div class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- SLICE 3 — SINTOMA -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('slice-test/slice-3.png')"></div>
+    <div class="scrim"></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="blk" style="top:200px">
+      <div class="h" style="font-size:84px">Você subiu<br>a verba e<br><span class="am">vendeu igual</span></div>
+      <div class="corpo">Mais verba, mais gente alcançada, e o <b>caixa parado no mesmo lugar</b>.</div>
+    </div>
+    <div class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+</div>
+</body>
+</html>

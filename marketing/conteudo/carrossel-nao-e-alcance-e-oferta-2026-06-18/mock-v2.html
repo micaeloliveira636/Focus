@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo2:#7B34D6; --roxo-claro:#B98BEE; --lilas:#D9C2F5; --claro:#F3EEE7; }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; flex-direction:column; align-items:center; gap:40px; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; }
+
+  .grain{ position:absolute; inset:0; z-index:8; pointer-events:none; opacity:.5; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:9; pointer-events:none;
+    background:radial-gradient(125% 100% at 50% 40%, transparent 60%, rgba(0,0,0,.45) 100%); }
+  .topo{ position:absolute; z-index:7; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:62px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.5)); }
+  .pill-v{ width:15px; height:50px; border:2px solid rgba(217,194,245,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:7; left:80px; bottom:60px;
+    border:1.5px solid rgba(255,255,255,.45); border-radius:40px; padding:11px 26px;
+    font-size:15px; font-weight:700; letter-spacing:.16em; color:#fff; text-transform:uppercase; }
+
+  /* ghost words */
+  .ghost{ position:absolute; inset:0; z-index:1; overflow:hidden; opacity:.05; pointer-events:none;
+    font-weight:900; text-transform:uppercase; font-size:150px; line-height:1.05; letter-spacing:-.03em;
+    color:#fff; white-space:nowrap; transform:rotate(-4deg) translate(-40px,-20px); }
+  .ghost div{ margin-left:-60px; }
+
+  /* ---------- CAPA ---------- */
+  .capa{ background:radial-gradient(120% 100% at 20% 18%, #3A1570 0%, #2A1056 48%, #1b0c39 78%, #120724 100%); }
+  .capa .kick{ position:absolute; z-index:6; top:150px; left:80px; display:inline-block;
+    background:rgba(185,139,238,.16); border:1.5px solid rgba(185,139,238,.6); color:var(--lilas);
+    font-size:19px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:11px 20px; border-radius:30px; }
+  .capa .hero{ position:absolute; z-index:6; left:80px; top:50%; transform:translateY(-52%); width:940px;
+    font-weight:900; text-transform:uppercase; letter-spacing:-.035em; line-height:.92; color:#fff; }
+  .capa .l1{ font-size:120px; }
+  /* ALCANCE riscado */
+  .risc{ position:relative; color:#8E6BC4; }
+  .risc::after{ content:''; position:absolute; left:-8px; right:-8px; top:54%; height:11px; border-radius:6px;
+    background:#C9A9F2; transform:rotate(-2.2deg); box-shadow:0 0 18px rgba(155,95,224,.7); }
+  /* OFERTA circulada */
+  .ofbox{ position:relative; display:inline-block; color:#fff; }
+  .ofbox svg{ position:absolute; left:-46px; top:-28px; width:calc(100% + 92px); height:calc(100% + 70px); z-index:-1; }
+  .capa .sub{ position:absolute; z-index:6; left:84px; bottom:170px; width:760px;
+    font-size:32px; font-weight:500; color:#E4DAF2; }
+  .capa .sub b{ color:#fff; font-weight:800; }
+
+  /* ---------- CONCEITO (s3) ---------- */
+  .conc{ background:radial-gradient(110% 90% at 50% 30%, #341362 0%, #220e44 55%, #160a2e 100%); }
+  .conc .hd{ position:absolute; z-index:6; top:150px; left:80px; right:80px; text-align:center;
+    font-weight:900; text-transform:uppercase; letter-spacing:-.03em; line-height:1.0; color:#fff; font-size:72px; }
+  .conc .hd .ac{ color:var(--roxo-claro); }
+  .eq{ position:absolute; z-index:5; left:50%; top:55%; transform:translate(-50%,-50%);
+    display:flex; align-items:flex-end; gap:18px; height:360px; }
+  .eq i{ width:54px; background:linear-gradient(180deg,#C9A9F2,#7B34D6); border-radius:8px 8px 3px 3px;
+    box-shadow:0 0 30px rgba(123,52,214,.5); }
+  .zzz{ position:absolute; z-index:6; right:150px; top:300px; color:var(--lilas); font-weight:900; font-style:italic;
+    font-size:90px; opacity:.85; transform:rotate(8deg); }
+  .conc .cap{ position:absolute; z-index:6; left:50%; bottom:150px; transform:translateX(-50%); width:840px; text-align:center;
+    font-size:30px; font-weight:500; color:#E4DAF2; line-height:1.45; }
+  .mk{ background:linear-gradient(transparent 10%, rgba(123,52,214,.6) 10%, rgba(123,52,214,.6) 92%, transparent 92%);
+    padding:0 7px; color:#fff; font-weight:800; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- CAPA -->
+  <section class="slide capa">
+    <div class="ghost"><div>Alcance&nbsp;Alcance&nbsp;Alcance</div><div>Alcance&nbsp;Alcance&nbsp;Alcance</div><div>Alcance&nbsp;Alcance&nbsp;Alcance</div><div>Alcance&nbsp;Alcance&nbsp;Alcance</div><div>Alcance&nbsp;Alcance&nbsp;Alcance</div><div>Alcance&nbsp;Alcance&nbsp;Alcance</div></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="kick">Pra quem já gastou com anúncio e não vendeu</div>
+    <div class="hero">
+      <div class="l1">Não é<br><span class="risc">Alcance.</span><br>É <span class="ofbox">Oferta.<svg viewBox="0 0 400 200" preserveAspectRatio="none"><path d="M40 100 C 30 40, 150 24, 230 28 C 330 33, 392 70, 380 115 C 366 168, 250 184, 150 178 C 60 172, 12 150, 26 96" fill="none" stroke="#C9A9F2" stroke-width="7" stroke-linecap="round" opacity=".95"/></svg></span></div>
+    </div>
+    <div class="sub">Seu anúncio não falhou. <b>Sua oferta falhou.</b></div>
+    <div class="arrasta">Arrasta →</div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- CONCEITO s3 -->
+  <section class="slide conc">
+    <div class="hd">Alcance só amplifica<br>o que <span class="ac">você já tem</span></div>
+    <div class="eq">
+      <i style="height:120px"></i><i style="height:200px"></i><i style="height:150px"></i>
+      <i style="height:300px"></i><i style="height:240px"></i><i style="height:340px"></i><i style="height:280px"></i>
+    </div>
+    <div class="zzz">Zzz</div>
+    <div class="cap">Anúncio é volume. Se a mensagem é sem graça, você só faz <span class="mk">mais gente bocejar mais alto</span>.</div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+</div>
+</body>
+</html>

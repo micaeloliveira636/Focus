@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --roxo:#692ABF; --roxo2:#7B34D6; --roxo-claro:#B98BEE; --lilas:#D9C2F5; --ouro:#E8A33D;
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg');
+    --geo:url('../../../identidade/textura-geometrica.png');
+    --couro:url('../../../identidade/textura-couro.jpg');
+  }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; flex-direction:column; align-items:center; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#160a26; }
+
+  /* 1. fundo texturizado em camadas */
+  .base{ position:absolute; inset:0; z-index:0;
+    background:radial-gradient(120% 95% at 28% 22%, #2C1450 0%, #20103e 46%, #160a26 78%, #0f0720 100%); }
+  .tx-concreto{ position:absolute; inset:0; z-index:1; background-image:var(--couro); background-size:cover; background-position:center;
+    mix-blend-mode:overlay; opacity:.5; }
+  .tx-scratch{ position:absolute; inset:0; z-index:1; background-image:var(--scratched); background-size:cover;
+    mix-blend-mode:soft-light; opacity:.35; }
+  .ghost-img{ position:absolute; inset:0; z-index:1; background-image:var(--geo); background-size:150%; background-position:30% 20%;
+    mix-blend-mode:overlay; opacity:.08; }
+  .halftone{ position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.22; mix-blend-mode:overlay;
+    background-image:radial-gradient(rgba(255,255,255,.9) 1px, transparent 1.4px); background-size:7px 7px; }
+  /* palavra-fantasma */
+  .ghost-word{ position:absolute; z-index:1; inset:0; overflow:hidden; opacity:.045; pointer-events:none;
+    font-weight:900; text-transform:uppercase; font-size:165px; line-height:1.0; letter-spacing:-.03em;
+    color:#fff; white-space:nowrap; transform:rotate(-5deg) translate(-60px,40px); }
+
+  /* 3. elemento recorrente: faixa rasgada vertical (ouro) na borda esquerda */
+  .faixa{ position:absolute; z-index:3; top:-40px; bottom:-40px; left:-10px; width:70px;
+    background:linear-gradient(180deg,#E8A33D,#C9822A); box-shadow:6px 0 24px rgba(0,0,0,.5);
+    transform:rotate(1.2deg); clip-path:polygon(0 0,100% 2%,86% 26%,100% 48%,82% 70%,100% 90%,0 100%); }
+  .faixa::after{ content:''; position:absolute; inset:0; background-image:var(--scratched); background-size:cover;
+    mix-blend-mode:multiply; opacity:.35; }
+
+  /* 6. mobília de revista */
+  .byline{ position:absolute; z-index:7; top:72px; left:120px; right:80px; display:flex; align-items:center; gap:14px;
+    color:#CDBBEA; font-size:18px; font-weight:700; letter-spacing:.04em; }
+  .byline .ch{ color:var(--ouro); font-weight:900; letter-spacing:-2px; }
+  .byline img{ height:40px; width:40px; border-radius:50%; border:2px solid var(--ouro); object-fit:cover; background:#2a1450; padding:4px; }
+  .byline .me{ color:#fff; }
+  .dots{ position:absolute; z-index:7; bottom:54px; left:50%; transform:translateX(-50%); display:flex; gap:11px; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.32); }
+  .dots i.on{ background:var(--ouro); width:26px; border-radius:6px; }
+  .badge{ position:absolute; z-index:7; right:74px; bottom:300px; width:118px; height:118px; border-radius:50%;
+    border:2px dashed rgba(217,194,245,.7); display:flex; align-items:center; justify-content:center; text-align:center;
+    color:#E7DAF7; font-size:15px; font-weight:700; line-height:1.25; transform:rotate(-9deg); }
+
+  /* 5. tipografia tratada e mista */
+  .hero{ position:absolute; z-index:6; left:120px; top:300px; width:880px;
+    text-transform:uppercase; color:#fff; }
+  .pre{ font-size:64px; font-weight:500; font-style:italic; text-transform:none; letter-spacing:-.01em; color:#EADCFb; margin-bottom:2px; }
+  .big{ display:inline-block; font-weight:900; font-size:165px; line-height:.86; letter-spacing:-.045em;
+    transform:scaleX(.9); transform-origin:left; }
+  /* ALCANCE riscado/apagado */
+  .risc{ position:relative; color:#7E5DB6; }
+  .risc::after{ content:''; position:absolute; left:-6px; right:14px; top:50%; height:14px; border-radius:7px;
+    background:#E8A33D; transform:translateY(-50%) rotate(-2deg); box-shadow:0 2px 16px rgba(232,163,61,.55); }
+  /* É + OFERTA em bloco */
+  .lin3{ margin-top:8px; display:flex; align-items:center; gap:22px; }
+  .e{ font-size:96px; font-weight:800; font-style:italic; }
+  .ofbox{ display:inline-block; background:var(--roxo2); color:#fff; font-weight:900; font-size:150px; line-height:1;
+    letter-spacing:-.04em; padding:6px 26px 16px; border-radius:12px; transform:scaleX(.92) rotate(-1.6deg);
+    transform-origin:left; box-shadow:0 18px 40px rgba(0,0,0,.5), inset 0 -8px 24px rgba(0,0,0,.25); }
+
+  .sub{ position:absolute; z-index:6; left:124px; bottom:150px; width:680px;
+    font-size:33px; font-weight:500; color:#E4DAF2; line-height:1.4; text-shadow:0 2px 14px rgba(0,0,0,.7); }
+  .sub b{ color:#fff; font-weight:800; }
+
+  /* zona do objeto (vai entrar o megafone recortado, vazando pela base) */
+  .obj-shadow{ position:absolute; z-index:4; left:38%; right:-4%; bottom:-30px; height:520px;
+    background:radial-gradient(60% 70% at 60% 100%, rgba(0,0,0,.6), transparent 72%); pointer-events:none; }
+
+  .grain{ position:absolute; inset:0; z-index:8; pointer-events:none; opacity:.55; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:9; pointer-events:none;
+    background:radial-gradient(125% 100% at 45% 38%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="slide">
+    <div class="base"></div>
+    <div class="tx-concreto"></div>
+    <div class="tx-scratch"></div>
+    <div class="ghost-img"></div>
+    <div class="ghost-word">Alcance&nbsp;Alcance&nbsp;Alcance<br>Alcance&nbsp;Alcance&nbsp;Alcance<br>Alcance&nbsp;Alcance&nbsp;Alcance<br>Alcance&nbsp;Alcance&nbsp;Alcance<br>Alcance&nbsp;Alcance&nbsp;Alcance</div>
+    <div class="halftone"></div>
+    <div class="faixa"></div>
+
+    <div class="byline"><span>Trazido por</span><span class="ch">&rsaquo;&rsaquo;&rsaquo;&rsaquo;</span><img src="../../../identidade/logo-simbolo-branco.png" alt=""><span class="me">@focusprogress</span></div>
+
+    <div class="hero">
+      <div class="pre">Pra quem já gastou com anúncio:</div>
+      <div class="big"><span class="risc">Alcance</span></div>
+      <div class="lin3"><span class="e">não é</span></div>
+      <div class="lin3"><span class="ofbox">Oferta</span></div>
+    </div>
+
+    <div class="obj-shadow"></div>
+    <div class="sub">Seu anúncio não falhou.<br><b>Sua oferta falhou.</b></div>
+
+    <div class="badge">Continue<br>arrastando</div>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+</div>
+</body>
+</html>
