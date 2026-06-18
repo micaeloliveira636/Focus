@@ -5,6 +5,8 @@
 > **Ler isto + `design-guide.md` + `referencias/dna-criativo.md` antes de criar qualquer carrossel.** A skill `/carrossel` segue isso.
 >
 > ⚠️ **Antes de criar, abrir `referencias/dna-criativo.md`** (menu de técnicas + checklist anti-genérico). Regra-mãe: criatividade = CENA composta (IA + manipulação), não "foto crua + texto por cima". Variar de técnica entre slides.
+>
+> 🎬 **Sou o diretor de design (papel assumido jun/2026).** A régua é o banco curado e descrito em `referencias/capturas-2026-06-17/DESCRICOES.md` (14 perfis + 27 carrosséis). **Abrir + ver a seção 13 deste playbook antes de criar.** Responsável por tudo no visual, principalmente os prompts do ChatGPT.
 
 ---
 
@@ -177,3 +179,94 @@ Mesmas regras fixas (vertical 4:5, low-key/muted, espaço negativo, grade roxo F
 
 **Molde "massa de cor roxa" (técnica nº 3 — quando quiser fundo roxo, não foto):**
 > (Pode ser feito direto no HTML — fundo `#692ABF` chapado + pilha de texturas em soft-light + leve vinheta roxa escura nos cantos. Não precisa de foto do ChatGPT.)
+
+---
+
+## 13. PADRÃO DE DIREÇÃO — banco de referências (jun/2026)
+
+> O Micael me nomeou **diretor de design** dos carrosséis. Sou responsável por tudo no
+> visual — conceito, composição, acabamento e, principalmente, **os prompts do ChatGPT**.
+> A régua é o banco que ele curou e eu descrevi slide a slide:
+> **`identidade/referencias/capturas-2026-06-17/DESCRICOES.md`** (14 perfis + 27
+> carrosséis). **Abrir esse arquivo antes de criar** — é o padrão a atingir.
+> Tudo traduzido pra Focus: **roxo + escuro + lobo + Montserrat. Texto é o rei.**
+
+### 13.1 A régua (quem estudar)
+- **@geisianedsgn ⭐ (DNA-mãe):** cena composta surreal (objeto-símbolo montado),
+  grunge, elemento gráfico atravessando os slides, palavra-herói, rim light, selo de
+  autoria. Posts DXKC/DWl-/DWEyg/DVGq/DWXG/DZIH são o gabarito.
+- **@gaia.psd:** colagem-moodboard + tipografia gigante + 1 cor-assinatura.
+- **@luisfelipe.design / @yaojadzn:** prova de que **paleta fechada (roxo escuro)** =
+  grade coesa e premium. Referência de cor mais próxima da Focus.
+
+### 13.2 Sistema de TEXTURAS com papéis (descoberta do post DWXG — alto valor)
+Texturas não são enfeite solto; cada uma tem função. Adotar como camadas fixas:
+- **Grids** → no **fundo** dos slides (já temos `textura-geometrica`). Vai bem no claro
+  e no escuro.
+- **Halftone** → **sobre os títulos** e na **finalização** (não só fundo).
+- **Kraft / paper** → **base** texturizada do carrossel inteiro (densidade de papel).
+- **Film dust** → poeira/arranhão; truque do CTRL+I pra inverter preto↔branco.
+- **Flow (gradiente desfocado)** → usar como **ILUMINAÇÃO**, não como fundo — mancha de
+  luz roxa desfocada atrás do sujeito. (No nosso: glow roxo + leve teal de canto.)
+> Mapear pros arquivos que já temos (`textura-scratched/fabric/plastic/couro/stars/
+> liquid/geometrica`) e pedir ao ChatGPT os que faltarem como PNG avulso.
+
+### 13.3 Moldes de ROTEIRO/ESTRUTURA (roubados dos favoritos)
+- **Arco emocional (DXKC):** capa-tese → sintomas (lista) → dúvida em silêncio →
+  "você só vê o resultado" → confissão pessoal → reframe/virada → CTA. Molde campeão
+  pra tema de dor/mentalidade.
+- **2 caixas — Mito × Real / Mentira × Verdade (DWl-):** template fixo, label em
+  destaque + caixa âmbar (errado) vs caixa neutra (certo). Reaplicável a qualquer tema.
+- **Carrossel de OFERTA (DX__x):** capa → dores em lista → promessa → o que aprende →
+  quando → quanto → CTA. Pra quando a Focus vender serviço/mentoria.
+- **"N técnicas/estilos pra copiar" (DZir2):** catálogo, 1 ideia por card, cor de fundo
+  por seção. Conteúdo de autoridade.
+- **Recap mensal estilo revista (DVJA):** masthead gigante sangrando + seções "all
+  about X" + overlays de UI real + slide-respiro claro no fim. Bastidor/autoridade.
+
+### 13.4 Sistema de SÉRIE (faz a grade virar marca)
+- **Elemento gráfico recorrente** atravessando todos os slides (na Geisiane é arame
+  farpado/correntes/galhos). **No nosso: um traço/fio roxo** (`#9B5FE0`) ou a estrela
+  de 4 pontas, presente em todo slide.
+- **Selo de autoria fixo** ("Brought to you by" → no nosso, lobo + `@focusprogress`
+  discreto no topo).
+- **Capa com template repetível numerado** (ex.: "Referência #01") cria reconhecimento
+  imediato no feed (lição @rafafrancodesign).
+- **Cena temática coesa** (um "mundo" do começo ao fim, ex. o gótico do DVGq) em vez de
+  objetos desconexos — eleva muito a percepção.
+
+### 13.5 Protocolo de PROMPT — minha responsabilidade nº 1
+Regras fixas continuam (vertical 4:5 · 1 imagem · **sem texto/letra/número/logo/marca/
+watermark** · low-key muted · espaço negativo escuro pro texto · grade roxo Focus +
+leve teal · grão de filme). **Novos moldes destilados do banco:**
+
+**A) Cena composta surreal (o DNA Geisiane — usar na maioria das capas):**
+> Vertical 4:5 hyperreal composited scene, surreal art-direction. A single striking
+> symbolic object — [OBJETO-SÍMBOLO ligado ao tema, ex.: a cracked porcelain mask / a
+> bear trap / an astronaut overgrown with flowers / a marionette] — as the hero,
+> dramatically lit and seamlessly montaged into a moody environment. Deep grunge
+> textured background, volumetric haze, a hard rim light carving the object. Strong
+> cast shadows so the object feels truly placed in the scene (not pasted). Color grade:
+> low-key, desaturated, deep purple dominant with a faint teal rim, heavy film grain
+> baked in. Composition: object to one side, large clean DARK negative space for text.
+> 50mm, premium editorial. No text, letters, numbers, logos or watermark.
+
+**B) Luz volumétrica dramática (clima/virada — do DVGq):**
+> ...single key light source (moonlight / lightning / glowing embers) cutting through
+> mist in dramatic volumetric god-rays, deep atmospheric shadows, cinematic dark-fantasy
+> mood, deep purple grade with amber-to-purple accent, heavy grain. [+ regra negativa].
+
+**C) Objeto retrô em DUOTONE roxo (do DKIK — "objeto isolado em cor chapada"):**
+> single [objeto retrô: flip phone / CRT / camera] in a strong purple-and-magenta
+> duotone, halftone grain, isolated on a flat plain background, product-cutout style,
+> no shadow. No text/logo/watermark. → recortar e compor no HTML.
+
+**D) Elementos avulsos pra colagem (estilo gaia.psd / Geisiane):** pedir cada peça
+separada — objeto recortável, traço/scribble, card/polaroid, pedaço de textura — em
+`single [X] centered on a flat plain light-grey background, no shadow, no text` pra
+passar no `remove-bg.js` e eu montar a colagem (camadas + oclusão do texto + sombra).
+
+> Princípio que amarra tudo: **imagem nunca entra crua.** Ou é cena composta/conceitual
+> (molde A/B), ou objeto duotone (C), ou peças que EU colo (D). Variar a técnica entre
+> os slides. Sempre auto-criticar antes de mostrar (não entrego o que eu mesmo acho
+> fraco).
