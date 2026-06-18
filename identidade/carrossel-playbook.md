@@ -317,3 +317,60 @@ no fim pra ficar tudo na mesma coloração. Feito injetando camadas **por baixo 
   mantém o branco do mármore e as cores naturais. Esse é o valor certo.
 - glow roxo central sutil + grão extra + vinheta mais funda (uniformes nos 8).
 Reaproveitar `render-final.js` pra qualquer carrossel multi-fonte.
+
+---
+
+## 14. RECEITA NÍVEL-REFERÊNCIA — processo padrão de todo carrossel (jun/2026)
+
+> Conversa-chave com o Micael. Isso aqui é o jeito de trabalhar, não uma dica solta.
+> Vale pra TODO carrossel daqui pra frente, salvo quando ele pedir o contrário.
+
+**Princípio:** criatividade aqui NÃO é inventar do nada nem repetir um molde único
+("cena composta surreal + objeto-símbolo + grade roxo" no automático = uma nota só,
+reprovado como preguiça). Criatividade é **recombinação dirigida**: garimpar o banco
+`identidade/referencias/.../DESCRICOES.md` e **fundir peças de várias referências**
+(o jeito da capa de uma, a textura de outra, a estrutura de uma terceira, a coragem de
+cor de uma quarta) num combo que ninguém montou ainda pra aquele tema, traduzido pra
+identidade Focus (roxo + escuro + lobo + Montserrat). O `DESCRICOES.md` é um **catálogo
+de peças**: cada referência termina num "Roubar pra Focus" que é a técnica a tirar dali.
+
+O processo tem **três tempos**, nessa ordem:
+
+### 14.1 ETAPA 1 — DIREÇÃO CRIATIVA (antes de qualquer prompt)
+1. Abrir o `DESCRICOES.md` e garimpar de propósito (não puxar do automático).
+2. Montar o **combo**: pra esse tema, dizer de quais referências vem cada peça, por nome:
+   capa (de quem), sistema de textura/luz (de quem), elemento recorrente da série (de
+   quem), estrutura de roteiro (de quem), slide de respiro (de quem), acento de cor (de quem).
+3. **Apresentar o combo pro Micael ANTES de executar** ("vou fundir o elemento X da ref A,
+   a textura Y da ref B, a estrutura Z da ref C"). Ele aprova ou ajusta. Variar a mistura
+   entre carrosséis — não repetir o mesmo combo.
+
+### 14.2 ETAPA 2 — PROMPTS NÍVEL-REFERÊNCIA (detalhe é obrigatório)
+A direção criativa só acontece se entrar no prompt **com nome e sobrenome**. Não adianta
+decidir "parede arranhada + rim light da Geisiane" e escrever "fundo escuro com luz roxa".
+Cada prompt carrega TODAS estas camadas (checklist):
+- **Sujeito + movimento roubado** da referência escolhida (ex.: "composto estilo moodboard
+  recortado da @gaia.psd").
+- **Material específico** (mármore Carrara com veios, concreto descascado, latão escovado,
+  papel envelhecido). Metade do realismo está aqui.
+- **Luz nomeada** (rim light rasante / raking key caindo em sombra / god-ray volumétrico),
+  nunca só "dramática".
+- **Partículas e atmosfera** (poeira suspensa, embers, névoa volumétrica, halation).
+- **Lente e filme** (35/50mm, profundidade rasa, look Cinestill 800T, grão embutido).
+- **Texturas da série** que escolhi roubar do banco pra esse carrossel.
+- **Composição + espaço negativo** (onde o sujeito senta, onde fica o vazio escuro pro
+  texto) + formato **9:16 cortado pra 4:5** (tira a marca d'água).
+- **Regras negativas** sempre: nada de fio/linha/neon/streak, nada de texto/letra/número/
+  logo/marca d'água.
+Quanto mais específico, mais perto da referência. Foi a diferença entre o batch fraco e o
+batch nível-referência do "Ninguém cria do nada".
+
+### 14.3 ETAPA 3 — EXECUÇÃO
+- A/B **GPT vs Meta por cena** e escolha slide a slide (régua da 13.7: silêncio/espaço →
+  GPT; riqueza/textura → Meta).
+- **Grade final unificado** (13.8) quando misturar fontes.
+- **Texto é o rei** (seção 1) e auto-crítica honesta antes de mostrar (não entrego o que eu
+  mesmo acho fraco).
+- ⚠️ Conferir a **fonte certa das fotos** antes de comparar (fotos GPT ficam em
+  `C:\Users\Pichau\Pictures\GPT fotos`, pegar o batch mais recente por hora; Meta vem no
+  Downloads como `tall-vertical-916-*.jpeg`). Não assumir pasta nem batch.
