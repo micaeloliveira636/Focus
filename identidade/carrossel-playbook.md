@@ -413,3 +413,22 @@ torcer pra emenda bater (fica FALSO, os pixels não continuam):
    conversarem, scrim direcional pra legibilidade, mobília fixa (lobo, pílula, bolinhas).
 5. ⚠️ Resolução: fatiar reduz o px por slide (618x773 -> upscale 1.75x pra 1080x1350). O grão
    disfarça, aguenta IG; se quiser nitidez, gerar masters maiores.
+
+### 14.6 EVITAR "CARA DE IA" — régua = o carrossel dos bustos (virada jun/2026)
+O Micael apontou: as imagens do `carrossel-referencias-criatividade` (bustos de mármore,
+corredor, ateliê) ficaram ÓTIMAS porque parecem **fotografia**, e as do megafone ficaram com
+**cara de IA**. A diferença, destrinchada:
+- ✅ **Materiais e cenas reais e críveis** (mármore, concreto, madeira, tinta a óleo real),
+  shot como **fotografia / still-life**, não render.
+- ✅ **Luz naturalista** (uma luminária real, um raio de sol pela névoa num espaço real). Luz
+  que existiria na vida real.
+- ✅ **Roxo como UM acento pequeno e pontual** (brilho dentro das rachaduras, UM busto aceso).
+  O resto da cena fica em **cor natural/desaturada** (mármore branco, concreto cinza). A cena
+  NÃO é tingida inteira.
+- ❌ **Tells de IA a EVITAR:** partículas/poeira brilhante flutuando no ar, "energy stream",
+  god-ray e bokeh exagerados, a cena inteira lavada de luz colorida (roxo+âmbar em tudo),
+  grade super-saturada. Isso transforma foto em "arte digital".
+- ⚠️ Cuidado: o mecanismo de **continuidade** (14.5) NÃO pode ser o jato de partículas (é o
+  pior tell). Se quiser continuidade, ancorar em algo **físico**: o chão/parede, um raio de
+  luz real, a perspectiva que segue, uma rachadura que continua. Senão, slides photoreal
+  standalone (como os bustos) já são o nível.
