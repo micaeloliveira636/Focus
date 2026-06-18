@@ -808,8 +808,158 @@ plastic, couro). **Referência técnica de maior valor do banco.**
   template de slide. Trocar acentos pelo roxo. Vale virar referência fixa do
   carrossel-playbook.
 
-> ⏳ **AINDA PENDENTES DE DESCRIÇÃO** (capturados, faltou ler/escrever):
-> DWEygDKlAJ0 (7), DVGqndUjaq9 (6), DKIKsNhRL86 (6), DVJAZ3niFq- (10).
+## DWEygDKlAJ0 — "Como não ser um designer marionete" (@geisianedsgn ⭐) · 7 slides
+**Favorita — tema de limites com o cliente** (não deixar o cliente "dirigir" o
+design). Mesmo DNA já documentado: teal + bege papel + **arame farpado** + cenas
+compostas surreais + palavra-herói dourada + numeração em caixa âmbar. Tese
+diretamente útil pra postura da Focus com clientes.
+
+- **Slide 1 (capa):** teal; **marionete de madeira com cabeça de TV antiga**
+  segurando uma rosa amarela, balão de fala "Ai eu até gosto, mas...". "Como não ser
+  um **DE SIG NER**" (branco empilhado) "**MARIONETE**" (caixa âmbar). Selo Geisiane,
+  marcador "01".
+- **Slide 2:** teal com **arame farpado + máscaras de madeira** nos cantos. "Existem
+  alguns clientes que querem **pegar na nossa mão** (dourado) e criar o post por nós"
+  + lista itálico: "Abaixa mais o logo" / "Coloca isso do outro lado" / "Arrasta a
+  foto mais pra baixo" / "Muda a fonte".
+- **Slide 3:** bege papel, arame nas bordas, post-it amarelo. "Além de atrasar toda a
+  demanda **É MUITO FRUSTRANTE TER QUE FAZER ALTERAÇÕES TÃO BOBAS.**" (dourado
+  gigante) + "...depois o cliente pede pra voltar a primeira versão."
+- **Slide 4:** preto, **fusca enferrujado tomado por plantas** + marionete. "Por isso
+  você precisa *se posicionar* (itálico dourado) quando isso acontece. Vou te dar 3
+  dicas... Já salva o post."
+- **Slide 5 — dica 1:** "**Deixe claro que você é o designer.**" + "Não deixe o
+  cliente pegar na sua mão e te fazer de marionete." (marionete no fusca).
+- **Slide 6 — dicas 2 e 3:** "**Cobre por alteração.**" (3 grátis, da 4ª em diante
+  taxa) e "**Dê a sua opinião**" (exponha seu pensamento, não tenha medo de se
+  posicionar). Números em caixa âmbar.
+- **Slide 7 (CTA):** preto com folhas P&B. "E aí, *curtiu* esse **conteúdo**? Já salva
+  pra não perder as dicas. E me conta, você já precisou lidar com algum cliente
+  assim?" Selo Geisiane.
+- **Texturas/luz/sombra:** mesma receita — tela teal/papel bege texturizados, grão,
+  arame farpado de moldura, objetos montados com sombra real e rim light, fundos
+  pretos cinematográficos nas viradas. Teal + bege + preto + dourado.
+- **Roubar pra Focus:** (1) **tese de postura profissional** (você é o especialista,
+  não executor de pitaco) — ótimo tema institucional; (2) **lista de falas reais do
+  cliente** em itálico como prova social negativa; (3) **dicas numeradas em caixa de
+  cor**; (4) objeto-símbolo recorrente (marionete = perda de autonomia). Paleta pro
+  roxo.
+
+## DVGqndUjaq9 — "Ousadia é posicionamento" / Designer Master (@geisianedsgn ⭐) · 6 slides
+**Favorita — lançamento (Designer Master) com tese de posicionamento:** parar de ser
+"seguro demais", bancar a própria identidade pra não competir por preço. Aqui a cena
+composta vira **dark-fantasy/gótico-Halloween** (cemitério, abóboras, árvore de
+olhos de fogo). Tema diretamente aplicável à Focus (vender por identidade, não por
+preço). *Obs.: o slide-01 capturado é o **painel de legenda do IG** (mesmo glitch do
+DYpxkaaFZQZ), não a capa — ignorar; descrição a partir do slide 2.*
+
+- **Slide 2:** floresta gótica escura, **moldura/portal redondo ornamentado**. "Em
+  algum momento, você começa a **sufocar o seu próprio estilo.**" + lista (paleta
+  fácil / fonte neutra / layout engessado pra não assustar o cliente) + "Faz porque
+  te ensinaram a ter **medo do próprio estilo.**"
+- **Slide 3:** **cemitério gótico** — lápide, **abóboras de Halloween**, lanternas,
+  castelo ao fundo, lua. "**E ASSIM, SUA IDENTIDADE VAI MORRENDO.**" (dourado gigante)
+  + corpo; lápide gravada "aqui jaz uma identidade".
+- **Slide 4:** **arco gótico** + pergaminho, **bebê 3D (estilo Pixar) segurando
+  dinamites**. "**OUSADIA NÃO É EXCESSO. É POSICIONAMENTO.** Não é sobre ser
+  'diferentão'. É ter a coragem de colocar a sua cara no projeto." + caixa manuscrita
+  "Misturo técnica, estratégia e a minha própria identidade".
+- **Slide 5:** **violino/cello + relâmpagos**, hera. "**QUANDO O DESIGN TEM A SUA
+  ESSÊNCIA, O JOGO VIRA.**" (dourado) + "Você para de brigar por preço porque ninguém
+  consegue copiar a sua identidade."
+- **Slide 6 (CTA):** **árvore com olhos de fogo/lava brilhando** (dark fantasy). "O
+  MERCADO JÁ ESTÁ ENTUPIDO DE **CÓPIAS.** Dia 09 abro a nova turma do Designer
+  Master... carrosséis que **impactam e vendem de verdade.** Comenta **DM**..."
+- **Texturas/luz/sombra:** cenas **fotorrealistas escuras montadas** (céu noturno,
+  névoa, raios, fogo nos olhos), **luz dramática volumétrica** (raios de lua/relâmpago
+  cortando a névoa), rim light âmbar nos objetos, pergaminho texturizado nos blocos de
+  texto, grão. Paleta verde-petróleo escuro + âmbar/fogo + dourado.
+- **Roubar pra Focus:** (1) tese **"identidade > preço"** (parar de competir por
+  valor) — ótimo argumento comercial; (2) **cena temática coesa** (um "mundo" gótico
+  do começo ao fim) em vez de objetos soltos; (3) **luz volumétrica dramática** como
+  recurso de profundidade; (4) metáfora visual forte (cemitério = morte da
+  identidade). Trocar âmbar pelo roxo, manter o clima escuro (já é nosso).
+
+## DKIKsNhRL86 — "A Influxo tá de cara nova" (rebrand @influxo.br) · 6 slides
+**Anúncio de rebrand/reposicionamento de um estúdio — e a paleta é quase a da Focus**
+(roxo + preto + branco + **acento magenta**). Linguagem: foto P&B + card de texto +
+**doodle/scribble roxo** como elemento gráfico recorrente + objetos retrô tingidos
+de roxo. Referência de paleta e de narrativa "nova fase".
+
+- **Slide 1 (capa):** fundo azul-roxo, foto P&B de mulher de óculos escuros e
+  earmuffs de pelo. "A **INFLUXO**" (branco gigante, com "INFLUXO" fantasma repetido)
+  "TÁ DE CARA *nova*" (script) + "E não foi só o visual que mudou." Scribble roxo.
+- **Slide 2:** foto P&B (rua, ângulo alto), **card de papel** sobreposto: "Depois de
+  anos criando pros outros, **decidimos olhar pra nós mesmas** (magenta). ...ajustamos
+  tudo pra **CRESCER COM VOCÊ.**" (preto gigante). Tag @influxo.br.
+- **Slide 3:** off-white com **scribble doodle preto** grande + **celular flip roxo**
+  (Razr, tint roxo). Lista: "Novo posicionamento / Serviços mais claros / Comunicação
+  alinhada / **A mesma essência** (magenta): criativa, acessível e com foco em
+  resultado".
+- **Slide 4:** fundo preto, **mão segurando uma explosão de scribble magenta** (P&B +
+  magenta). "A entrega estratégica, a paixão pelo design, e a nossa missão: **FAZER
+  VOCÊ SER VISTO, LEMBRADO E *escolhido***" (gigante, "escolhido" em script magenta).
+  Texto-fantasma repetido embaixo.
+- **Slide 5:** foto de **CRT/computador retrô** numa estante, **card roxo** sobreposto:
+  "Quer uma presença no digital com estratégia de verdade? ...criativos, carrosséis,
+  páginas de vendas e vídeos que" + post-it magenta "**CONECTAM E CONVERTEM.**"
+- **Slide 6 (CTA):** preto/roxo, **boca/lábios roxos gigantes** (pop art, tint roxo).
+  "Fala com a gente no direct... **A INFLUXO TÁ DE CARA NOVA.**" + "Agora só falta *a
+  sua*" (script). Scribble roxo.
+- **Texturas/luz/sombra:** **halftone/P&B granulado** nas fotos, **scribble vetorial**
+  como assinatura gráfica, objetos retrô **tingidos de roxo/magenta** (duotone), cards
+  de papel com sombra, texto-fantasma de profundidade. Roxo + preto + branco +
+  magenta — **a referência de paleta mais próxima da Focus** do banco.
+- **Roubar pra Focus (alto valor):** (1) **paleta validada** (roxo+preto+branco+acento)
+  — ver como eles equilibram; (2) **scribble/doodle** como elemento gráfico de marca
+  recorrente (poderia ser um traço roxo nosso); (3) **duotone roxo** em objeto retrô
+  (= nosso "objeto isolado em cor chapada"); (4) **foto P&B + card de texto** como
+  layout limpo; (5) narrativa de "nova fase/reposicionamento" caso a Focus faça um
+  anúncio assim.
+
+## DVJAZ3niFq- — "All About February — Recap" (designer internacional) · 10 slides
+**Recap mensal em formato CAPA DE REVISTA / editorial.** Em inglês, estética de
+magazine: masthead vermelho gigante, fotos cinematográficas escuras e **overlays de
+UI real** (modo Foco do iOS, notificações de pagamento, player de música) contando a
+história. Paleta vermelho + preto + creme. Molde forte pra um "recap do mês/bastidor"
+da Focus.
+
+- **Slide 1 (capa):** **capa de revista** — "ALL ABOUT **FEBRUARY**" (vermelho
+  gigante) + "RECAP" + "ISSUE FEB 2025", selfie no espelho com câmera (cena neon
+  escura), **balões de comentário** sobrepostos. Masthead + cara de social.
+- **Slide 2:** silhueta na janela; **menu do Modo Foco do iOS** sobreposto (Do Not
+  Disturb, Personal, Work, Sleep, THE HYBRID) em pills de vidro. "I've been working on
+  a lot of projects... but have I been wasting time?"
+- **Slide 3:** "TOP APPS OF FEB" + **ícones de apps flutuando** (Freedom, Slack,
+  Discord, WhatsApp, Notion, Spotify), retrato com luz vermelha.
+- **Slide 4:** "DEBUT — TRYING A NEW **ART STYLE**" em **graffiti vermelho riscado**
+  sobre retrato com **tarja nos olhos**, clip de revista "A for Artist", polaroid.
+- **Slide 5:** **colagem editorial de fotos de eventos** (release de music video,
+  show), poster ao fundo, grade de polaroids levemente giradas.
+- **Slide 6:** "ALL ABOUT **CAFFEINE**" (vermelho) sobre foto POV de mão segurando
+  **latte** (top-down, tênis embaixo), balão "coffee.", **player de música** "Ocean
+  floor".
+- **Slide 7:** "MULTIPLE **CAFE HOPS**" branco sobre foto de **xícara + laptop** em
+  café. "Visited multiple cafés to find the best fit for my workflow."
+- **Slide 8:** retrato com luz quente + **notificações de pagamento** ("Payment
+  from... Completed") sobrepostas. "Been a productive stretch, the projects paid off."
+- **Slide 9:** "FEBRUARY'S BEEN ALL ABOUT **WORK**" (vermelho gigante) + **tablet com
+  grade tipo Letterboxd** + janelas de Finder. Colagem.
+- **Slide 10 (fecho):** creme minimalista. "And now, onto **March.** ...more ideas,
+  more creations... Stay tuned."
+- **Texturas/luz/sombra:** **fotografia cinematográfica** (luz neon/vermelha, baixa
+  key), **grão de revista**, **masthead** tipográfico vermelho sangrando pras bordas,
+  UI de iOS/apps com **glassmorphism** como elemento narrativo, slide final em
+  off-white pra respiro. Vermelho + preto + creme.
+- **Roubar pra Focus (alto valor):** (1) **formato recap mensal** (capa de revista +
+  seções "all about X") — ótimo conteúdo de bastidor/autoridade; (2) **masthead
+  tipográfico gigante** sangrando na borda; (3) **overlays de UI real** (modo foco,
+  notificação, player) como prova e storytelling; (4) **slide-respiro final** em cor
+  clara fechando a série. Trocar vermelho pelo roxo, manter o clima escuro.
+
+---
+
+## Fim dos 27 carrosséis. Próximo: descrição dos 10 perfis extras (grades).
 > Mais os **10 perfis extras**: wanrleydesigner, yaojadzn, gaia.psd,
 > luisfelipe.design, nana_multimedia, designbyayelet, martavillegaasdesign,
 > designbysergio, rafafrancodesign, gtmshrma.
