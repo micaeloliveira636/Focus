@@ -278,3 +278,42 @@ passar no `remove-bg.js` e eu montar a colagem (camadas + oclusão do texto + so
 > (molde A/B), ou objeto duotone (C), ou peças que EU colo (D). Variar a técnica entre
 > os slides. Sempre auto-criticar antes de mostrar (não entrego o que eu mesmo acho
 > fraco).
+
+### 13.6 PIPELINE META AI (atualização jun/2026 — gerador preferido)
+O **Meta AI** virou o gerador principal (mais cinematográfico que o ChatGPT). Fluxo:
+1. Eu escrevo os prompts **completos** (regra embutida em CADA um, nunca em pedaços
+   pro Micael juntar). Formato: **9:16** (não 4:5), porque a imagem é cortada pra 4:5
+   com `cover` e **o corte remove a marca d'água "Meta AI"** do canto inferior. No
+   prompt: "Tall vertical 9:16... center-cropped to 4:5, keep subject and dark negative
+   space in the central 80%, leave the very bottom strip simple/empty so it can be
+   cropped off."
+2. **Prompt nível-referência = MUITO detalhe de direção de arte:** material específico
+   (ex. mármore Carrara com veios), luz (rim/raking/god-ray volumétrico), partículas
+   (poeira/embers), lente (35/50mm), look de filme (Cinestill 800T), "ultra-detailed,
+   photoreal". Quanto mais específico, mais perto da Geisiane.
+3. ❌ **Nada de "linha/fio/neon/streak" desenhado nem dentro da imagem** (reprovado). A
+   coesão vem da **luz e do tom roxo**, não de um fio. Sempre incluir no prompt: "no
+   glowing thread, wire, neon line, light streak or string of any kind."
+4. Micael gera e salva no **Downloads** (nome vem do prompt, NÃO mapeia direto): eu
+   **abro cada imagem e identifico pelo conteúdo**, depois renomeio/encaixo em `pecas/`.
+5. Sempre **backup** das versões anteriores (ex. `pecas/gpt-orig/`) antes de sobrescrever.
+
+### 13.7 ESCOLHA DE GERADOR POR TIPO DE CENA (aprendizado A/B jun/2026)
+Testado nos dois lados no "Ninguém cria do nada":
+- **ChatGPT** ganha em **cenas limpas/minimalistas e fiéis à paleta roxa fria** (capa,
+  pedestal vazio, fileira limpa, estante, parede). Mais espaço negativo, texto respira.
+- **Meta AI** ganha em **cenas ricas de textura/drama** (desintegração em cubos,
+  impasto da tela, "galpão" épico). Mais detalhe e profundidade.
+- Regra: cena que precisa de **silêncio/espaço** → ChatGPT; cena que precisa de
+  **riqueza/textura** → Meta. Decidir slide a slide e misturar.
+
+### 13.8 GRADE FINAL — acabamento de coloração (ferramenta `render-final.js`)
+Quando os slides vêm de fontes diferentes (GPT + Meta), passar um **grade unificado**
+no fim pra ficar tudo na mesma coloração. Feito injetando camadas **por baixo do texto
+(z-index 4, nunca tinge tipografia/logo)** na renderização:
+- `.cena{ filter: saturate(.92) contrast(1.04) brightness(.97) }` (doma extremos).
+- camada `mix-blend-mode:color` roxa **LEVE (~.14 opacity)** — harmoniza a temperatura.
+  ⚠️ **Não exagerar**: .34 ficou "tudo muito roxo" / monocromático (reprovado). ~.14
+  mantém o branco do mármore e as cores naturais. Esse é o valor certo.
+- glow roxo central sutil + grão extra + vinheta mais funda (uniformes nos 8).
+Reaproveitar `render-final.js` pra qualquer carrossel multi-fonte.
