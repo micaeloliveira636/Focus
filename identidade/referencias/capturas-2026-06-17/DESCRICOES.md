@@ -959,7 +959,107 @@ da Focus.
 
 ---
 
-## Fim dos 27 carrosséis. Próximo: descrição dos 10 perfis extras (grades).
+# PARTE 3 — PERFIS EXTRAS (leitura de grade)
+
+Descrição no nível do **feed** (direção geral, paleta, coesão e o que roubar). Os
+prints são da grade completa; o valor aqui é o *padrão de marca* de cada perfil, não
+post a post.
+
+## @wanrleydesigner — key art de cinema/séries
+- **Direção geral:** **pôsteres cinematográficos** (key art de filme/série/esporte).
+  Composições fotográficas dramáticas, retratos recortados, títulos tipográficos
+  fortes. Cara de cartaz de streaming.
+- **Paleta:** escura e variada por peça (cada pôster com sua cor), muito preto e
+  contraste alto, luz dramática.
+- **Coesão:** unificado pelo **formato pôster** e pelo acabamento cinematográfico
+  (grão, luz, color grading), não por uma paleta única.
+- **Roubar pra Focus:** tratamento **key art** (retrato + luz dramática + título
+  forte) pra capas de carrossel mais "filme"; color grading coeso como assinatura.
+
+## @yaojadzn — arte etérea/cósmica (o mais coeso)
+- **Direção geral:** **arte abstrata sonhadora** — rostos se dissolvendo em fumaça/
+  partículas, formas líquidas/cromadas, nebulosas, glow. Quase 100% arte conceitual.
+- **Paleta:** **azul-petróleo + roxo + preto** com brilhos, monocromático frio. Muito
+  próximo do clima escuro+roxo da Focus.
+- **Coesão:** **grade extremamente uniforme** (parece um único mood do início ao
+  fim) — referência de como uma paleta fechada cria identidade instantânea.
+- **Roubar pra Focus:** **dispersão em partículas/fumaça** e **glow** como efeito
+  sobre o lobo/retrato; disciplina de **paleta fechada** pra grade coesa.
+
+## @gaia.psd — colagem brasileira rosa (já mapeada)
+- **Direção geral:** **colagem/scrapbook** vibrante, tipografia gigante, stickers,
+  recortes, fotos do cotidiano. Autora dos posts DT24/DV8s/DX__x.
+- **Paleta:** **rosa-magenta + creme + preto**, explosões de cor brasileira.
+- **Coesão:** fortíssima — o magenta e a colagem amarram tudo.
+- **Roubar pra Focus:** lógica de **colagem + tipografia gigante + 1 cor-assinatura**
+  (no nosso, roxo). Já detalhado nos posts dela.
+
+## @luisfelipe.design — roxo cinematográfico (paleta-irmã da Focus)
+- **Direção geral:** **retratos cinematográficos com neon roxo**, carros, 3D, clima
+  tech/dark. Visual premium, profissional.
+- **Paleta:** **roxo + azul + preto** — das mais próximas da identidade Focus de todo
+  o banco.
+- **Coesão:** grade muito coesa no roxo escuro; sensação de estúdio sério.
+- **Roubar pra Focus (alto valor):** referência direta de **como o roxo escuro vira
+  marca** num feed; iluminação neon roxa em retrato; acabamento premium. Estudar de
+  perto junto com a Geisiane.
+
+## @nana_multimedia — flyer vibrante/energético
+- **Direção geral:** **flyers e capas energéticas** (eventos, DJ), foto + tipografia
+  bold, muita cor saturada. Vibe afro/urbana.
+- **Paleta:** saturada e contrastante (azul, laranja, vermelho), alto impacto.
+- **Coesão:** unida pela **energia** e pela tipografia bold, paleta variada.
+- **Roubar pra Focus:** **tipografia bold de flyer** e contraste alto pra peças que
+  precisam gritar (promo, evento); usar com parcimônia no nosso clima escuro.
+
+## @designbyayelet — dicas de design, leve e feminino
+- **Direção geral:** **conteúdo educativo pra designers** ("Peek my Portfolio",
+  fontes, paletas), clima claro, floral, arejado.
+- **Paleta:** **rosa + verde + branco**, clara e suave.
+- **Coesão:** coesa pelo tom claro/feminino e pelos templates de "dica".
+- **Roubar pra Focus:** formatos de **conteúdo-dica** (fontes, paletas, "peek my
+  portfolio") como ideias de série; o nosso seria a versão escura/roxa disso.
+
+## @martavillegaasdesign — editorial/colagem sofisticada
+- **Direção geral:** **art direction editorial** — colagem, fotografia de moda,
+  layout de revista, serifa, recortes refinados.
+- **Paleta:** **terrosa/dessaturada** com acentos vermelhos; bege, creme, tons
+  vintage.
+- **Coesão:** coesa pelo refinamento editorial e pela paleta quente dessaturada.
+- **Roubar pra Focus:** **mão de art direction** (layout de revista, grid editorial,
+  serifa de acento) pra elevar peças mais sofisticadas; respiro e composição.
+
+## @designbysergio — banco de recursos (estilo arco-íris)
+- **Direção geral:** **conteúdo de recursos/dicas** (free fonts, free mockups, color
+  gradients, UI designs, AI). Cada post numa cor sólida diferente.
+- **Paleta:** **multicolorida** (grade arco-íris), cada card uma cor chapada bold.
+- **Coesão:** unida pelo **template de card** consistente, não pela cor.
+- **Roubar pra Focus:** template de **carrossel de recurso/dica** (1 ideia por card,
+  cor de fundo chapada) — versão roxa monocromática no nosso caso. Mesmo nicho do
+  saurabhux/gtmshrma.
+
+## @rafafrancodesign — série "PROMPTS" (template de capa repetido)
+- **Direção geral:** **série de capas "PROMPT/PROMPTS"** sobre IA, formato de capa
+  repetido com retrato + título grande, número de edição. Grade muito padronizada.
+- **Paleta:** vibrante e variada por capa, alto contraste, vermelho recorrente.
+- **Coesão:** fortíssima pelo **template de capa repetido** (vira marca na grade).
+- **Roubar pra Focus:** poder de um **template de capa fixo numa série numerada**
+  (ex.: "Referência #01, #02...") pra criar reconhecimento imediato no feed.
+
+## @gtmshrma — marca vermelha de dicas (muito coeso)
+- **Direção geral:** **conteúdo de dicas/tutorial** (texture, "5 month design plan",
+  Photoshop), com o **rosto do designer** recorrente e tom vermelho.
+- **Paleta:** **vermelho + preto + branco** dominante, consistente.
+- **Coesão:** das grades mais coesas — vermelho + rosto + template fixo = marca
+  pessoal forte.
+- **Roubar pra Focus:** disciplina de **uma cor + rosto + template** virando marca;
+  no nosso, **roxo + lobo/rosto + grão**. Mesmo nicho do designbysergio/saurabhux,
+  mas com identidade pessoal mais marcada.
+
+---
+
+**Banco completo:** 4 perfis-chave + 10 perfis extras (14 grades) e 27 carrosséis
+descritos slide a slide. Capturas em `perfis/` e `posts/<código>/`.
 > Mais os **10 perfis extras**: wanrleydesigner, yaojadzn, gaia.psd,
 > luisfelipe.design, nana_multimedia, designbyayelet, martavillegaasdesign,
 > designbysergio, rafafrancodesign, gtmshrma.
