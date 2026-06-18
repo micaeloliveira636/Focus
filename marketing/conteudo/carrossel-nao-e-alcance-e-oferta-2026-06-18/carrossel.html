@@ -3,229 +3,169 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800&display=swap');
   *{ margin:0; padding:0; box-sizing:border-box; }
-  :root{
-    --roxo:#692ABF; --roxo-claro:#B98BEE; --roxo-fio:#9B5FE0; --branco:#FFFFFF; --claro:#F2EEE6;
-    --fabric:url('../../../identidade/textura-fabric.jpg');
-    --scratched:url('../../../identidade/textura-scratched.jpg');
-    --plastic:url('../../../identidade/textura-plastic.png');
-    --couro:url('../../../identidade/textura-couro.jpg');
-    --geo:url('../../../identidade/textura-geometrica.png');
-  }
+  :root{ --ac:#C9A9F2; --ac2:#B98BEE; --lilas:#E3D3F8; --roxo:#692ABF; --roxo2:#7B34D6; }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   .wrap{ display:flex; flex-direction:column; align-items:center; gap:40px; padding:20px 0; }
-  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0f0720; }
+  .bg{ position:absolute; inset:0; z-index:0; background-position:center; background-size:cover; }
 
-  /* ---------- camadas base (slides com foto) ---------- */
-  .massa{ position:absolute; inset:0; z-index:0;
-    background:radial-gradient(82% 60% at 50% 38%, #3D1766 0%, #2A1056 50%, #170a2c 80%, #0b0613 100%); }
-  .cena{ position:absolute; inset:0; z-index:1; background-position:center; background-size:cover; background-repeat:no-repeat;
-    filter:contrast(1.05) saturate(1.02) brightness(.9) blur(0.9px); transform:scale(1.02); }
-  .scrim{ position:absolute; inset:0; z-index:3; pointer-events:none;
-    background:radial-gradient(82% 58% at 50% 50%, rgba(8,5,14,.88) 0%, rgba(8,5,14,.58) 52%, rgba(8,5,14,.12) 100%); }
-  .sombratxt{ position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%);
-    width:900px; height:660px; pointer-events:none;
-    background:radial-gradient(closest-side, rgba(4,2,8,.82), rgba(4,2,8,.42) 56%, transparent 78%); filter:blur(18px); }
-  .tex{ position:absolute; inset:0; z-index:4; pointer-events:none; }
-  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
-  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.06; }
-  .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; opacity:.06; }
-  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.045; }
-  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.03; }
+  .scrim{ position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:
+      linear-gradient(101deg, rgba(8,5,15,.95) 0%, rgba(8,5,15,.78) 32%, rgba(8,5,15,.22) 58%, transparent 76%),
+      linear-gradient(180deg, rgba(8,5,15,.82) 0%, transparent 28%, transparent 72%, rgba(8,5,15,.5) 100%); }
 
-  /* ---------- topo (lobo + pílula) ---------- */
-  .topo{ position:absolute; z-index:7; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
-  .topo img{ height:66px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
-  .pill-v{ width:15px; height:50px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+  .topo{ position:absolute; z-index:6; top:58px; left:88px; right:78px; display:flex; justify-content:space-between; align-items:center; }
+  .topo img{ height:56px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.75)); }
+  .pill-v{ width:14px; height:46px; border:2px solid rgba(201,169,242,.85); border-radius:12px; }
+  .dots{ position:absolute; z-index:6; bottom:50px; left:88px; display:flex; gap:10px; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.3); }
+  .dots i.on{ background:var(--ac); width:26px; border-radius:6px; }
 
-  /* ---------- bloco de texto centralizado ---------- */
-  .bloco{ position:absolute; z-index:6; left:50%; top:50%; transform:translate(-50%,-50%); width:920px; text-align:center; }
-  .kicker{ font-size:23px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--roxo-claro);
-    margin-bottom:26px; text-shadow:0 2px 12px rgba(0,0,0,.7); }
-  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.03em; color:#fff; line-height:1.02;
-    text-shadow:0 12px 30px rgba(0,0,0,.92), 0 2px 6px rgba(0,0,0,.7); }
-  .h .ac{ color:var(--roxo-claro); text-shadow:0 6px 24px rgba(105,42,191,.55), 0 2px 6px rgba(0,0,0,.7); }
-  .corpo{ margin:34px auto 0; max-width:730px; font-size:29px; font-weight:500; line-height:1.5; color:#E4DAF2;
-    text-shadow:0 2px 14px rgba(0,0,0,.85); }
-  .corpo b{ color:#fff; font-weight:700; }
-  /* marca-texto roxo linha-a-linha (roubado do 'instagram caiu') */
-  .mk{ background:linear-gradient(transparent 8%, rgba(105,42,191,.55) 8%, rgba(105,42,191,.55) 92%, transparent 92%);
-    padding:0 6px; color:#fff; font-weight:700; }
+  .blk{ position:absolute; z-index:5; left:88px; width:780px; }
+  .kick{ display:inline-block; font-size:19px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+    color:#1a1030; background:var(--ac); padding:9px 16px; border-radius:6px; margin-bottom:24px; }
+  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.035em; line-height:.97; color:#fff;
+    text-shadow:0 10px 34px rgba(0,0,0,.9), 0 2px 8px rgba(0,0,0,.85); }
+  .h .it{ font-weight:500; font-style:italic; text-transform:none; letter-spacing:-.01em; color:var(--lilas); }
+  .h .am{ color:var(--ac); }
+  .risc{ position:relative; color:#9B81C6; }
+  .risc::after{ content:''; position:absolute; left:-4px; right:-2px; top:52%; height:11px; border-radius:6px;
+    background:var(--ac); transform:translateY(-50%) rotate(-1.8deg); box-shadow:0 2px 14px rgba(201,169,242,.45); }
+  .corpo{ margin-top:28px; max-width:560px; font-size:29px; font-weight:500; line-height:1.46; color:#EADFF6;
+    text-shadow:0 2px 12px rgba(0,0,0,.95); }
+  .corpo b{ color:#fff; font-weight:800; }
+  .arrasta{ position:absolute; z-index:6; right:72px; bottom:60px;
+    border:1.5px solid rgba(255,255,255,.45); border-radius:40px; padding:11px 24px;
+    font-size:14px; font-weight:700; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
 
-  /* ---------- arrasta ---------- */
-  .arrasta{ position:absolute; z-index:7; left:50%; transform:translateX(-50%); bottom:60px;
-    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 26px;
-    font-size:15px; font-weight:600; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
-
-  /* ---------- grão + vinheta ---------- */
-  .grain{ position:absolute; inset:0; z-index:8; pointer-events:none; opacity:.6; mix-blend-mode:overlay;
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.4; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
-  .vinh{ position:absolute; inset:0; z-index:9; pointer-events:none;
-    background:radial-gradient(125% 95% at 50% 45%, transparent 56%, rgba(0,0,0,.52) 100%); }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(130% 100% at 40% 40%, transparent 56%, rgba(0,0,0,.5) 100%); }
 
-  /* ---------- overlay Gerenciador de Anúncios (slide 2) ---------- */
-  .uicard{ position:absolute; z-index:7; left:96px; bottom:150px; width:430px; padding:22px 26px 24px; border-radius:18px;
-    background:linear-gradient(180deg, rgba(22,13,38,.86), rgba(12,7,20,.9)); border:1px solid rgba(155,95,224,.55);
-    box-shadow:0 22px 60px rgba(0,0,0,.55); transform:rotate(-3deg); }
-  .uicard .uihead{ font-size:14px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#B98BEE;
-    margin-bottom:18px; display:flex; align-items:center; gap:8px; }
-  .uicard .uihead::before{ content:''; width:9px; height:9px; border-radius:50%; background:#9B5FE0; box-shadow:0 0 10px #9B5FE0; }
-  .uirow{ display:flex; justify-content:space-between; align-items:center; margin:14px 0; }
-  .uirow .lbl{ font-size:19px; font-weight:600; color:#E4DAF2; }
-  .uibars{ display:flex; align-items:flex-end; gap:5px; height:34px; }
-  .uibars i{ width:9px; background:#8E54D8; border-radius:2px; display:block; }
-  .uiflat{ width:90px; height:3px; background:#6b5a82; border-radius:2px; }
-  .val{ font-size:20px; font-weight:800; min-width:78px; text-align:right; }
-  .up{ color:#74D7A0; } .flat{ color:#C98AA0; }
+  /* slide 4 tipografico */
+  .tipo{ background:#16092b; }
+  .tipo .bgm{ position:absolute; inset:0; z-index:0; background:radial-gradient(85% 65% at 50% 40%, #4A1C8C 0%, #311263 48%, #1c0b39 80%, #110723 100%); }
+  .tipo .big{ position:absolute; z-index:5; left:50%; top:44%; transform:translate(-50%,-50%); width:1000px; text-align:center;
+    font-weight:900; text-transform:uppercase; letter-spacing:-.04em; line-height:.9; color:#fff; font-size:150px;
+    text-shadow:0 14px 34px rgba(0,0,0,.5); }
+  .tipo .big .am{ color:var(--ac); }
+  .tipo .corpo{ position:absolute; z-index:5; left:50%; top:73%; transform:translateX(-50%); text-align:center; max-width:740px; margin:0; }
 
-  /* ---------- slide 4 (respiro tipográfico) ---------- */
-  .slide.tipo{ background:#16092b; }
-  .tipo .massa{ background:radial-gradient(80% 60% at 50% 40%, #4A1C8C 0%, #311263 48%, #1d0c3a 78%, #120723 100%); }
-  .tipo .big{ position:absolute; z-index:6; left:50%; top:43%; transform:translate(-50%,-50%); width:1180px; text-align:center;
-    font-weight:900; text-transform:uppercase; letter-spacing:-.04em; line-height:.92; color:#fff;
-    text-shadow:0 14px 34px rgba(0,0,0,.6); }
-  .tipo .big .ac{ color:var(--roxo-claro); }
-  .tipo .corpo{ position:absolute; z-index:6; left:50%; top:74%; transform:translateX(-50%); }
-
-  /* ---------- slide 5 (virada — duotone roxo reforçado) ---------- */
-  .slide.virada .cena{ filter:contrast(1.08) saturate(1.18) brightness(.92) blur(0.6px); }
-  .slide.virada .duo{ position:absolute; inset:0; z-index:2; pointer-events:none; background:#6a23c8; mix-blend-mode:color; opacity:.34; }
-
-  /* ---------- slide 8 (CTA roxo em massa) ---------- */
-  .slide.cta{ background:#1a0b33; }
-  .cta .massa{ background:radial-gradient(82% 62% at 50% 34%, #7B34D6 0%, #4C1D83 46%, #2A1056 78%, #150824 100%); }
-  .cta .tex .t-fabric{ opacity:.06; } .cta .tex .t-scratch{ opacity:.06; }
-  .cta .bloco{ width:880px; }
-  .cta .lobo{ height:148px; width:auto; margin:0 auto 38px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
-  .cta .arroba{ margin-top:38px; font-size:27px; font-weight:800; letter-spacing:.02em; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  /* slide 8 CTA */
+  .cta{ background:#1a0b33; }
+  .cta .bgm{ position:absolute; inset:0; z-index:0; background:radial-gradient(82% 62% at 50% 33%, #7B34D6 0%, #4C1D83 46%, #2A1056 78%, #150824 100%); }
+  .cta .c{ position:absolute; z-index:5; left:50%; top:50%; transform:translate(-50%,-50%); width:860px; text-align:center; }
+  .cta .lobo{ height:140px; margin:0 auto 34px; display:block; filter:drop-shadow(0 6px 20px rgba(0,0,0,.5)); }
+  .cta .arroba{ margin-top:34px; font-size:26px; font-weight:800; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  .cta .corpo{ margin-left:auto; margin-right:auto; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- ===================== SLIDE 1 — CAPA ===================== -->
+  <!-- 1 CAPA -->
   <section class="slide">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s1.png')"></div>
-    <div class="sombratxt"></div>
+    <div class="bg" style="background-image:url('pecas/s1.png')"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="kicker">Pra quem já gastou com anúncio e não vendeu</div>
-      <div class="h" style="font-size:90px">Não é alcance.<br>É <span class="ac">oferta.</span></div>
-      <div class="corpo" style="font-size:31px">Seu anúncio não falhou. Sua oferta falhou.</div>
+    <div class="blk" style="top:212px">
+      <div class="kick">Pra quem já gastou com anúncio</div>
+      <div class="h" style="font-size:104px"><span class="it" style="font-size:58px">Não é</span><br><span class="risc">Alcance.</span><br><span class="it" style="font-size:58px">é</span> <span class="am">Oferta.</span></div>
+      <div class="corpo">Seu anúncio não falhou.<br><b>Sua oferta falhou.</b></div>
     </div>
     <div class="arrasta">Arrasta →</div>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 2 — SINTOMA (overlay gerenciador) ===================== -->
+  <!-- 2 SINTOMA -->
   <section class="slide">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s2.png')"></div>
-    <div class="sombratxt"></div>
+    <div class="bg" style="background-image:url('pecas/s2.png')"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:72px">Você subiu a verba<br>e <span class="ac">vendeu igual</span></div>
-      <div class="corpo">Mais verba, mais gente alcançada, e o caixa do mês <b>parado no mesmo lugar</b>. Aí você sobe a verba de novo achando que é pouco.</div>
+    <div class="blk" style="top:150px">
+      <div class="h" style="font-size:80px">Você subiu<br>a verba e<br><span class="am">vendeu igual</span></div>
+      <div class="corpo">Mais verba, mais gente alcançada, e o <b>caixa parado no mesmo lugar</b>. Aí você sobe a verba de novo achando que é pouco.</div>
     </div>
-    <div class="uicard">
-      <div class="uihead">Gerenciador de anúncios</div>
-      <div class="uirow"><span class="lbl">Investimento</span>
-        <span class="uibars"><i style="height:10px"></i><i style="height:17px"></i><i style="height:24px"></i><i style="height:34px"></i></span>
-        <span class="val up">+312%</span></div>
-      <div class="uirow"><span class="lbl">Faturamento</span>
-        <span class="uiflat"></span>
-        <span class="val flat">0%</span></div>
-    </div>
+    <div class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 3 — PROBLEMA REAL ===================== -->
+  <!-- 3 PROBLEMA -->
   <section class="slide">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s3.png')"></div>
-    <div class="sombratxt"></div>
+    <div class="bg" style="background-image:url('pecas/s3.png')"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:64px">Alcance só amplifica<br>o que <span class="ac">você já tem</span></div>
-      <div class="corpo">Anúncio é volume. Se a mensagem é sem graça, você só faz <b>mais gente bocejar mais alto</b>. Mil pessoas com uma oferta morna são mil bocejos.</div>
+    <div class="blk" style="top:160px">
+      <div class="h" style="font-size:74px">Alcance só<br><span class="am">amplifica</span><br>o que você<br>já tem</div>
+      <div class="corpo">Anúncio é volume. Se a mensagem é sem graça, você só faz <b>mais gente bocejar mais alto</b>.</div>
     </div>
+    <div class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 4 — PRINCÍPIO (respiro tipográfico) ===================== -->
+  <!-- 4 PRINCIPIO (tipografico) -->
   <section class="slide tipo">
-    <div class="massa"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
+    <div class="bgm"></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="big" style="font-size:158px">Megafone<br>não cria<br><span class="ac">desejo</span></div>
-    <div class="corpo" style="max-width:760px">Ele leva o desejo pra frente de mais gente. O desejo quem cria é a <b>oferta</b>. Sem oferta, o megafone não tem o que gritar.</div>
+    <div class="big">Megafone<br>não cria<br><span class="am">desejo</span></div>
+    <div class="corpo" style="font-size:30px">Ele leva o desejo pra frente de mais gente. O desejo quem cria é a <b>oferta</b>. Sem oferta, o megafone não tem o que gritar.</div>
+    <div class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 5 — VIRADA (duotone roxo) ===================== -->
-  <section class="slide virada">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s5.png')"></div>
-    <div class="duo"></div>
-    <div class="sombratxt"></div>
-    <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
-    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:66px">Oferta é o motivo<br>de comprar <span class="ac">agora</span></div>
-      <div class="corpo">E não é desconto. É deixar claro <b>o que é, pra quem é, por que vale e por que agora</b>. Quando isso fica óbvio, o anúncio só mostra pra gente certa.</div>
-    </div>
-    <div class="grain"></div><div class="vinh"></div>
-  </section>
-
-  <!-- ===================== SLIDE 6 — NA PRÁTICA ===================== -->
+  <!-- 5 VIRADA -->
   <section class="slide">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s6.png')"></div>
-    <div class="sombratxt"></div>
+    <div class="bg" style="background-image:url('pecas/s5.png')"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:62px">Arrume a oferta<br>antes de <span class="ac">subir a verba</span></div>
+    <div class="blk" style="top:170px">
+      <div class="h" style="font-size:72px">Oferta é o<br>motivo de<br>comprar <span class="am">agora</span></div>
+      <div class="corpo">Não é desconto. É deixar claro <b>o que é, pra quem é, por que vale e por que agora</b>. Aí o anúncio só precisa mostrar pra gente certa.</div>
+    </div>
+    <div class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+
+  <!-- 6 PRATICA -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('pecas/s6.png')"></div>
+    <div class="scrim"></div>
+    <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
+    <div class="blk" style="top:158px">
+      <div class="h" style="font-size:66px">Arrume a oferta<br>antes de<br><span class="am">subir a verba</span></div>
       <div class="corpo">A mesma verba numa oferta afiada vende <b>mais que o dobro</b> dela numa oferta morna. Primeiro a mensagem, depois o volume.</div>
     </div>
+    <div class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 7 — RESULTADO ===================== -->
+  <!-- 7 RESULTADO -->
   <section class="slide">
-    <div class="massa"></div>
-    <div class="cena" style="background-image:url('pecas/s7.png')"></div>
-    <div class="sombratxt"></div>
+    <div class="bg" style="background-image:url('pecas/s7.png')"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
     <div class="topo"><img src="../../../identidade/logo-simbolo-branco.png" alt=""><div class="pill-v"></div></div>
-    <div class="bloco">
-      <div class="h" style="font-size:68px">O mesmo anúncio<br><span class="ac">começa a vender</span></div>
-      <div class="corpo">Nada mudou na ferramenta. Mudou <b>o que ela estava anunciando</b>. O jogo vira quando a oferta carrega o anúncio, e não o contrário.</div>
+    <div class="blk" style="top:170px">
+      <div class="h" style="font-size:72px">O mesmo<br>anúncio<br><span class="am">começa a vender</span></div>
+      <div class="corpo">Nada mudou na ferramenta. Mudou <b>o que ela estava anunciando</b>. A oferta passa a carregar o anúncio.</div>
     </div>
+    <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
-  <!-- ===================== SLIDE 8 — CTA ===================== -->
+  <!-- 8 CTA -->
   <section class="slide cta">
-    <div class="massa"></div>
-    <div class="tex"><span class="t-plastic"></span><span class="t-couro"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
-    <div class="bloco">
+    <div class="bgm"></div>
+    <div class="c">
       <img class="lobo" src="../../../identidade/logo-simbolo-branco.png" alt="">
-      <div class="h" style="font-size:78px">Cansou de<br>queimar <span class="ac" style="color:#EBDDFB">verba?</span></div>
-      <div class="corpo">Vem montar com a Focus a <b>oferta e o tráfego</b> que transformam clique em venda, em vez de só alcance que não vira caixa.</div>
+      <div class="h" style="font-size:78px">Cansou de<br>queimar <span class="am" style="color:#EBDDFB">verba?</span></div>
+      <div class="corpo">Vem montar com a Focus a <b>oferta e o tráfego</b> que transformam clique em venda, não só alcance que não vira caixa.</div>
       <div class="arroba">@focusprogress</div>
     </div>
+    <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i></div>
     <div class="grain"></div><div class="vinh"></div>
   </section>
 
