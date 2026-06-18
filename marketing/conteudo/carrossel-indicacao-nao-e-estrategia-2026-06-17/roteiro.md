@@ -7,14 +7,16 @@
 
 ## Direção visual (coesão da série)
 - Paleta Focus: roxo `#692ABF` / roxo claro `#9B5FE0` sobre escuro `#161616`.
-- **Motivo recorrente (nosso "arame farpado"):** um **fio/linha roxa que brilha**,
-  presente em todo slide. No começo ele aparece frágil/desfiado (indicação), e vira
-  um fluxo firme/controlado na virada (canal).
-- Texturas com papel (seção 13.2): kraft de base, grids no fundo, halftone sobre os
-  títulos, flow (glow roxo desfocado) como iluminação.
+- **Coesão pela LUZ, não por linha:** tom roxo cinematográfico + cena composta em
+  todos os slides. ❌ Nada de fio/linha/neon desenhado nem dentro das imagens
+  (reprovado pelo Micael).
+- Textura na **receita aprovada** (playbook 13.2): plastic + couro + scratched +
+  fabric em baixa opacidade + `.sombratxt` atrás do texto. Sem grids sobre foto.
 - Texto é o rei: palavra-herói gigante Montserrat 900, scrim escuro forte, foto recuada.
 - Arco de roteiro emprestado da @geisianedsgn: tese > sintoma > problema real > virada
   > prática > CTA.
+- **Imagens geradas em 9:16** (Meta AI) e cortadas pra 4:5 com `cover`: o sujeito fica
+  no centro, a base vazia, e o corte tira a marca d'água do canto.
 
 ---
 
@@ -38,10 +40,9 @@
 - Herói: `INDICAÇÃO VOCÊ NÃO ABRE`
 - Corpo: `Quando o caixa aperta, não dá pra "ligar" a indicação. Um canal de vendas, sim. Essa é a diferença inteira.`
 
-### Slide 5 — DADO / respiro (fundo claro #F2EEE6, só design, sem foto)
-- Número gigante: `1`
-- Frase: `Basta UM canal que você liga quando quer pra parar de torcer pro mês ser bom.`
-- (textura grids cinza sutil + grão de papel)
+### Slide 5 — O canal que você liga (imagem s5: interruptor)
+- Herói: `BASTA 1 CANAL` ("1" é o destaque)
+- Corpo: `que você liga quando quer pra parar de torcer pro mês ser bom.`
 
 ### Slide 6 — A virada (imagem A/B)
 - Herói: `UMA TORNEIRA DE CLIENTES QUE VOCÊ ABRE`
@@ -59,72 +60,67 @@
 
 ---
 
-## PROMPTS PRO CHATGPT (imagem, vertical 4:5, sem texto/logo)
+## PROMPTS (Meta AI — imagem 9:16, SEM linha/fio, corte 4:5)
 
-> Regras fixas em todos: vertical 4:5, fotorrealista/cena composta, low-key, muted,
-> grade roxo Focus dominante + leve teal de canto, grão de filme assado, MUITO espaço
-> negativo escuro pro texto, sem texto/letra/número/logo/marca/watermark.
-> Salvar em `C:\Users\Pichau\Pictures\GPT fotos\` (nomear s1, s2, s3, s4, s6, s7).
+> **Regras fixas (colar junto em cada prompt):**
+> Tall vertical 9:16 format. The image will later be center-cropped to 4:5, so keep the
+> main subject and the clean dark empty space within the central 80% of the frame, and
+> leave the very bottom strip simple and empty (it gets cropped, removing the corner
+> watermark). Hyperreal cinematic photograph, low-key, desaturated, muted. Deep purple
+> dominant color grade with a faint teal rim light, gentle volumetric haze, fine film
+> grain baked in. IMPORTANT: no glowing thread, no wire, no neon line, no light streak,
+> no string of any kind. No text, letters, numbers, logos or watermark.
 
-**S1 — Capa (dependência frágil):**
-> Vertical 4:5 hyperreal composited surreal scene. A heavy old telephone hangs in a
-> dark empty void, suspended by one single thin fraying glowing purple thread that is
-> about to snap. Dramatic rim light catches the frayed fibers; volumetric haze drifts
-> below. Strong realistic cast shadow so the object feels truly placed. Color grade:
-> low-key, desaturated, deep purple dominant with a faint teal rim, heavy film grain
-> baked in. Composition: telephone in the lower right, large clean dark negative space
-> across the top and left for text. 50mm, premium editorial. No text, letters, numbers,
-> logos or watermark.
+**S1 — Capa (telefone):**
+> A heavy old rotary telephone tumbling and falling through a dark empty void in mid-air,
+> silent and abandoned, dramatic rim light catching its edges, soft smoke and haze
+> drifting around it, strong realistic shadow. Composition: telephone in the lower-right
+> of the central area, large clean dark negative space in the upper-left for text. 50mm,
+> premium editorial.
 
-**S2 — Mês que chove, mês que seca (instabilidade):**
-> Vertical 4:5 cinematic composited scene. A worn open paper appointment book on a dark
-> desk, most pages empty and dusty with only a few scattered illegible smudged marks
-> (no readable text), a single thin glowing purple thread weaving loosely between the
-> sparse marks. Moody hard side light, deep shadows, dust in the air. Color grade:
-> low-key, muted, deep purple with faint teal, film grain baked in. Composition: book
-> in the lower half, clean dark empty negative space in the upper half for text. 35mm.
-> No text, letters, numbers, logos or watermark.
+**S2 — Mês que chove, mês que seca:**
+> A worn open paper appointment book resting on a dark wooden desk, most of its pages
+> empty, dusty and faded, only a few faint illegible smudged marks, soft dust floating
+> in a moody hard side light, deep shadows. Composition: book in the lower-center, clean
+> dark empty negative space above it for text. 35mm.
 
-**S3 — Faturamento escorrendo pela mão (sem controle):**
-> Vertical 4:5 hyperreal macro scene. A single open human hand in dark space, fine sand
-> and a few drops of water slipping and falling through the fingers, impossible to hold,
-> a thin glowing purple thread tangled loosely around the fingers. Dramatic rim light on
-> the hand, everything else deep shadow. Color grade: low-key, desaturated, deep purple
-> with a faint teal rim, heavy film grain. Composition: hand center-low, large dark
-> negative space above for text. 50mm macro, shallow depth of field. No text, letters,
-> numbers, logos or watermark.
+**S3 — Faturamento escorrendo da mão:**
+> A single open human hand in dark space, fine dry sand and a few drops of water slipping
+> and falling through the fingers, impossible to hold, dramatic rim light on the skin,
+> everything else in deep shadow. Composition: hand in the lower-center, large dark
+> negative space above for text. 50mm macro, shallow depth of field.
 
-**S4 — A torneira/válvula que você controla (princípio):**
-> Vertical 4:5 hyperreal composited scene. A sturdy industrial metal valve mounted in a
-> dark concrete wall, a hand firmly turning it, a steady controlled stream of glowing
-> liquid light pouring out in a clean confident line. In-control, deliberate mood.
-> Dramatic rim light, deep shadows. Color grade: low-key, deep purple dominant with the
-> stream glowing purple, faint teal, film grain baked in. Composition: valve in the
-> upper right, the stream leading down, clean dark negative space on the left for text.
-> 50mm. No text, letters, numbers, logos or watermark.
+**S5 — O interruptor (você liga quando quer):**
+> A single light switch on a dark textured wall, a hand reaching in and flipping it on,
+> warm-and-purple light suddenly flooding across the wall from the switch, a decisive
+> "turn it on whenever you want" feeling, dramatic rim light, deep shadow all around.
+> Composition: the switch and hand in the right of the central area, clean dark negative
+> space on the left and upper area for text. 50mm.
 
-**S6 — Negócio vivo, fluxo de clientes (virada):**
-> Vertical 4:5 cinematic composited scene. A small local business storefront at dusk
-> seen from the sidewalk, warm-and-purple interior glow spilling out, a steady stream of
-> softly out-of-focus people flowing in through the door, alive and thriving. A faint
-> glowing purple thread leads from outside into the doorway like a guided path. Deep
-> blue-purple ambient sky, wet pavement with reflections, hopeful mood. Color grade:
-> cinematic, low-key, muted, film grain baked in. Composition: storefront center-right,
-> dark foreground sidewalk in the lower-left as clean negative space for text. 35mm,
-> shallow depth of field. No text, signage, brand names, logos or watermark.
+**S4 — A válvula que você controla:**
+> A sturdy industrial metal valve mounted on a dark concrete wall, a hand firmly turning
+> the wheel, a clean steady stream of water pouring straight down from it, the water
+> faintly catching deep purple light, confident and in-control mood, dramatic rim light,
+> deep shadows. Composition: valve in the upper-right of the central area, clean dark
+> negative space on the left for text. 50mm.
 
-**S7 — O dial que controla o volume (na prática):**
-> Vertical 4:5 hyperreal composited scene. A hand turning a large glowing dial / dimmer
-> knob in a dark space; the dial visibly controls the intensity of a stream of glowing
-> purple light flowing past it, a clear sense of control and choice. Dramatic rim light,
-> deep shadow everywhere else. Color grade: low-key, deep purple dominant, faint teal,
-> heavy film grain baked in. Composition: dial in the lower right, the glowing flow
-> sweeping across, clean dark negative space in the upper-left for text. 50mm. No text,
-> letters, numbers, logos or watermark.
+**S6 — Loja viva, fluxo de clientes:**
+> A small local business storefront at dusk seen from the sidewalk, warm interior light
+> glowing through the window mixed with a soft purple ambient, several softly
+> out-of-focus people walking in through the open door, alive and thriving, deep
+> blue-purple sky, wet pavement with gentle reflections, hopeful mood. Composition:
+> storefront on the right of the central area, darker foreground sidewalk on the
+> lower-left as clean negative space for text. 35mm, shallow depth of field.
+
+**S7 — O controle do volume:**
+> A hand turning a large premium metal dial or knob in a dark space, the dial glowing
+> with a soft deep-purple light blooming gently outward from under the hand, a clear
+> sense of control and choice, dramatic rim light, deep shadow all around. Composition:
+> dial in the lower-right of the central area, clean dark negative space in the upper-left
+> for text. 50mm.
 
 ---
 
 ## Próximo passo
-1. Micael gera as 6 imagens (s1, s2, s3, s4, s6, s7) no ChatGPT e salva na pasta.
-2. Claude finaliza: monta os 8 HTMLs (scrim + texturas + fio roxo + Montserrat),
-   desenha os slides 5 (claro/dado) e 8 (CTA), e renderiza 1080x1350.
+1. Micael gera as 6 imagens (s1, s2, s3, s4, s6, s7) no Meta AI e salva (Downloads serve).
+2. Claude encaixa em `pecas/` (corte 4:5 tira a marca d'água) e renderiza os 8 slides.
