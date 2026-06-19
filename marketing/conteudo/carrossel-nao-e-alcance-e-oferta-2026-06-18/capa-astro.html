@@ -37,9 +37,13 @@
   .bloco{ position:absolute; z-index:5; left:50%; top:235px; transform:translateX(-50%); width:900px; text-align:center; }
   .kicker{ font-size:23px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--lilas);
     margin-bottom:26px; text-shadow:0 2px 12px rgba(0,0,0,.6); }
-  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.03em; color:#fff; line-height:1.0; font-size:90px;
-    text-shadow:0 10px 30px rgba(0,0,0,.55), 0 2px 8px rgba(0,0,0,.5); }
-  .h .ac{ color:var(--lilas); }
+  /* tipografia extrudada 3D + sombra projetada (estilo thehybriddesigner) */
+  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.015em; color:#fff; line-height:.95; font-size:94px;
+    text-shadow:
+      0 2px 0 #7a4ab8, 0 4px 0 #6d3ea9, 0 6px 0 #60359a, 0 8px 0 #532c88, 0 10px 0 #471f74, 0 12px 0 #3b1763,
+      0 30px 32px rgba(6,2,16,.74),
+      0 0 40px rgba(228,208,255,.28); }
+  .h .ac{ color:#fff; }
   .sub{ margin-top:30px; font-size:31px; font-weight:500; color:#EADFF6; text-shadow:0 2px 12px rgba(0,0,0,.5); }
 
   .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:58px;
