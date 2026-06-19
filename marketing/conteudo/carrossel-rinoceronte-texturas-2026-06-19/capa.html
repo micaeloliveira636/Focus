@@ -6,88 +6,79 @@
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   *{ margin:0; padding:0; box-sizing:border-box; }
   :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --lilas:#E3D3F8;
+    --plastic:url('../../../identidade/textura-plastic.png');
     --scratched:url('../../../identidade/textura-scratched.jpg');
-    --fabric:url('../../../identidade/textura-fabric.jpg');
-    --couro:url('../../../identidade/textura-couro.jpg'); }
+    --fabric:url('../../../identidade/textura-fabric.jpg'); }
   html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   .wrap{ display:flex; flex-direction:column; align-items:center; padding:20px 0; }
-  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#160b29; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
 
-  /* fundo desfocado */
-  .bg{ position:absolute; inset:0; z-index:0; background:url('rino-src.png') center/cover no-repeat;
-    filter:blur(3px) brightness(.78) saturate(1.06) contrast(1.05); transform:scale(1.05); }
+  /* cena (a estrela): recuada só um tiquinho, igual a capa aprovada */
+  .cena{ position:absolute; inset:0; z-index:0; background:url('rino-src.png') center/cover no-repeat;
+    filter:contrast(1.06) saturate(1.05) brightness(.9) blur(0.9px); transform:scale(1.02); }
+  /* realce quente sutil no lado do sol (editorial) */
+  .warm{ position:absolute; inset:0; z-index:1; pointer-events:none; mix-blend-mode:soft-light;
+    background:radial-gradient(46% 40% at 78% 30%, rgba(255,196,150,.20), transparent 70%); }
+  /* scrim suave de cima e de baixo, garante leitura sem apagar a cena */
+  .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(180deg, rgba(10,7,15,.5) 0%, rgba(10,7,15,.08) 22%, rgba(10,7,15,0) 46%, rgba(8,5,14,.5) 100%); }
+  /* texturas reais, quase invisiveis (matam o liso de IA) */
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.06; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.04; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.025; }
+  /* sombra macia ATRAS do bloco de texto (separa do fundo, da densidade) */
+  .sombratxt{ position:absolute; z-index:3; left:50%; top:455px; width:900px; height:470px; transform:translateX(-50%); pointer-events:none;
+    background:radial-gradient(closest-side, rgba(5,3,9,.8), rgba(5,3,9,.42) 56%, transparent 78%);
+    filter:blur(16px); }
 
-  /* sombras/scrim pra profundidade e legibilidade (texto rei) */
-  .scrim{ position:absolute; inset:0; z-index:1; pointer-events:none;
-    background:
-      radial-gradient(120% 70% at 50% 46%, rgba(105,42,191,.18), transparent 58%),
-      linear-gradient(180deg, rgba(10,5,20,.62) 0%, rgba(10,5,20,.18) 26%, rgba(8,4,18,.34) 60%, rgba(6,3,14,.82) 100%); }
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:66px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
 
-  /* SUAS texturas */
-  .tex{ position:absolute; inset:0; z-index:2; pointer-events:none; }
-  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-size:cover; }
-  .t-couro{ background-image:var(--couro); mix-blend-mode:soft-light; opacity:.05; }
-  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.04; }
+  /* titulo centralizado, com sombra projetada de camada dupla */
+  .hero{ position:absolute; left:50%; transform:translateX(-50%); top:500px; width:960px; text-align:center;
+    font-weight:900; text-transform:uppercase; letter-spacing:-.03em; line-height:.92; }
+  .hero .l1{ font-size:92px; display:block; }
+  .hero .l2{ font-size:126px; display:block; margin-top:6px; }
+  .heroShadow{ z-index:4; color:rgba(3,2,6,.92); transform:translate(calc(-50% + 6px), 0); margin-top:0; }
+  .heroShadow{ filter:blur(7px); }
+  .heroShadow2{ top:520px; }
+  .heroFront{ z-index:5; color:#fff; }
+  .heroFront .l1{ text-shadow:0 2px 6px rgba(0,0,0,.6); }
+  .heroFront .l2{ color:var(--roxo-claro); text-shadow:0 6px 26px rgba(105,42,191,.55), 0 2px 8px rgba(0,0,0,.6); }
 
-  /* topo */
-  .topo{ position:absolute; z-index:6; top:58px; left:74px; right:74px; display:flex; justify-content:space-between; align-items:center; }
-  .marca{ display:flex; align-items:center; gap:14px; }
-  .marca img{ height:52px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.7)); }
-  .marca .n{ font-size:20px; font-weight:800; color:#fff; letter-spacing:.02em; text-shadow:0 2px 8px rgba(0,0,0,.6); line-height:1.1; }
-  .marca .a{ font-size:14px; font-weight:600; color:var(--lilas); letter-spacing:.04em; }
-  .pill{ width:16px; height:54px; border:2px solid rgba(217,194,245,.85); border-radius:13px; box-shadow:0 2px 12px rgba(0,0,0,.5); }
-
-  /* bloco de texto — rei */
-  .bloco{ position:absolute; z-index:5; left:50%; top:430px; transform:translateX(-50%); width:940px; text-align:center; }
-  .kicker{ font-size:24px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--lilas);
-    margin-bottom:30px; text-shadow:0 2px 14px rgba(0,0,0,.7); }
-  .h{ font-weight:900; text-transform:uppercase; letter-spacing:-.018em; color:#fff; line-height:.96; font-size:118px;
-    text-shadow:
-      0 2px 0 #7a4ab8, 0 4px 0 #6d3ea9, 0 6px 0 #5f349a, 0 8px 0 #522b86, 0 11px 0 #441f70,
-      0 30px 40px rgba(5,2,14,.8),
-      0 0 46px rgba(228,208,255,.26); }
-  .h .ac{ color:var(--lilas);
-    text-shadow:
-      0 2px 0 #8a5ec4, 0 4px 0 #7a4ab8, 0 6px 0 #6a3aa6, 0 8px 0 #5a2d92, 0 11px 0 #49217a,
-      0 30px 40px rgba(5,2,14,.8),
-      0 0 52px rgba(185,139,238,.5); }
-  .sub{ margin-top:36px; font-size:32px; font-weight:500; color:#EADFF6; text-shadow:0 2px 14px rgba(0,0,0,.7); }
-
-  /* rodape: arrasta + bolinhas */
-  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:128px;
-    display:flex; align-items:center; gap:10px;
+  /* rodape */
+  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:122px;
     border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 26px;
     font-size:15px; font-weight:600; letter-spacing:.16em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
-  .dots{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:66px; display:flex; gap:11px; align-items:center; }
-  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.4); display:block; box-shadow:0 1px 4px rgba(0,0,0,.5); }
+  .dots{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:64px; display:flex; gap:11px; align-items:center; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.42); display:block; box-shadow:0 1px 4px rgba(0,0,0,.5); }
   .dots i.on{ width:30px; border-radius:6px; background:var(--roxo-claro); }
 
-  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.5; mix-blend-mode:overlay;
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.7; mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
   .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
-    background:radial-gradient(120% 95% at 50% 42%, transparent 54%, rgba(0,0,0,.55) 100%); }
+    background:radial-gradient(125% 95% at 50% 44%, transparent 56%, rgba(0,0,0,.5) 100%); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <section class="slide">
-    <div class="bg"></div>
+    <div class="cena"></div>
+    <div class="warm"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-couro"></span><span class="t-fabric"></span></div>
+    <div class="tex"><span class="t-plastic"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
+    <div class="sombratxt"></div>
 
     <div class="topo">
-      <div class="marca">
-        <img src="../../../identidade/logo-simbolo-branco.png" alt="">
-        <div><div class="n">FOCUS</div><div class="a">@agenciafocus</div></div>
-      </div>
-      <div class="pill"></div>
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
     </div>
 
-    <div class="bloco">
-      <div class="kicker">Pra quem vive de indicação</div>
-      <div class="h">Indicação<br>não é<br><span class="ac">estratégia</span></div>
-      <div class="sub">é sorte com outro nome.</div>
-    </div>
+    <div class="hero heroShadow heroShadow2"><span class="l1">Indicação não é</span><span class="l2">estratégia</span></div>
+    <div class="hero heroFront"><span class="l1">Indicação não é</span><span class="l2">estratégia</span></div>
 
     <div class="arrasta">Arrasta &rarr;</div>
     <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
