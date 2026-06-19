@@ -31,13 +31,47 @@ O texto é o elemento mais importante de todo carrossel/post estático. **Imagem
 
 ## 3. O que o dono NÃO GOSTA ❌ (reprovado, não repetir)
 
-- **Fonte manuscrita / marker / script** — testado e reprovado. Só Montserrat.
+- **Brush/script na MANCHETE inteira ou em frase longa** — fica com cara de Canva. (Revisto jun/2026: o brush Yellowtail é permitido **só como acento de 1-2 palavras** sobre base grotesca/serifa. Ver seção "Sistema tipográfico".)
 - **Letra/palavra colorida em teal** — reprovado. Teal só como **glow sutil de canto**, nunca em texto.
 - **Vinheta pesada / manchas pretas** na imagem — reprovado.
 - **Textura como foto de fundo principal chapada** (ex.: liquid sozinho em tela cheia no blend screen, parecendo foto/swirl) — reprovado. A textura entra como **pilha blendada (soft-light/overlay)** — aparente e integrada à superfície, **nunca** como uma foto chapada que compete com o texto.
 - **Mover o sujeito de lugar** ou **sombra dura/offset** embaixo do sujeito — reprovado.
 - **Foto forte/vívida** competindo com o texto — reprovado.
 - **Logo bugada**: halo/caixa de ruído em volta do lobo; logo pequena; quadro preto atrás do lobo em fundo claro; qualquer **sombra/glow por cima da logo**. Tudo isso é proibido.
+
+---
+
+## 3.5. Sistema tipográfico (kit de 4 vozes + baralho de movimentos)
+
+> Definido jun/2026 a partir das refs do dono (@mazzeidesign_, @eriky.designer). **A criatividade tipográfica não está em "achar a fonte certa" — está em recombinar o kit diferente a cada post.** A imagem pode ser simples (até só textura + cor); quem carrega a peça é o jogo entre as fontes. Mocks de referência em `referencias/sistema-tipografico-2026-06/`.
+
+**O kit (arquivos em `identidade/fontes/`):**
+
+| Voz | Fonte | Papel |
+|---|---|---|
+| Herói grotesco | **Archivo Black** / **Anton** (condensada) | Palavra-soco gigante, caixa-alta, sangrando a margem |
+| Herói editorial | **Fraunces** (variável, ital + opsz + SOFT + WONK) | Serifa de alto contraste, manchete de revista, temas clássico/autoridade |
+| Acento brush | **Yellowtail** | Tempero manuscrito em **1-2 palavras**, nunca a manchete inteira |
+| Apoio | **Montserrat** | Kicker, corpo, botões, UI |
+
+**Wiring (`@font-face` local):** reaproveitar `marketing/conteudo/carrossel-olimpo-2026-06-19/_fonts.css` (já aponta pros 5 arquivos). Importar com `@import url('caminho/_fonts.css')` no topo do HTML do slide.
+
+**Regras do kit:**
+- O herói é sempre **diferente** da voz de apoio. O contraste entre vozes é o que mata o efeito "legenda colada".
+- Escolher o herói pelo **registro do tema**: grotesca = punchy/moderno/tático · serifa = clássico/premium/autoridade. Não defaultar.
+- Brush só no acento. Roxo claro (`#B98BEE`) ou branco.
+
+**Baralho de movimentos (recombinar 2-3 por post, variar entre posts):**
+1. **Palavra estourando a margem** — herói gigante cortando levemente a borda (corte proposital). Ex: `demo-tipo.png`, `capa-E/F.png`.
+2. **Serifa italica como contraponto** — uma palavra em Fraunces itálico roxo aninhada no meio da grotesca. Ex: `demo-tipo.png` ("cria").
+3. **Bloco de cor atrás da palavra** — retângulo roxo levemente torto sob uma palavra-chave. Ex: `demo-tipo.png` ("DO").
+4. **Brush no acento** — 1-2 palavras em Yellowtail, leve rotação. Ex: `capa-E/F.png` ("do nada").
+5. **Grotesca vs serifa colidindo** — herói grotesco + herói serifa no mesmo slide, escalas e ângulos diferentes.
+6. **Tipo como gráfico** — sem foto, a tipografia É o visual: ângulo, escala absurda, sobreposição, recorte (estilo @typosters).
+7. **Kicker com risquinho** — Montserrat caixa-alta tracking aberto + traço roxo curto na frente. Ex: todas as D/demo.
+8. **Caps editorial (Fraunces caixa-alta)** — serifa de alto contraste em CAPS pra capa premium. Ex: `capa-D.png`.
+
+**Imagem simples é OK.** Não precisa de render cinematográfico em todo slide. Um fundo `#0c0b11` + glow roxo radial + textura sutil + o jogo tipográfico já chega no nível das refs (ver `demo-tipo.png`).
 
 ---
 

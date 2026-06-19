@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('_fonts.css');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; --branco:#FFFFFF;
+    --plastic:url('../../../identidade/textura-plastic.png');
+    --scratched:url('../../../identidade/textura-scratched.jpg');
+    --fabric:url('../../../identidade/textura-fabric.jpg'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; flex-direction:column; align-items:center; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+  .cena{ position:absolute; inset:0; z-index:0; background:url('olimpo-src.png') center/cover no-repeat;
+    filter:contrast(1.06) saturate(1.04) brightness(.9) blur(0.9px); transform:scale(1.02); }
+  .blur{ position:absolute; left:0; top:0; width:46%; height:100%; z-index:1; pointer-events:none;
+    backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+    -webkit-mask-image:linear-gradient(95deg, #000 0%, #000 58%, transparent 100%);
+    mask-image:linear-gradient(95deg, #000 0%, #000 58%, transparent 100%); }
+  .warm{ position:absolute; inset:0; z-index:1; pointer-events:none; mix-blend-mode:soft-light;
+    background:radial-gradient(46% 40% at 60% 30%, rgba(255,196,150,.18), transparent 70%); }
+  .scrim{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(95deg, rgba(10,7,15,.78) 0%, rgba(10,7,15,.42) 34%, rgba(10,7,15,0) 58%),
+      linear-gradient(180deg, transparent 56%, rgba(8,5,14,.55) 100%); }
+  .tex{ position:absolute; inset:0; z-index:3; pointer-events:none; }
+  .tex span{ position:absolute; inset:0; display:block; background-position:center; background-repeat:no-repeat; background-size:cover; }
+  .t-plastic{ background-image:var(--plastic); mix-blend-mode:overlay; opacity:.06; }
+  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.04; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.025; }
+  .sombratxt{ position:absolute; z-index:3; left:-160px; top:470px; width:840px; height:520px; pointer-events:none;
+    background:radial-gradient(closest-side, rgba(5,3,9,.82), rgba(5,3,9,.4) 56%, transparent 78%);
+    filter:blur(18px); }
+
+  /* E — lane Mazzei: Archivo Black caps gigante sangrando + acento brush Yellowtail */
+  .hero{ position:absolute; left:74px; top:470px; font-family:'Archivo Black',sans-serif;
+    text-transform:uppercase; font-size:132px; line-height:.86; letter-spacing:-.025em; }
+  .heroShadow{ z-index:4; color:rgba(3,2,6,.92); transform:translate(6px,16px); filter:blur(7px); }
+  .heroFront{ z-index:5; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,.6); }
+  .brush{ position:absolute; z-index:6; left:96px; top:712px; font-family:'Yellowtail',cursive;
+    font-size:128px; line-height:.9; color:var(--roxo-claro); transform:rotate(-4deg);
+    text-shadow:0 6px 26px rgba(105,42,191,.55), 0 2px 6px rgba(0,0,0,.6); }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:68px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(185,139,238,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:80px; bottom:128px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+  .dots{ position:absolute; z-index:6; left:80px; bottom:66px; display:flex; gap:11px; align-items:center; }
+  .dots i{ width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.42); display:block; box-shadow:0 1px 4px rgba(0,0,0,.5); }
+  .dots i.on{ width:30px; border-radius:6px; background:var(--roxo-claro); }
+  .grain{ position:absolute; inset:0; z-index:7; pointer-events:none; opacity:.7; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  .vinh{ position:absolute; inset:0; z-index:8; pointer-events:none;
+    background:radial-gradient(125% 95% at 55% 44%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="slide">
+    <div class="cena"></div>
+    <div class="blur"></div>
+    <div class="warm"></div>
+    <div class="scrim"></div>
+    <div class="tex"><span class="t-plastic"></span><span class="t-scratch"></span><span class="t-fabric"></span></div>
+    <div class="sombratxt"></div>
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+    <div class="hero heroShadow">Ninguém<br>cria</div>
+    <div class="hero heroFront">Ninguém<br>cria</div>
+    <div class="brush">do nada</div>
+    <div class="arrasta">Arrasta &rarr;</div>
+    <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="grain"></div><div class="vinh"></div>
+  </section>
+</div>
+</body>
+</html>

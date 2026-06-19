@@ -30,13 +30,20 @@
 
 ## Tipografia
 
-- **Títulos e destaques:** Montserrat (SemiBold / Bold)
+> **Atualizado jun/2026:** a marca deixou de ser "família única Montserrat". Agora é um **kit de 4 vozes** que se recombina por post. Detalhe completo + baralho de movimentos no `carrossel-playbook.md` (seção "Sistema tipográfico"). Arquivos em `identidade/fontes/`.
 
-- **Corpo, subtítulos e botões:** Montserrat (Regular / Medium)
+**O kit (4 vozes):**
 
-- **Peso do título:** Bold para impacto; SemiBold para títulos de apoio
+| Voz | Fonte | Papel |
+|---|---|---|
+| **Herói grotesco** | Archivo Black / Anton | Palavra-soco gigante, caixa-alta, sangrando a margem (lane @mazzeidesign_) |
+| **Herói editorial** | Fraunces (variável) | Manchete de revista, serifa de alto contraste, temas clássico/autoridade (lane @eriky.designer) |
+| **Acento brush** | Yellowtail | Tempero manuscrito em **1-2 palavras**, nunca na manchete inteira |
+| **Apoio** | Montserrat | Kicker, corpo, botões, UI (ARRASTA, dots) |
 
-> Família única: Montserrat (pesos ExtraLight a Bold).
+- **Regra de ouro:** o herói (grotesca OU serifa) é sempre **diferente** da voz de apoio. É o contraste entre vozes que faz a peça parecer desenhada, não legenda colada.
+- **Por tema:** grotesca = punchy/moderno/tático · serifa = clássico/premium/autoridade. Escolher a voz-herói pelo registro do tema, não por default.
+- **Corpo e kicker** seguem em Montserrat (Regular/Medium/SemiBold). Bold na palavra-chave do corpo.
 
 ---
 
@@ -54,7 +61,7 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 - **Fundo escuro full-bleed** (#0c0b11) com **textura sutil** — liquid marble em **baixa opacidade (~20%, blend screen)**. Textura NUNCA em 100% (fica feio). Glows de canto: roxo principal + **toque de teal/verde** (`#19E0C0`) como acento secundário sutil.
 - **Slide de estatística/dado em fundo CLARO** (#F2EEE6) com a textura **geométrica/topográfica** em cinza claro (~16%, blend multiply) + texto escuro. É a exceção ao "marca vive no escuro" — usar só pra dado/número, como o designer faz.
 - **Slide com FOTO:** o **texto é o rei** — a imagem nunca compete. A foto entra como fundo **recuado**: leve desfoque (`backdrop-filter: blur ~3px` + brightness ~.78) + **textura/grão** por cima (stars ~12% soft-light) + **scrim escuro FORTE atrás do texto** (gradiente quase opaco no terço do texto). Foto cinematográfica e muda; quem chama atenção é a frase.
-- **Tipografia:** Montserrat **900, CAIXA-ALTA**, kerning apertado (-0.02em) nos títulos. Palavra-chave em **roxo claro** (`#9B5FE0`).
+- **Tipografia:** kit de 4 vozes (ver seção Tipografia acima). Herói grotesco (Archivo Black/Anton) **caixa-alta, kerning apertado** OU herói editorial (Fraunces) conforme o tema. Palavra-chave em **roxo claro** (`#9B5FE0`) ou no acento brush (Yellowtail). Apoio em Montserrat.
 - **Devices de marcação (a assinatura do estilo):** círculo desenhado à mão (marcador) em volta da palavra-chave · sublinhado-marcador · texto **riscado** (line-through roxo). Usar com parcimônia, 1 por slide.
 - **Recorrentes:** lobo só-símbolo em **contorno branco** (`logo-simbolo-branco.png`) no topo · **pílula vertical** de contorno (roxo ou teal) como acento · **"ARRASTA →"** em pílula no rodapé · CTA final com lockup completo + botão roxo.
 
@@ -63,7 +70,7 @@ Dark e tecnológico. Fundo escuro com roxo neon como protagonista. Sensação pr
 Direções a puxar dessas refs (sempre traduzindo pra paleta Focus — roxo + teal sobre escuro):
 
 - **Capa liderada por FOTO** + uma palavra/frase gigante por cima (estilo @macroplaneta / @adarshdesign). Foto cinematográfica de fundo com overlay escuro + título bold. Depende de foto (Canva / OpenAI / banco / foto do cliente).
-- **Tipografia:** SÓ **Montserrat**, sempre. ❌ **Nada de fonte manuscrita/marker/script** (testado e reprovado pelo dono — fica feio). A palavra-chave se destaca pelo **peso e pela cor roxa**, não por outra fonte.
+- **Tipografia:** kit de 4 vozes (Archivo Black/Anton · Fraunces · Yellowtail · Montserrat). O brush (Yellowtail) entra **só como acento em 1-2 palavras**, nunca na manchete inteira (a regra antiga "só Montserrat / nada de script" foi revista em jun/2026 — o veto era contra brush na frase toda, não contra o conceito). A palavra-chave se destaca pelo **contraste entre vozes, peso e cor roxa**.
 - **Pop de cor:** roxo saturado é o acento. ❌ **Não colorir letras/palavras em teal** (reprovado). O teal entra **só** como brilho sutil de canto/glow, nunca em texto.
 - **Pessoa recortada** + cor forte + rabisco na palavra-chave (estilo @pinovaa.psd) pra posts mais punchy.
 - Variante **editorial/sofisticada** (serifa, clima premium — estilo @cacaubelragocreative) pra temas de autoridade/branding.
@@ -97,7 +104,8 @@ Direções a puxar dessas refs (sempre traduzindo pra paleta Focus — roxo + te
 ## O que NUNCA fazer
 
 - Fundo claro como base padrão (a marca vive no escuro)
-- Misturar outra fonte que não Montserrat
+- Usar fonte fora do kit (Archivo Black/Anton · Fraunces · Yellowtail · Montserrat)
+- Brush (Yellowtail) na manchete inteira — ele é só acento de 1-2 palavras
 - Roxo lavado/pastel — o roxo é vibrante e saturado
 - Visual poluído; o logo precisa de respiro
 
