@@ -73,6 +73,23 @@ O texto é o elemento mais importante de todo carrossel/post estático. **Imagem
 
 **Imagem simples é OK.** Não precisa de render cinematográfico em todo slide. Um fundo `#0c0b11` + glow roxo radial + textura sutil + o jogo tipográfico já chega no nível das refs (ver `demo-tipo.png`).
 
+### Receita de CAPA que o Micael aprovou (jun/2026) — estrutura @mazzeidesign_
+
+> Validada na capa do Olimpo ("Ninguém cria do nada"). Arquivo de ouro: `marketing/conteudo/carrossel-olimpo-2026-06-19/capa-ref-B.html` (mock `capa-ref-B.png`). **Usar de template pra próximas capas.**
+
+Estrutura (texto na faixa de baixo, sobre a imagem, SEM recorte/oclusão):
+1. **Imagem inteira** de fundo, `brightness ~.92`, com **gradiente escuro só embaixo** (`transparent 42% → rgba(8,5,14,.45) 64% → rgba(6,4,11,.9) 88% → .97 100%`). A imagem NÃO é manipulada, o texto não fica atrás de nada.
+2. **Kicker** (Montserrat 500, ~23px, `letter-spacing .42em`, CAIXA-ALTA, branco 78%).
+3. **Linha de setup** (~58-70px): a frase-contexto, com **uma palavra no acento** em Fraunces itálico roxo claro (`#B98BEE`) e o resto em Montserrat branco. Ex: "*ninguém* cria do".
+4. **Palavra-soco gigante** (Archivo Black, ~196px, `line-height .9`, `letter-spacing -.03em`, branco) embaixo. Ex: "nada".
+5. **Sombra projetada nas letras** (`text-shadow:0 4px 30px rgba(0,0,0,.6)` no herói; `0 2px 14px` no setup). O Micael **gosta** disso em capa: descola o texto do fundo e puxa o foco pra frase.
+6. Logo símbolo branco no topo-esq, pílula vertical no topo-dir, "ARRASTA →" em pílula centralizada embaixo.
+
+**Regras duras (aprendidas apanhando nessa sessão):**
+- ❌ **Nada de recorte (remove-bg), oclusão (texto atrás do sujeito) ou manipulação de imagem.** Ele cravou: "você é péssimo em recorte e manipulação, não inventa moda." Replicar a estrutura da ref, fiel.
+- ❌ **Não usar a Fraunces italic na frase inteira** — ela é só o acento de 1 palavra.
+- ✅ Quando ele der spec por elemento ("na versão X muda só a cor/fonte de Y"), mudar **só o nomeado**, manter tamanho/posição/sombra idênticos. Ver memória `executar-spec-literal`.
+
 ---
 
 ## 4. Fluxo de trabalho (divisão de tarefas)

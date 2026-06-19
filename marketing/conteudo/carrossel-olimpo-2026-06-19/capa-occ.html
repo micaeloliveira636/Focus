@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('_fonts.css');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#C49BF2; --branco:#FFFFFF;
+    --scratched:url('../../../identidade/textura-scratched.jpg'); }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; justify-content:center; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+
+  /* z0: cena de fundo (estatua + templo), tratada e escurecida pra dar mood + leitura */
+  .cena{ position:absolute; inset:0; z-index:0; background:url('olimpo-src.png') center/cover no-repeat;
+    filter:contrast(1.05) saturate(.98) brightness(.74); }
+  /* atmosfera roxa + escurecimento de baixo */
+  .mood{ position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:radial-gradient(70% 55% at 50% 22%, rgba(105,42,191,.20), transparent 60%),
+      linear-gradient(180deg, rgba(8,5,14,.30) 0%, rgba(8,5,14,0) 30%, rgba(8,5,14,.35) 64%, rgba(6,4,11,.82) 100%); }
+
+  /* z2: MANCHETE atras da estatua (oclusao). Fraunces italico leve, caixa-baixa. */
+  .hero{ position:absolute; z-index:2; left:0; right:0; top:600px; text-align:center;
+    font-family:'Fraunces',serif; font-style:italic; font-weight:340; font-size:188px; line-height:.86;
+    letter-spacing:-.01em; color:#fff; font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;
+    text-shadow:0 6px 34px rgba(0,0,0,.55); }
+  .hero .ac{ color:var(--roxo-claro); }
+
+  /* z3: estatua recortada por cima -> o texto fica ATRAS dela */
+  .estatua{ position:absolute; inset:0; z-index:3; background:url('estatua-cut.png') center/cover no-repeat;
+    filter:contrast(1.05) saturate(1.02) brightness(.92) drop-shadow(0 10px 30px rgba(0,0,0,.5)); }
+
+  /* z4: grão + textura sutil unificando os planos */
+  .tex{ position:absolute; inset:0; z-index:4; pointer-events:none; mix-blend-mode:overlay; opacity:.05;
+    background-image:var(--scratched); background-size:cover; }
+  .grain{ position:absolute; inset:0; z-index:4; pointer-events:none; opacity:.6; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+
+  .kick{ position:absolute; z-index:5; left:0; right:0; top:520px; text-align:center; font-family:'Montserrat',sans-serif;
+    font-weight:600; font-size:22px; letter-spacing:.40em; text-transform:uppercase; color:rgba(255,255,255,.86);
+    text-shadow:0 2px 10px rgba(0,0,0,.7); }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:66px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(196,155,242,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:74px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+  .vinh{ position:absolute; inset:0; z-index:7; pointer-events:none;
+    background:radial-gradient(125% 95% at 50% 42%, transparent 56%, rgba(0,0,0,.5) 100%); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="slide">
+    <div class="cena"></div>
+    <div class="mood"></div>
+    <div class="kick">Criatividade</div>
+    <div class="hero">ninguém cria<br><span class="ac">do nada</span></div>
+    <div class="estatua"></div>
+    <div class="tex"></div><div class="grain"></div>
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+    <div class="arrasta">Arrasta &rarr;</div>
+    <div class="vinh"></div>
+  </section>
+</div>
+</body>
+</html>

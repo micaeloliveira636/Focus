@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('_fonts.css');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --roxo-claro:#B98BEE; }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; justify-content:center; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#0a070f; }
+  /* === BASE IDENTICA A B (fontes e tudo) === */
+  .cena{ position:absolute; inset:0; z-index:0; background:url('olimpo-src.png') center/cover no-repeat;
+    filter:contrast(1.04) saturate(1.0) brightness(.92); }
+  .escuro{ position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:linear-gradient(180deg, transparent 42%, rgba(8,5,14,.45) 64%, rgba(6,4,11,.9) 88%, rgba(5,3,9,.97) 100%); }
+  .kick{ position:absolute; z-index:3; left:0; right:0; top:770px; text-align:center;
+    font-family:'Montserrat',sans-serif; font-weight:500; font-size:23px; letter-spacing:.42em;
+    text-transform:uppercase; color:rgba(255,255,255,.78); text-shadow:0 2px 10px rgba(0,0,0,.7); }
+  .setup{ position:absolute; z-index:3; left:0; right:0; top:812px; text-align:center;
+    font-family:'Montserrat',sans-serif; font-weight:500; font-size:58px; color:#fff;
+    text-shadow:0 2px 14px rgba(0,0,0,.7); }
+  /* MUDANCA: "ninguem" no roxo claro */
+  .setup .ac{ font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:70px;
+    color:var(--roxo-claro); font-variation-settings:'opsz' 144,'SOFT' 40; }
+  /* MUDANCA: "nada" no roxo claro (fonte/tamanho da B) */
+  .hero{ position:absolute; z-index:3; left:0; right:0; top:884px; text-align:center;
+    font-family:'Archivo Black',sans-serif; font-size:196px; line-height:.9; letter-spacing:-.03em;
+    color:var(--roxo-claro); text-shadow:0 4px 30px rgba(0,0,0,.6); }
+
+  .topo{ position:absolute; z-index:6; top:60px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:66px; filter:drop-shadow(0 2px 10px rgba(0,0,0,.6)); }
+  .pill-v{ width:16px; height:52px; border:2px solid rgba(196,155,242,.85); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:72px;
+    border:1.5px solid rgba(255,255,255,.5); border-radius:40px; padding:11px 24px;
+    font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 10px #000; }
+  .grain{ position:absolute; inset:0; z-index:5; pointer-events:none; opacity:.55; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="slide">
+    <div class="cena"></div>
+    <div class="escuro"></div>
+    <div class="kick">Criatividade</div>
+    <div class="setup"><span class="ac">ninguém</span> cria do</div>
+    <div class="hero">nada</div>
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-branco.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+    <div class="arrasta">Arrasta &rarr;</div>
+    <div class="grain"></div>
+  </section>
+</div>
+</body>
+</html>
