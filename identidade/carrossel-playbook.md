@@ -446,3 +446,53 @@ meio, outro na ponta esquerda). Do ponto de vista de quem ARRASTA, o olho tem qu
   o leitor percebe que é outro TIPO de slide, não bagunça.
 - Cada slide bem composto isoladamente (14.6) não basta: a série é lida em RITMO. Compor a
   sequência, não só a peça.
+
+### 14.8 ANATOMIA DO PROMPT DE MANIPULAÇÃO (virada jun/2026)
+O Micael cobrou: eu entregava prompt raso ("homem segurando celular, fundo roxo") quando as
+referências dele (rafafrancodesign, mazzeidesign) são **manipulações** que exigem um briefing
+de direção de arte em **camadas**. O ChatGPT faz manipulação excelente SE o prompt for um
+spec denso. Toda imagem-manipulação carrega estas camadas, nessa ordem:
+1. **Tipo + nível** — "ultra premium editorial poster, photorealistic photo manipulation,
+   award-winning, 8k, cinematic".
+2. **Sujeito principal + posição + realismo** — quem é, onde senta na composição, textura real
+   (mármore fosco com veios, pele com poro, pelo).
+3. **Sujeito/elemento secundário** — segundo personagem ou objeto, com posição própria.
+4. **Elemento gráfico grande** — número/símbolo/forma gigante integrado ao fundo (o "7" do CR7,
+   o disco solar). É o que dá cara de pôster.
+5. **Movimento** — brush/streaks/poeira diagonais (com parcimônia; ver tells da IA abaixo).
+6. **Ambiente + profundidade** — cenário ao fundo desfocado, moldura de primeiro plano.
+7. **Luz nomeada** + **grade** + **paleta TRAVADA** (ex.: "white/red/green/gold only";
+   pra Focus: terra natural + roxo como ÚNICO acento).
+8. **Espaço negativo** reservado pro título + **técnico** (4:5, 1080x1350, ultra sharp).
+Régua mental: o prompt do CR7 (rafafrancodesign). Quanto mais camada nomeada, mais perto da
+referência. Prompt curto = imagem genérica.
+
+**Fix anti-"cara de IA" no nível do prompt (não só no acabamento):** quando a imagem sai
+"épica CGI", o vilão nº1 em manipulação é o **halo/anel de neon** atrás da cabeça (marca
+registrada de Midjourney) — trocar por **luz/sol real por trás, sem anel**. Os outros tells:
+bloom dourado uniforme, mármore "cera"/glossy, neon colado nas bordas, estátuas de fundo
+derretidas. Regenerar puxando fotográfico: `shot on film, naturalistic light, matte/weathered
+texture, less HDR, restrained contrast, NOT over-saturated, real lens bokeh, subtle grain`.
+Foi o que tirou a cara de IA da capa do Olimpo (round 1 com halo roxo de neon → reprovado;
+round 2 fotográfico → aprovado).
+
+### 14.9 RECEITA EXATA DE ACABAMENTO DA CAPA (números aprovados jun/2026)
+Tratamento que o Micael aprovou (capa dos bustos → reaplicado no rino e no Olimpo). HTML/CSS
+1080x1350, camadas por z-index. **Imagem fica NÍTIDA**, o blur é só um respiro:
+- **`.cena`** (bg, z0): `filter:contrast(1.06) saturate(1.04) brightness(.9) blur(0.9px); scale(1.02)`.
+  ⚠️ Blur de **0.9px**, não 13px. Erro que cometi: blur gigante + brightness baixa = fundo
+  morto e textura crua aparecendo. Imagem tem que ler.
+- **`.blur`** (z1): backdrop-blur localizado só no lado do texto, com máscara em gradiente
+  (recua o canto, empurra o texto pra frente). **`.warm`**: radial soft-light quente no lado do sol.
+- **`.scrim`** (z2): gradiente só no lado/baixo do texto (não escurece a cena toda).
+- **`.tex`** (z3): texturas reais quase invisíveis — `t-plastic` overlay .06, `t-scratch`
+  overlay .04, `t-fabric` soft-light .025. Discretas; um grid de textura batendo na cara = erro.
+- **`.sombratxt`** (z3): radial escuro `blur(16px)` ATRÁS do bloco de texto (densidade, separa do fundo).
+- **Título** (z4/z5): **sombra projetada de camada DUPLA** — `.heroShadow` (cópia escura
+  `translate(7px,20px) blur(6px)`) atrás do `.heroFront` branco. Palavra-herói em
+  `--roxo-claro` com glow roxo. Hierarquia: linha de apoio menor/mais leve (peso 400-600,
+  caixa normal), palavra-destaque em 900 grandona.
+- **Mobília fixa:** lobo (topo esq) + pílula vertical lilás (topo dir), `Arrasta →` + bolinhas
+  do carrossel (z6) embaixo. **Grão** overlay .7 (z7) + **vinheta** radial (z8) fechando.
+Render: `render.mjs` (Playwright chrome headless, `playwright-core` em `comercial/coletor`,
+viewport 1080x1350, screenshot do `.slide`).
