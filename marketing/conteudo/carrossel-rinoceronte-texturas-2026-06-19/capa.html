@@ -15,7 +15,7 @@
 
   /* fundo desfocado */
   .bg{ position:absolute; inset:0; z-index:0; background:url('rino-src.png') center/cover no-repeat;
-    filter:blur(13px) brightness(.66) saturate(1.08) contrast(1.04); transform:scale(1.14); }
+    filter:blur(3px) brightness(.78) saturate(1.06) contrast(1.05); transform:scale(1.05); }
 
   /* sombras/scrim pra profundidade e legibilidade (texto rei) */
   .scrim{ position:absolute; inset:0; z-index:1; pointer-events:none;
@@ -26,9 +26,8 @@
   /* SUAS texturas */
   .tex{ position:absolute; inset:0; z-index:2; pointer-events:none; }
   .tex span{ position:absolute; inset:0; display:block; background-position:center; background-size:cover; }
-  .t-scratch{ background-image:var(--scratched); mix-blend-mode:overlay; opacity:.10; }
-  .t-couro{ background-image:var(--couro); mix-blend-mode:overlay; opacity:.07; }
-  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.06; }
+  .t-couro{ background-image:var(--couro); mix-blend-mode:soft-light; opacity:.05; }
+  .t-fabric{ background-image:var(--fabric); mix-blend-mode:soft-light; opacity:.04; }
 
   /* topo */
   .topo{ position:absolute; z-index:6; top:58px; left:74px; right:74px; display:flex; justify-content:space-between; align-items:center; }
@@ -74,7 +73,7 @@
   <section class="slide">
     <div class="bg"></div>
     <div class="scrim"></div>
-    <div class="tex"><span class="t-scratch"></span><span class="t-couro"></span><span class="t-fabric"></span></div>
+    <div class="tex"><span class="t-couro"></span><span class="t-fabric"></span></div>
 
     <div class="topo">
       <div class="marca">
