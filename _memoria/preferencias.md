@@ -23,3 +23,5 @@ Autenticidade acima de tudo. Se soar como discurso pronto de vendedor, está err
 
 - **Nunca usar travessão/em-dash (—) em nada.** O dono odeia, acha que não tem nada a ver com o português real. Reescrever a frase com ponto, vírgula ou "e sim". Vale pra todo conteúdo e entrega.
 - Preferir **"seu/sua"** a "teu/tua" no texto dos posts.
+
+- Prompts de carrossel: SEMPRE colar os prompts completos aqui no chat (prontos pra copiar), nao so salvar no arquivo. O Micael copia direto da conversa.
