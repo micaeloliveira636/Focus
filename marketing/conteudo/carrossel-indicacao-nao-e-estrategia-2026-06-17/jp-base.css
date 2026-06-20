@@ -11,8 +11,8 @@ html,body{ font-family:'Montserrat',sans-serif; background:#000; }
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
 .escuro{ position:absolute; inset:0; z-index:2; pointer-events:none;
   background:
-    radial-gradient(125% 108% at 50% 47%, transparent 52%, rgba(9,5,16,.26) 80%, rgba(9,5,16,.56) 100%),
-    linear-gradient(180deg, rgba(9,5,16,.34) 0%, transparent 13%, transparent 82%, rgba(9,5,16,.48) 100%); }
+    radial-gradient(125% 108% at 50% 47%, transparent 50%, rgba(9,5,16,.33) 80%, rgba(9,5,16,.66) 100%),
+    linear-gradient(180deg, rgba(9,5,16,.42) 0%, transparent 13%, transparent 81%, rgba(9,5,16,.58) 100%); }
 .bloco{ position:absolute; z-index:3; text-align:center; }
 .l{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:44px; line-height:1.06; color:var(--tinta);
   text-shadow:0 2px 18px rgba(10,6,18,.20); margin-top:10px; }
