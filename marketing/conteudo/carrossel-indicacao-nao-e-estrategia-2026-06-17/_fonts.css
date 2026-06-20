@@ -1,0 +1,11 @@
+/* fontes locais da Focus — testes tipograficos */
+@font-face{ font-family:'Fraunces'; font-style:normal; font-weight:100 900;
+  src:url('../../../identidade/fontes/Fraunces.ttf') format('truetype'); }
+@font-face{ font-family:'Fraunces'; font-style:italic; font-weight:100 900;
+  src:url('../../../identidade/fontes/Fraunces-Italic.ttf') format('truetype'); }
+@font-face{ font-family:'Archivo Black'; font-weight:400;
+  src:url('../../../identidade/fontes/ArchivoBlack-Regular.ttf') format('truetype'); }
+@font-face{ font-family:'Anton'; font-weight:400;
+  src:url('../../../identidade/fontes/Anton-Regular.ttf') format('truetype'); }
+@font-face{ font-family:'Yellowtail'; font-weight:400;
+  src:url('../../../identidade/fontes/Yellowtail-Regular.ttf') format('truetype'); }

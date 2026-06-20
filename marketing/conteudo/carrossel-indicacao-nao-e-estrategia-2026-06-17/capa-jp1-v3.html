@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('_fonts.css');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  :root{ --roxo:#692ABF; --tinta:#140f1c; }
+  html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+  .wrap{ display:flex; justify-content:center; padding:20px 0; }
+  .slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#ece7dd; }
+  .cena{ position:absolute; inset:0; z-index:0; background:url('capa-jp-samurai.png') center/cover no-repeat; }
+  .tex{ position:absolute; inset:0; z-index:1; pointer-events:none; mix-blend-mode:multiply; opacity:.10;
+    background:url('../../../identidade/textura-scratched.jpg') center/cover; }
+  .grain{ position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.45; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+  /* VINHETA: escurece as bordas, foca o centro, harmoniza com o texto de cima e de baixo */
+  .vinh{ position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:radial-gradient(118% 86% at 50% 44%, transparent 50%, rgba(16,9,24,.30) 78%, rgba(12,7,20,.62) 100%); }
+
+  .kick{ position:absolute; z-index:3; left:0; right:0; top:92px; text-align:center;
+    font-family:'Montserrat',sans-serif; font-weight:600; font-size:23px; letter-spacing:.40em;
+    text-transform:uppercase; color:rgba(26,20,34,.82); text-shadow:0 2px 10px rgba(12,8,20,.30); }
+  .setup{ position:absolute; z-index:3; left:0; right:0; top:132px; text-align:center;
+    font-family:'Montserrat',sans-serif; font-weight:500; font-size:60px; color:var(--tinta);
+    text-shadow:0 5px 20px rgba(12,8,20,.45), 0 2px 5px rgba(12,8,20,.35); }
+  .setup .ac{ font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:72px;
+    color:var(--roxo); text-shadow:0 5px 20px rgba(12,8,20,.45), 0 2px 5px rgba(12,8,20,.35); }
+  .hero{ position:absolute; z-index:3; left:0; right:0; top:200px; text-align:center;
+    font-family:'Archivo Black',sans-serif; font-size:116px; line-height:.9; letter-spacing:-.035em;
+    color:var(--tinta); text-shadow:0 6px 24px rgba(12,8,20,.5), 0 2px 5px rgba(12,8,20,.4); }
+
+  .topo{ position:absolute; z-index:6; top:52px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .topo img{ height:60px; }
+  .pill-v{ width:16px; height:50px; border:2px solid rgba(120,70,200,.9); border-radius:12px; }
+  .arrasta{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:58px;
+    border:1.5px solid rgba(255,255,255,.55); border-radius:40px; padding:11px 24px;
+    font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600; letter-spacing:.15em; color:#fff; text-transform:uppercase; text-shadow:0 2px 12px #000; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="slide">
+    <div class="cena"></div>
+    <div class="tex"></div><div class="grain"></div>
+    <div class="vinh"></div>
+    <div class="kick">Pra quem vive de indicação</div>
+    <div class="setup">indicação <span class="ac">não</span> é</div>
+    <div class="hero">estratégia</div>
+    <div class="topo">
+      <img src="../../../identidade/logo-simbolo-roxo.png" alt="">
+      <div class="pill-v"></div>
+    </div>
+    <div class="arrasta">Arrasta &rarr;</div>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* estilo base dos slides internos japoneses */
+*{ margin:0; padding:0; box-sizing:border-box; }
+:root{ --roxo:#692ABF; --roxo-claro:#b98bee; --tinta:#15101c; }
+html,body{ font-family:'Montserrat',sans-serif; background:#000; }
+.wrap{ display:flex; justify-content:center; padding:20px 0; }
+.slide{ width:1080px; height:1350px; position:relative; overflow:hidden; background:#ece7dd; }
+.cena{ position:absolute; inset:0; z-index:0; background-position:center; background-size:cover; background-repeat:no-repeat; }
+.tex{ position:absolute; inset:0; z-index:1; pointer-events:none; mix-blend-mode:multiply; opacity:.08;
+  background:url('../../../identidade/textura-scratched.jpg') center/cover; }
+.grain{ position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.4; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px 220px; }
+.escuro{ position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(9,5,16,.50) 0%, transparent 11%, transparent 80%, rgba(9,5,16,.68) 100%),
+    linear-gradient(90deg, rgba(9,5,16,.42) 0%, transparent 9%, transparent 91%, rgba(9,5,16,.42) 100%); }
+.bloco{ position:absolute; z-index:3; text-align:center; }
+.l{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:44px; line-height:1.06; color:var(--tinta);
+  text-shadow:0 2px 18px rgba(10,6,18,.20); margin-top:10px; }
+.l .ac{ font-family:'Fraunces',serif; font-style:italic; font-weight:500; color:var(--roxo); }
+.hero{ font-family:'Archivo Black',sans-serif; font-size:86px; line-height:.92; letter-spacing:-.03em; color:var(--tinta);
+  text-shadow:0 4px 28px rgba(10,6,18,.28), 0 2px 8px rgba(10,6,18,.18); margin-top:2px; }
+.hero .ac{ color:var(--roxo); }
+.corpo{ margin-top:24px; font-family:'Montserrat',sans-serif; font-weight:500; font-size:26px; line-height:1.45;
+  color:rgba(24,18,32,.86); text-shadow:0 2px 8px rgba(236,231,221,.5); }
+.corpo b{ font-weight:700; color:var(--tinta); }
+.topo{ position:absolute; z-index:6; top:54px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:flex-start; }
+.topo img{ height:58px; filter:drop-shadow(0 2px 8px rgba(0,0,0,.4)); }
+.pill-v{ width:15px; height:48px; border:2px solid rgba(150,110,225,.9); border-radius:12px; }
+.dots{ position:absolute; z-index:6; left:50%; transform:translateX(-50%); bottom:54px; display:flex; gap:10px; align-items:center; }
+.dots i{ width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.4); display:block; }
+.dots i.on{ width:26px; border-radius:5px; background:var(--roxo-claro); }
